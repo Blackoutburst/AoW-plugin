@@ -11,12 +11,14 @@ public class GamePlayer {
 	protected int gold;
 	protected int xp;
 	protected List<Warrior> warriors;
+	protected List<Warrior> opponents;
 	
 	public GamePlayer(Player player) {
 		this.player = player;
 		this.gold = 100;
 		this.xp = 0;
 		this.warriors = new ArrayList<Warrior>();
+		this.opponents = new ArrayList<Warrior>();
 	}
  	
 	public Player getPlayer() {
@@ -50,5 +52,12 @@ public class GamePlayer {
 	public void setWarriors(List<Warrior> warriors) {
 		this.warriors = warriors;
 	}
-	
+
+	public List<Warrior> getOpponents() {
+		return opponents;
+	}
+
+	public void setOpponents(List<Warrior> opponents) {
+		this.opponents = opponents;
+	}
 }
