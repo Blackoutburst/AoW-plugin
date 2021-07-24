@@ -27,17 +27,17 @@ public class JoinEvent {
 	}
 	
 	private void spawnNPC(PlayerJoinEvent event) {
-		spawnKnight(event, 1310.5f);
-		spawnKnight(event, 1342.5f);
-		spawnArcher(event, 1312.5f);
-		spawnArcher(event, 1340.5f);
-		spawnMount(event, 1314.5f);
-		spawnMount(event, 1338.5f);
+		spawnKnight(event, 1310.5f, "§9");
+		spawnKnight(event, 1342.5f, "§4");
+		spawnArcher(event, 1312.5f, "§9");
+		spawnArcher(event, 1340.5f, "§4");
+		spawnMount(event, 1314.5f, "§9");
+		spawnMount(event, 1338.5f, "§4");
 		
 	}
 	
-	private void spawnKnight(PlayerJoinEvent event, float Z) {
-		NPC npc = new NPC(UUID.randomUUID(), "§eKnight")
+	private void spawnKnight(PlayerJoinEvent event, float Z, String color) {
+		NPC npc = new NPC(UUID.randomUUID(), color + "Knight")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))
 				.setSkin(SkinLoader.getSkinById(0))
 				.setCapeVisible(false);
@@ -47,8 +47,8 @@ public class JoinEvent {
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(267))));
 	}
 	
-	private void spawnArcher(PlayerJoinEvent event, float Z) {
-		NPC npc = new NPC(UUID.randomUUID(), "§eArcher")
+	private void spawnArcher(PlayerJoinEvent event, float Z, String color) {
+		NPC npc = new NPC(UUID.randomUUID(), color + "Archer")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))
 				.setSkin(SkinLoader.getSkinById(1))
 				.setCapeVisible(false);
@@ -58,8 +58,8 @@ public class JoinEvent {
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(261))));
 	}
 	
-	private void spawnMount(PlayerJoinEvent event, float Z) {
-		NPC npc = new NPC(UUID.randomUUID(), "§eMount")
+	private void spawnMount(PlayerJoinEvent event, float Z, String color) {
+		NPC npc = new NPC(UUID.randomUUID(), color + "Mount")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))
 				.setSkin(SkinLoader.getSkinById(2))
 				.setCapeVisible(false);
