@@ -1,12 +1,13 @@
 package com.blackout.aow.event;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import com.blackout.aow.core.Warrior;
 import com.blackout.aow.main.Main;
-import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.utils.SkinLoader;
 
 import net.minecraft.server.v1_8_R3.PacketPlayOutEntity.PacketPlayOutRelEntityMove;
@@ -35,16 +36,26 @@ public class EnableEvent {
 	private void moveToRight() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 		
-			for (NPC p : Main.player1NPC) {
-				((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getEntityId(), (byte) 0, (byte) 0, (byte)(5), true));
+			int index = 0;
+			for (Warrior p : Main.player1NPC) {
+				if (p.canWalkRight(index)) {
+					((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getNpc().getEntityId(), (byte) 0, (byte) 0, (byte)(5), true));
+					p.getNpc().setLocation(new Location(p.getNpc().getLocation().getWorld(), p.getNpc().getLocation().getX(), p.getNpc().getLocation().getY(), p.getNpc().getLocation().getZ() + 0.16f));
+				}
+				index++;
 			}
 		}
 	}
 	
 	private void moveToLeft() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
-			for (NPC p : Main.player2NPC) {
-				((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getEntityId(), (byte) 0, (byte) 0, (byte)(-5), true));
+			int index = 0;
+			for (Warrior p : Main.player2NPC) {
+				if (p.canWalkLeft(index)) {
+					((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getNpc().getEntityId(), (byte) 0, (byte) 0, (byte)(-5), true));
+					p.getNpc().setLocation(new Location(p.getNpc().getLocation().getWorld(), p.getNpc().getLocation().getX(), p.getNpc().getLocation().getY(), p.getNpc().getLocation().getZ() - 0.16f));
+				}
+				index++;
 			}
 		}
 	}

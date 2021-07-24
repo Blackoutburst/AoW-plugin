@@ -12,15 +12,15 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.blackout.aow.core.Warrior;
 import com.blackout.aow.event.EnableEvent;
 import com.blackout.aow.event.JoinEvent;
-import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
 
-	public static List<NPC> player1NPC = new ArrayList<NPC>();
-	public static List<NPC> player2NPC = new ArrayList<NPC>();
+	public static List<Warrior> player1NPC = new ArrayList<Warrior>();
+	public static List<Warrior> player2NPC = new ArrayList<Warrior>();
 	
 	@Override
 	public void onEnable() {
