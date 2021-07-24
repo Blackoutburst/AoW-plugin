@@ -27,12 +27,12 @@ public class JoinEvent {
 	}
 	
 	private void spawnNPC(PlayerJoinEvent event) {
-		spawnKnight(event, 1310.5f, "§9");
-		spawnKnight(event, 1342.5f, "§4");
-		spawnArcher(event, 1312.5f, "§9");
-		spawnArcher(event, 1340.5f, "§4");
-		spawnMount(event, 1314.5f, "§9");
-		spawnMount(event, 1338.5f, "§4");
+		spawnKnight(event, 1309.5f, "§9");
+		spawnKnight(event, 1343.5f, "§4");
+		spawnArcher(event, 1311.5f, "§9");
+		spawnArcher(event, 1341.5f, "§4");
+		spawnMount(event, 1313.5f, "§9");
+		spawnMount(event, 1339.5f, "§4");
 		
 	}
 	

@@ -1,5 +1,8 @@
 package com.blackout.aow.main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
@@ -11,10 +14,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.blackout.aow.event.EnableEvent;
 import com.blackout.aow.event.JoinEvent;
+import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
 
+	public static List<NPC> player1NPC = new ArrayList<NPC>();
+	public static List<NPC> player2NPC = new ArrayList<NPC>();
+	
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);
@@ -33,7 +40,7 @@ public class Main extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent event) {
-		event.setCancelled(true);
+		//event.setCancelled(true);
 	}
 	
 	@Override
