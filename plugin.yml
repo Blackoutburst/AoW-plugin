@@ -1,0 +1,6 @@
+main: com.blackout.aow.main.Main
+name: AgeOfWar
+version: 0.1
+api-version: 1.13
+author: Blackoutburst
+description: Age of War plugin
