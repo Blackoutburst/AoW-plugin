@@ -103,15 +103,15 @@ public class Warrior {
 		double prevZ = 0;
 		double myZ = this.getNpc().getLocation().getZ();
 		
-		if (Main.player2NPC.size() > 0) {
-			prevZ = Main.player2NPC.get(0).getNpc().getLocation().getZ();
+		if (Main.player2.warriors.size() > 0) {
+			prevZ = Main.player2.warriors.get(0).getNpc().getLocation().getZ();
 			if (Math.abs(prevZ - myZ) < 1.5f) {
 				return false;
 			}
 		}
 		
 		if (index == 0) return true;
-		prevZ = Main.player1NPC.get(index - 1).getNpc().getLocation().getZ();
+		prevZ = Main.player1.warriors.get(index - 1).getNpc().getLocation().getZ();
 		
 		if (Math.abs(prevZ - myZ) < 2) {
 			return false;
@@ -126,14 +126,14 @@ public class Warrior {
 		double prevZ = 0;
 		double myZ = this.getNpc().getLocation().getZ();
 		
-		if (Main.player1NPC.size() > 0) {
-			prevZ = Main.player1NPC.get(0).getNpc().getLocation().getZ();
+		if (Main.player1.warriors.size() > 0) {
+			prevZ = Main.player1.warriors.get(0).getNpc().getLocation().getZ();
 			if (Math.abs(prevZ - myZ) < 1.5f) {
 				return false;
 			}
 		}
 		if (index == 0) return true;
-		prevZ = Main.player2NPC.get(index - 1).getNpc().getLocation().getZ();
+		prevZ = Main.player2.warriors.get(index - 1).getNpc().getLocation().getZ();
 		
 		if (Math.abs(prevZ - myZ) < 2) {
 			return false;

@@ -49,14 +49,14 @@ public class EnableEvent {
 	private void fight() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 			int index = 0;
-			for (Warrior p : Main.player1NPC) {
-				WarriorUtils.fight(p, player, index, Main.player2NPC);
+			for (Warrior p : Main.player1.getWarriors()) {
+				WarriorUtils.fight(p, player, index, Main.player2.getWarriors());
 				index++;
 			}
 			
 			index = 0;
-			for (Warrior p : Main.player2NPC) {
-				WarriorUtils.fight(p, player, index, Main.player1NPC);
+			for (Warrior p : Main.player2.getWarriors()) {
+				WarriorUtils.fight(p, player, index, Main.player1.getWarriors());
 				index++;
 			}
 		}
@@ -66,10 +66,10 @@ public class EnableEvent {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 		
 			int index = 0;
-			for (Warrior p : Main.player1NPC) {
+			for (Warrior p : Main.player1.getWarriors()) {
 				if (p.canWalkRight(index)) {
 					((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getNpc().getEntityId(), (byte) 0, (byte) 0, (byte)(5), true));
-					p.getNpc().setLocation(new Location(p.getNpc().getLocation().getWorld(), p.getNpc().getLocation().getX(), p.getNpc().getLocation().getY(), p.getNpc().getLocation().getZ() + 0.16f));
+					p.getNpc().setLocation(new Location(p.getNpc().getLocation().getWorld(), p.getNpc().getLocation().getX(), p.getNpc().getLocation().getY(), p.getNpc().getLocation().getZ() + (0.16f / Bukkit.getOnlinePlayers().size())));
 				}
 				index++;
 			}
@@ -78,11 +78,12 @@ public class EnableEvent {
 	
 	private void moveToLeft() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
+			
 			int index = 0;
-			for (Warrior p : Main.player2NPC) {
+			for (Warrior p : Main.player2.getWarriors()) {
 				if (p.canWalkLeft(index)) {
 					((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getNpc().getEntityId(), (byte) 0, (byte) 0, (byte)(-5), true));
-					p.getNpc().setLocation(new Location(p.getNpc().getLocation().getWorld(), p.getNpc().getLocation().getX(), p.getNpc().getLocation().getY(), p.getNpc().getLocation().getZ() - 0.16f));
+					p.getNpc().setLocation(new Location(p.getNpc().getLocation().getWorld(), p.getNpc().getLocation().getX(), p.getNpc().getLocation().getY(), p.getNpc().getLocation().getZ() - (0.16f / Bukkit.getOnlinePlayers().size())));
 				}
 				index++;
 			}
