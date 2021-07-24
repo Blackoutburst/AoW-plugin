@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.core.Warrior;
+import com.blackout.aow.core.WarriorUtils;
 import com.blackout.aow.main.Main;
 import com.blackout.npcapi.utils.SkinLoader;
 
@@ -47,19 +48,15 @@ public class EnableEvent {
 	
 	private void fight() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
-			
 			int index = 0;
 			for (Warrior p : Main.player1NPC) {
-				p.fightRight(player, index);
+				WarriorUtils.fight(p, player, index, Main.player2NPC);
 				index++;
 			}
-		}
-		
-		for (Player player : Bukkit.getOnlinePlayers()) {
 			
-			int index = 0;
+			index = 0;
 			for (Warrior p : Main.player2NPC) {
-				p.fightLeft(player, index);
+				WarriorUtils.fight(p, player, index, Main.player1NPC);
 				index++;
 			}
 		}

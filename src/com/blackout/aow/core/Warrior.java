@@ -1,22 +1,8 @@
 package com.blackout.aow.core;
 
-import java.util.List;
-import java.util.UUID;
-
-import org.bukkit.Location;
-import org.bukkit.Sound;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
-import org.bukkit.entity.Player;
-
 import com.blackout.aow.main.Main;
 import com.blackout.holoapi.core.Holo;
-import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
-import com.blackout.npcapi.utils.NPCManager;
-
-import net.minecraft.server.v1_8_R3.PacketPlayOutAnimation;
-import net.minecraft.server.v1_8_R3.PacketPlayOutAttachEntity;
-import net.minecraft.server.v1_8_R3.PlayerConnection;
 
 public class Warrior {
 
@@ -146,101 +132,12 @@ public class Warrior {
 				return false;
 			}
 		}
-		
 		if (index == 0) return true;
 		prevZ = Main.player2NPC.get(index - 1).getNpc().getLocation().getZ();
 		
 		if (Math.abs(prevZ - myZ) < 2) {
 			return false;
 		}
-		
 		return true;
-	}
-	
-	public void fightRight(Player player, int index) {
-		if (Main.player2NPC.size() > 0) {
-			Warrior opponent = Main.player2NPC.get(0);
-			double myZ = this.getNpc().getLocation().getZ();
-			double prevZ = opponent.getNpc().getLocation().getZ();
-			
-			if (Math.abs(prevZ - myZ) < 2 && this.type != WarriorType.Archer) {
-				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-				player.playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				updateLife(opponent, player, Main.player2NPC);
-			}
-			
-			if (Math.abs(prevZ - myZ) < 6 && this.type == WarriorType.Archer) {
-				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-				player.playSound(this.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-				player.playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				updateLife(opponent, player, Main.player2NPC);
-			}
-		}
-	}
-	
-	public void fightLeft(Player player, int index) {
-		if (Main.player1NPC.size() > 0) {
-			Warrior opponent = Main.player1NPC.get(0);
-			double myZ = this.getNpc().getLocation().getZ();
-			double prevZ = opponent.getNpc().getLocation().getZ();
-			
-			if (Math.abs(prevZ - myZ) < 2 && this.type != WarriorType.Archer) {
-				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-				player.playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				updateLife(opponent, player, Main.player1NPC);
-			}
-			
-			if (Math.abs(prevZ - myZ) < 6 && this.type == WarriorType.Archer) {
-				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-				player.playSound(this.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-				player.playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				updateLife(opponent, player, Main.player1NPC);
-			}
-		}
-	}
-	
-	private void updateLife(Warrior opponent, Player player, List<Warrior> list) {
-		opponent.setLife(opponent.getLife() - this.getDamage());
-		int lifePercent = (opponent.getLife() * 100 / opponent.getMaxLife());
-		
-		HoloManager.deleteHolo(player, opponent.lifeBar);
-		
-		Location newLoc = new Location (opponent.getNpc().getLocation().getWorld(), opponent.getNpc().getLocation().getX(), opponent.getNpc().getLocation().getY(), opponent.getNpc().getLocation().getZ());
-		newLoc.setY(newLoc.getY() + 1.4f);
-		
-		Holo newBar = new Holo(UUID.randomUUID(), getLifeBar(lifePercent))
-		        .setLocation(newLoc);
-		HoloManager.spawnHolo(newBar, player);
-		opponent.setLifeBar(newBar);
-		
-		((CraftPlayer) player).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, newBar.getEntity(), opponent.getNpc().getEntity()));
-	
-		if (opponent.getLife() <= 0) {
-			HoloManager.deleteHolo(player, opponent.lifeBar);
-			list.remove(opponent);
-			NPCManager.deleteNPC(player, opponent.getNpc());
-		}
-	}
-	
-	private String getLifeBar(int lifePercent) {
-		if (lifePercent <= 10) return "§c██████████";
-		if (lifePercent <= 20) return "§a█§c█████████";
-		if (lifePercent <= 30) return "§a██§c████████";
-		if (lifePercent <= 40) return "§a███§c███████";
-		if (lifePercent <= 50) return "§a████§c██████";
-		if (lifePercent < 60) return "§a█████§c█████";
-		if (lifePercent < 70) return "§a██████§c████";
-		if (lifePercent < 80) return "§a███████§c███";
-		if (lifePercent < 90) return "§a████████§c██";
-		if (lifePercent < 100) return "§a█████████§c█";
-		return "§a██████████";
 	}
 }

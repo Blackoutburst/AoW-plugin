@@ -5,3 +5,4 @@ api-version: 1.13
 author: Blackoutburst
 description: Age of War plugin
 depend: [NPCAPI]
+depend: [HoloAPI]
