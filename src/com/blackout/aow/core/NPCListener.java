@@ -29,10 +29,10 @@ public class NPCListener implements NPCPacket {
 				switch(npc.getName()) {
 					case "§9Knight": spawnNPC(npc, p, 1307.5f, 0, 1); break;
 					case "§9Archer": spawnNPC(npc, p, 1307.5f, 0, 1); break;
-					case "§9Mount": spawnNPC(npc, p, 1307.5f, 0, 1); break;
+					case "§9Berserk": spawnNPC(npc, p, 1307.5f, 0, 1); break;
 					case "§4Knight": spawnNPC(npc, p, 1345.5f, 180, 2); break;
 					case "§4Archer": spawnNPC(npc, p, 1345.5f, 180, 2); break;
-					case "§4Mount": spawnNPC(npc, p, 1345.5f, 180, 2); break;
+					case "§4Berserk": spawnNPC(npc, p, 1345.5f, 180, 2); break;
 					default: continue;
 				}
 			}
@@ -47,10 +47,10 @@ public class NPCListener implements NPCPacket {
 				switch(npc.getName()) {
 					case "§9Knight": spawnNPC(npc, p, 1307.5f, 0, 1); return;
 					case "§9Archer": spawnNPC(npc, p, 1307.5f, 0, 1); return;
-					case "§9Mount": spawnNPC(npc, p, 1307.5f, 0, 1); return;
+					case "§9Berserk": spawnNPC(npc, p, 1307.5f, 0, 1); return;
 					case "§4Knight": spawnNPC(npc, p, 1345.5f, 180, 2); return;
 					case "§4Archer": spawnNPC(npc, p, 1345.5f, 180, 2); return;
-					case "§4Mount": spawnNPC(npc, p, 1345.5f, 180, 2); return;
+					case "§4Berserk": spawnNPC(npc, p, 1345.5f, 180, 2); return;
 					default: continue;
 				}
 			}
@@ -77,7 +77,7 @@ public class NPCListener implements NPCPacket {
 				if (npc.getName().contains("Archer")) {
 					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(261))));
 				}
-				if (npc.getName().contains("Mount")) {
+				if (npc.getName().contains("Berserk")) {
 					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(258))));
 				}
 			}

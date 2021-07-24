@@ -59,7 +59,7 @@ public class JoinEvent {
 	}
 	
 	private void spawnMount(PlayerJoinEvent event, float Z, String color) {
-		NPC npc = new NPC(UUID.randomUUID(), color + "Mount")
+		NPC npc = new NPC(UUID.randomUUID(), color + "Berserk")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))
 				.setSkin(SkinLoader.getSkinById(2))
 				.setCapeVisible(false);
@@ -67,17 +67,6 @@ public class JoinEvent {
 		
 		PlayerConnection connection = ((CraftPlayer) event.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(258))));
-	
-		/*
-		WorldServer s = ((CraftWorld) Bukkit.getWorld("world")).getHandle();
-		EntityHorse horseEntity = new EntityHorse(s);
-		horseEntity.setLocation(973.5f, 54, Z, 90, 0);
-		horseEntity.setTame(true);
-		
-		connection.sendPacket(new PacketPlayOutAttachEntity(0, npc.getEntity(), horseEntity));
-		connection.sendPacket(new PacketPlayOutSpawnEntityLiving(horseEntity));
-		connection.sendPacket(new PacketPlayOutEntityHeadRotation(horseEntity, (byte) ((npc.getLocation().getYaw() * 256.0F) / 360.0F)));
-		*/
 	}
 	
 }
