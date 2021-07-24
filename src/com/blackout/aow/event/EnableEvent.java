@@ -50,13 +50,13 @@ public class EnableEvent {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 			int index = 0;
 			for (Warrior p : Main.player1.getWarriors()) {
-				WarriorUtils.fight(p, player, index, Main.player2.getWarriors());
+				WarriorUtils.fight(p, player, index, Main.player1, Main.player2);
 				index++;
 			}
 			
 			index = 0;
 			for (Warrior p : Main.player2.getWarriors()) {
-				WarriorUtils.fight(p, player, index, Main.player1.getWarriors());
+				WarriorUtils.fight(p, player, index, Main.player2, Main.player1);
 				index++;
 			}
 		}

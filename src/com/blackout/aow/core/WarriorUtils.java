@@ -1,6 +1,5 @@
 package com.blackout.aow.core;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
@@ -47,7 +46,7 @@ public class WarriorUtils {
 			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
-		
+		gp.setGold(gp.getGold() - 15);
 		p.sendMessage("§aKnight created for 15 gold");
 		
 		if (gp == Main.player1) {
@@ -65,7 +64,7 @@ public class WarriorUtils {
 			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
-		
+		gp.setGold(gp.getGold() - 30);
 		p.sendMessage("§aArcher created for 30 gold");
 		
 		if (gp == Main.player1) {
@@ -82,7 +81,7 @@ public class WarriorUtils {
 			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
-		
+		gp.setGold(gp.getGold() - 100);
 		p.sendMessage("§aBerserk created for 100 gold");
 		
 		if (gp == Main.player1) {
@@ -92,43 +91,53 @@ public class WarriorUtils {
 		}
 	}
 	
-	public static void fight(Warrior warrior, Player player, int index, List<Warrior> opponents) {
-		if (opponents.size() > 0) {
-			Warrior opponent = opponents.get(0);
+	public static void fight(Warrior warrior, Player player, int index, GamePlayer gp1, GamePlayer gp2) {
+		if (gp1.getOpponents().size() > 0) {
+			Warrior opponent = gp1.getOpponents().get(0);
 			double myZ = warrior.getNpc().getLocation().getZ();
 			double prevZ = opponent.getNpc().getLocation().getZ();
 			
 			if (Math.abs(prevZ - myZ) < 2 && warrior.type != WarriorType.Archer) {
-				for (Player p : Bukkit.getOnlinePlayers()) {
-					PlayerConnection connection = ((CraftPlayer) p).getHandle().playerConnection;
-					connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-					connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-					player.playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				}
+				PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
+				connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
+				gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
 				
-				updateLife(warrior, opponent, player, opponents);
+				Warrior opp2 = gp2.getWarriors().get(0);
+				connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
+				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(0).getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
+				gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+				
+				updateLife(warrior, opponent, gp1);
+				updateLife(gp2.getOpponents().get(index), opp2, gp2);
 			}
 			
 			if (Math.abs(prevZ - myZ) < 6 && warrior.type == WarriorType.Archer) {
-				for (Player p : Bukkit.getOnlinePlayers()) {
-					PlayerConnection connection = ((CraftPlayer) p).getHandle().playerConnection;
-					p.playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-					connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-					connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-					p.playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				}
-				updateLife(warrior, opponent, player, opponents);
+				PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
+				gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
+				connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
+				gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+				
+				Warrior opp2 = gp2.getWarriors().get(0);
+				connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
+				gp2.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
+				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(0).getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
+				gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+				
+				updateLife(warrior, opponent, gp1);
+				updateLife(gp2.getOpponents().get(index), opp2, gp2);
 			}
 		}
 	}
 	
-	private static void updateLife(Warrior warrior, Warrior opponent, Player player, List<Warrior> list) {
+	private static void updateLife(Warrior warrior, Warrior opponent, GamePlayer gp) {
 		opponent.setLife(opponent.getLife() - warrior.getDamage());
 		int lifePercent = (opponent.getLife() * 100 / opponent.getMaxLife());
 		
-		for (Player p : Bukkit.getOnlinePlayers()) {
-			HoloManager.deleteHolo(p, opponent.lifeBar);
-		}
+		HoloManager.deleteHolo(gp.getPlayer(), opponent.lifeBar);
 		
 		Location newLoc = new Location (opponent.getNpc().getLocation().getWorld(), opponent.getNpc().getLocation().getX(), opponent.getNpc().getLocation().getY(), opponent.getNpc().getLocation().getZ());
 		newLoc.setY(newLoc.getY() + 1.4f);
@@ -136,30 +145,33 @@ public class WarriorUtils {
 		Holo newBar = new Holo(UUID.randomUUID(), getLifeBar(lifePercent))
 		        .setLocation(newLoc);
 		
-		for (Player p : Bukkit.getOnlinePlayers()) {
-			HoloManager.spawnHolo(newBar, p);
-		}
+		HoloManager.spawnHolo(newBar, gp.getPlayer());
 		opponent.setLifeBar(newBar);
 		
-		for (Player p : Bukkit.getOnlinePlayers()) {
-			((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, newBar.getEntity(), opponent.getNpc().getEntity()));
-		}
+		((CraftPlayer) gp.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, newBar.getEntity(), opponent.getNpc().getEntity()));
 		
-		if (opponent.getLife() <= 0)
-			death(opponent, player, list);
+		if (opponent.life <= 0) 
+			death(opponent, gp);
 	}
 	
-	private static void death(Warrior opponent, Player player, List<Warrior> list) {
-		for (Player p : Bukkit.getOnlinePlayers()) {
-			HoloManager.deleteHolo(p, opponent.lifeBar);
-			NPCManager.deleteNPC(p, opponent.getNpc());
+	private static void death(Warrior opponent, GamePlayer gp) {
+		HoloManager.deleteHolo(gp.getPlayer(), opponent.lifeBar);
+		NPCManager.deleteNPC(gp.getPlayer(), opponent.getNpc());
+		
+		for (int i = 0; i < gp.getOpponents().size(); i++) {
+			Warrior w = gp.getOpponents().get(i);
+			if (w.life <= 0) 
+				gp.getOpponents().remove(w);
 		}
 		
-		list.remove(opponent);
-		GamePlayer gp = Utils.getGamePlayer(player);
+		for (int i = 0; i < gp.getWarriors().size(); i++) {
+			Warrior w = gp.getWarriors().get(i);
+			if (w.life <= 0) 
+				gp.getWarriors().remove(w);
+		}
 		gp.setGold(gp.getGold() + opponent.getGold());
 		gp.setXp(gp.getXp() + opponent.getXp());
-		player.sendMessage("§aYou earned §6"+opponent.getGold()+" gold §aand §b"+opponent.getXp()+"xp");
+		gp.getPlayer().sendMessage("§aYou earned §6"+opponent.getGold()+" gold §aand §b"+opponent.getXp()+"xp");
 	}
 	
 	private static String getLifeBar(int lifePercent) {
