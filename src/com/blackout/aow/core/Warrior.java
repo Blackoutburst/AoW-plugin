@@ -1,7 +1,14 @@
 package com.blackout.aow.core;
 
+import org.bukkit.Sound;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.entity.Player;
+
 import com.blackout.aow.main.Main;
 import com.blackout.npcapi.core.NPC;
+
+import net.minecraft.server.v1_8_R3.PacketPlayOutAnimation;
+import net.minecraft.server.v1_8_R3.PlayerConnection;
 
 public class Warrior {
 
@@ -124,6 +131,50 @@ public class Warrior {
 		}
 		
 		return true;
+	}
+	
+	public void fightRight(Player player, int index) {
+		if (Main.player2NPC.size() > 0) {
+			double myZ = this.getNpc().getLocation().getZ();
+			double prevZ = Main.player2NPC.get(0).getNpc().getLocation().getZ();
+			
+			if (Math.abs(prevZ - myZ) < 2 && this.type != WarriorType.Archer) {
+				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
+				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(Main.player2NPC.get(0).getNpc().getEntity(), 1));
+				player.playSound(Main.player2NPC.get(0).npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+			}
+			
+			if (Math.abs(prevZ - myZ) < 6 && this.type == WarriorType.Archer) {
+				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
+				player.playSound(this.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
+				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(Main.player2NPC.get(0).getNpc().getEntity(), 1));
+				player.playSound(Main.player2NPC.get(0).npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+			}
+		}
+	}
+	
+	public void fightLeft(Player player, int index) {
+		if (Main.player1NPC.size() > 0) {
+			double myZ = this.getNpc().getLocation().getZ();
+			double prevZ = Main.player1NPC.get(0).getNpc().getLocation().getZ();
+			
+			if (Math.abs(prevZ - myZ) < 2 && this.type != WarriorType.Archer) {
+				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
+				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(Main.player1NPC.get(0).getNpc().getEntity(), 1));
+				player.playSound(Main.player1NPC.get(0).npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+			}
+			
+			if (Math.abs(prevZ - myZ) < 6 && this.type == WarriorType.Archer) {
+				PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
+				player.playSound(this.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
+				connection.sendPacket(new PacketPlayOutAnimation(this.getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(Main.player1NPC.get(0).getNpc().getEntity(), 1));
+				player.playSound(Main.player1NPC.get(0).npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+			}
+		}
 	}
 	
 }

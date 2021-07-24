@@ -19,6 +19,7 @@ public class EnableEvent {
 		SkinLoader.loadSkinFromUUID(1, "7305938e473743f0bb093bfcc8f9fc5e");
 		SkinLoader.loadSkinFromUUID(2, "369f11812c7d4a7ab72f913df938ee3e");
 		moveNPC();
+		NPCFight();
 	}
 	
 	private void moveNPC() {
@@ -31,6 +32,37 @@ public class EnableEvent {
 				} catch(Exception e) {}
 			}
 		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 1L);
+	}
+	
+	private void NPCFight() {
+		new BukkitRunnable(){
+			@Override
+			public void run(){
+				try {
+					fight();
+				} catch(Exception e) {}
+			}
+		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 20L);
+	}
+	
+	private void fight() {
+		for (Player player : Bukkit.getOnlinePlayers()) {
+			
+			int index = 0;
+			for (Warrior p : Main.player1NPC) {
+				p.fightRight(player, index);
+				index++;
+			}
+		}
+		
+		for (Player player : Bukkit.getOnlinePlayers()) {
+			
+			int index = 0;
+			for (Warrior p : Main.player2NPC) {
+				p.fightLeft(player, index);
+				index++;
+			}
+		}
 	}
 	
 	private void moveToRight() {
