@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.main.Main;
+import com.blackout.holoapi.core.Holo;
+import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.APlayer;
 import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.core.NPCPacket;
@@ -16,6 +18,7 @@ import com.blackout.npcapi.utils.NPCManager;
 
 import net.minecraft.server.v1_8_R3.Item;
 import net.minecraft.server.v1_8_R3.ItemStack;
+import net.minecraft.server.v1_8_R3.PacketPlayOutAttachEntity;
 import net.minecraft.server.v1_8_R3.PacketPlayOutEntityEquipment;
 
 
@@ -58,37 +61,45 @@ public class NPCListener implements NPCPacket {
 	}
 
 	private void spawnNPC(NPC npc, Player p, float Z, float yaw, int playerNumber) {
-		NPC warrior = new NPC(UUID.randomUUID(), "§a██████████")
+		NPC warrior = new NPC(UUID.randomUUID(), "Warrior")
 				.setLocation(new Location(Bukkit.getWorld("world"), 983.5f, 54, Z, yaw, 0))
 				.setSkin(npc.getSkin())
-				.setCapeVisible(false);
+				.setCapeVisible(false)
+				.setNameVisible(false);
+		
+		Holo holo = new Holo(UUID.randomUUID(), "§a██████████")
+		        .setLocation(new Location(Bukkit.getWorld("world"), 983.5f, 54, Z, yaw, 0));
+		HoloManager.spawnHolo(holo, p);
 		
 		new BukkitRunnable() {
 			public void run() {
 				NPCManager.spawnNPC(warrior, p);
 				if (npc.getName().contains("Knight")) {
 					if (playerNumber == 1) {
-						Main.player1NPC.add(new Warrior(warrior, 100, 20, 15, 3, 20, WarriorType.Knight));
+						Main.player1NPC.add(new Warrior(warrior, holo, 100, 20, 15, 3, 20, WarriorType.Knight));
 					} else {
-						Main.player2NPC.add(new Warrior(warrior, 100, 20, 15, 3, 20, WarriorType.Knight));
+						Main.player2NPC.add(new Warrior(warrior, holo, 100, 20, 15, 3, 20, WarriorType.Knight));
 					}
 					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(267))));
+					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, holo.getEntity(), warrior.getEntity()));
 				}
 				if (npc.getName().contains("Archer")) {
-					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(261))));
 					if (playerNumber == 1) {
-						Main.player1NPC.add(new Warrior(warrior, 50, 10, 30, 5, 25, WarriorType.Archer));
+						Main.player1NPC.add(new Warrior(warrior, holo, 50, 10, 30, 5, 25, WarriorType.Archer));
 					} else {
-						Main.player2NPC.add(new Warrior(warrior, 50, 10, 30, 5, 25, WarriorType.Archer));
+						Main.player2NPC.add(new Warrior(warrior, holo, 50, 10, 30, 5, 25, WarriorType.Archer));
 					}
+					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(261))));
+					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, holo.getEntity(), warrior.getEntity()));
 				}
 				if (npc.getName().contains("Berserk")) {
-					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(258))));
 					if (playerNumber == 1) {
-						Main.player1NPC.add(new Warrior(warrior, 200, 30, 50, 10, 40, WarriorType.Berserk));
+						Main.player1NPC.add(new Warrior(warrior, holo, 200, 30, 50, 10, 40, WarriorType.Berserk));
 					} else {
-						Main.player2NPC.add(new Warrior(warrior, 200, 30, 50, 10, 40, WarriorType.Berserk));
+						Main.player2NPC.add(new Warrior(warrior, holo, 200, 30, 50, 10, 40, WarriorType.Berserk));
 					}
+					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(258))));
+					((CraftPlayer) p).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, holo.getEntity(), warrior.getEntity()));
 				}
 			}
 		}.runTaskLater(Main.getPlugin(Main.class), 5L);
