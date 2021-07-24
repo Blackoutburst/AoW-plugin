@@ -29,14 +29,14 @@ public class EnableEvent {
 					moveToLeft();
 				} catch(Exception e) {}
 			}
-		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 20L);
+		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 1L);
 	}
 	
 	private void moveToRight() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 		
 			for (NPC p : Main.player1NPC) {
-				((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getEntityId(), (byte) 0, (byte) 0, (byte)(10), true));
+				((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getEntityId(), (byte) 0, (byte) 0, (byte)(5), true));
 			}
 		}
 	}
@@ -44,7 +44,7 @@ public class EnableEvent {
 	private void moveToLeft() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 			for (NPC p : Main.player2NPC) {
-				((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getEntityId(), (byte) 0, (byte) 0, (byte)(-10), true));
+				((CraftPlayer)player).getHandle().playerConnection.sendPacket(new PacketPlayOutRelEntityMove(p.getEntityId(), (byte) 0, (byte) 0, (byte)(-5), true));
 			}
 		}
 	}
