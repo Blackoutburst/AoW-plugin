@@ -135,37 +135,28 @@ public class WarriorAction {
 		double prevZ = opponent.getNpc().getLocation().getZ();
 		
 		if (Math.abs(prevZ - myZ) < 1.5f && warrior.type != WarriorType.Archer) {
-			PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
-			connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-			connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-			gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-			
-			Warrior opp2 = gp2.getWarriors().get(0);
-			connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
-			connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
-			connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
-			gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-			
-			WarriorUtils.updateLife(warrior, opponent, gp1);
-			WarriorUtils.updateLife(gp2.getOpponents().get(index), opp2, gp2);
+			sendDamagePacket(index, warrior, gp1, gp2, opponent);
 		}
-		
 		if (Math.abs(prevZ - myZ) < 5.5f && warrior.type == WarriorType.Archer) {
-			PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
 			gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-			connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-			connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-			gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-			
-			Warrior opp2 = gp2.getWarriors().get(0);
-			connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
 			gp2.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-			connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
-			connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
-			gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-			
-			WarriorUtils.updateLife(warrior, opponent, gp1);
-			WarriorUtils.updateLife(gp2.getOpponents().get(index), opp2, gp2);
+			sendDamagePacket(index, warrior, gp1, gp2, opponent);
 		}
+	}
+	
+	private static void sendDamagePacket(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2, Warrior opponent) {
+		PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
+		connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
+		connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
+		gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+		
+		Warrior opp2 = gp2.getWarriors().get(0);
+		connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
+		connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
+		connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
+		gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
+		
+		WarriorUtils.updateLife(warrior, opponent, gp1);
+		WarriorUtils.updateLife(gp2.getOpponents().get(index), opp2, gp2);
 	}
 }
