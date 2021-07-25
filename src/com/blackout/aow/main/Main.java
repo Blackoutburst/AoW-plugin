@@ -25,6 +25,9 @@ public class Main extends JavaPlugin implements Listener {
 	public static Location spawnP1;
 	public static Location spawnP2;
 	
+	public static int seconds = 0;
+	public static boolean gameRunning = false;
+	
 	public static GamePlayer player1;
 	public static GamePlayer player2;
 	

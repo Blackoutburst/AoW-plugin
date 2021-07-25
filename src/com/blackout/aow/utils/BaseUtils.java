@@ -30,6 +30,7 @@ public class BaseUtils {
 	}
 	
 	private static void killBase(Base base) {
+		base.setLife(0);
 		GameUtils.endGame(base, Main.player1);
 		GameUtils.endGame(base, Main.player2);
 		

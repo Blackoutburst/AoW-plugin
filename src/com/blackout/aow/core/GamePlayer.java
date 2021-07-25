@@ -17,8 +17,9 @@ public class GamePlayer {
 	protected Base base;
 	protected Holo baseTitle;
 	protected Holo opponentBaseTitle;
+	protected Board board;
 	
-	public GamePlayer(Player player, Base base) {
+	public GamePlayer(Player player, Base base, Board board) {
 		this.player = player;
 		this.gold = 100;
 		this.xp = 0;
@@ -27,6 +28,7 @@ public class GamePlayer {
 		this.base = base;
 		this.baseTitle = null;
 		this.opponentBaseTitle = null;
+		this.board = board;
 	}
  	
 	public Player getPlayer() {
@@ -92,5 +94,12 @@ public class GamePlayer {
 	public void setOpponentBaseTitle(Holo opponentBaseTitle) {
 		this.opponentBaseTitle = opponentBaseTitle;
 	}
-	
+
+	public Board getBoard() {
+		return board;
+	}
+
+	public void setBoard(Board board) {
+		this.board = board;
+	}
 }

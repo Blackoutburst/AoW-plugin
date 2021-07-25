@@ -8,6 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.main.Main;
 import com.blackout.aow.utils.BaseUtils;
+import com.blackout.aow.utils.GameUtils;
 import com.blackout.aow.utils.WarriorUtils;
 
 import net.minecraft.server.v1_8_R3.PacketPlayOutAnimation;
@@ -54,6 +55,8 @@ public class WarriorAction {
 		
 		WarriorUtils.death(Main.player1);
 		WarriorUtils.death(Main.player2);
+		GameUtils.updateScoreboard(Main.player1);
+		GameUtils.updateScoreboard(Main.player2);
 	}
 	
 	private static void moveToRight() {

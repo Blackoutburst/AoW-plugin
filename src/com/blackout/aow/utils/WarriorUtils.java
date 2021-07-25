@@ -145,6 +145,8 @@ public class WarriorUtils {
 	}
 	
 	private static void sendAddPacket(float Z, float yaw, GamePlayer player1, GamePlayer player2, WarriorType type, int item) {
+		GameUtils.updateScoreboard(player1);
+		
 		NPC warrior = new NPC(UUID.randomUUID(), "Warrior")
 				.setLocation(new Location(Bukkit.getWorld("world"), 983.5f, 54, Z, yaw, 0))
 				.setSkin(SkinLoader.getSkinById(type.ordinal()))
@@ -194,14 +196,14 @@ public class WarriorUtils {
 	}
 	
 	private static Warrior knight(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 100, 20, 15, 3, 20, WarriorType.Knight);
+		return new Warrior(warrior, lifeBar, 100, 20, 15, 5, 20, WarriorType.Knight);
 	}
 	
 	private static Warrior archer(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 50, 10, 30, 5, 25, WarriorType.Archer);
+		return new Warrior(warrior, lifeBar, 60, 10, 20, 10, 25, WarriorType.Archer);
 	}
 	
 	private static Warrior berserk(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 200, 30, 100, 10, 80, WarriorType.Berserk);
+		return new Warrior(warrior, lifeBar, 400, 50, 300, 20, 280, WarriorType.Berserk);
 	}
 }

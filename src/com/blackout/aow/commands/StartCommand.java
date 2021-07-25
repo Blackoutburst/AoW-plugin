@@ -4,6 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.main.Main;
+import com.blackout.aow.utils.GameUtils;
 import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.utils.HoloManager;
 
@@ -48,6 +49,7 @@ public class StartCommand {
 			public void run(){
 				Main.player1.getPlayer().teleport(Main.spawnP1);
 				Main.player2.getPlayer().teleport(Main.spawnP2);
+				GameUtils.gameTimer();
 			}
 		}.runTaskLaterAsynchronously(Main.getPlugin(Main.class), 100L);
 	}
