@@ -113,7 +113,7 @@ public class Warrior {
 		if (index == 0) return true;
 		prevZ = Main.player1.warriors.get(index - 1).getNpc().getLocation().getZ();
 		
-		return (!(Math.abs(prevZ - myZ) < 2));
+		return (Math.abs(prevZ - myZ) >= 2);
 	}
 	
 	public boolean canWalkLeft(int index) {
