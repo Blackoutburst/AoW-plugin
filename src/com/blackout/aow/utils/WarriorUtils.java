@@ -204,6 +204,6 @@ public class WarriorUtils {
 	}
 	
 	private static Warrior berserk(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 400, 50, 300, 20, 280, WarriorType.Berserk);
+		return new Warrior(warrior, lifeBar, 400, 50, 300, 20, 150, WarriorType.Berserk);
 	}
 }
