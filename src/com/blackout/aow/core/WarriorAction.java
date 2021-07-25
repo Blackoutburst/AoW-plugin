@@ -91,9 +91,9 @@ public class WarriorAction {
 	
 	private static void fight(int index, Warrior warrior, Player player, GamePlayer gp1, GamePlayer gp2) {
 		if (gp1.getOpponents().size() > 0) {
-			fightNPC(index, warrior, player, gp1, gp2);
+			fightNPC(index, warrior, gp1, gp2);
 		} else {
-			fightBase(index, warrior, player, gp1, gp2);
+			fightBase(index, warrior, gp1, gp2);
 		}
 	}
 	
