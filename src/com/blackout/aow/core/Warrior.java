@@ -131,9 +131,6 @@ public class Warrior {
 		if (index == 0) return true;
 		prevZ = Main.player2.warriors.get(index - 1).getNpc().getLocation().getZ();
 		
-		if (Math.abs(prevZ - myZ) < 2) {
-			return false;
-		}
-		return true;
+		return (Math.abs(prevZ - myZ) >= 2);
 	}
 }

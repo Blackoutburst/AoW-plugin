@@ -3,7 +3,6 @@ package com.blackout.aow.core;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.main.Main;
@@ -43,13 +42,13 @@ public class WarriorAction {
 	private static void fight() {
 		int index = 0;
 		for (Warrior p : Main.player1.getWarriors()) {
-			fight(index, p, Main.player1.getPlayer(), Main.player1, Main.player2);
+			fight(index, p, Main.player1, Main.player2);
 			index++;
 		}
 		
 		index = 0;
 		for (Warrior p : Main.player2.getWarriors()) {
-			fight(index, p, Main.player2.getPlayer(), Main.player2, Main.player1);
+			fight(index, p, Main.player2, Main.player1);
 			index++;
 		}
 		
@@ -89,7 +88,7 @@ public class WarriorAction {
 		}
 	}
 	
-	private static void fight(int index, Warrior warrior, Player player, GamePlayer gp1, GamePlayer gp2) {
+	private static void fight(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2) {
 		if (gp1.getOpponents().size() > 0) {
 			fightNPC(index, warrior, gp1, gp2);
 		} else {
