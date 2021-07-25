@@ -2,6 +2,7 @@ package com.blackout.aow.main;
 
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -23,6 +24,8 @@ import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
 
+	public static final Location SPAWN = new Location(Bukkit.getWorld("world"), 958.5f, 55, 1326.5f, -90, 0);
+	
 	public static GamePlayer player1;
 	public static GamePlayer player2;
 	

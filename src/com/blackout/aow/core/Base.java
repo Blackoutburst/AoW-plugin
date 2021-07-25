@@ -11,8 +11,8 @@ public class Base {
 	public Base(float Z, Holo lifeBar) {
 		this.Z = Z;
 		this.lifeBar = lifeBar;
-		this.life = 10000;
-		this.maxLife = 10000;
+		this.life = 3000;
+		this.maxLife = 3000;
 	}
 
 	public float getZ() {

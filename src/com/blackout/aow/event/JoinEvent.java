@@ -8,6 +8,7 @@ import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import com.blackout.aow.core.NPCListener;
+import com.blackout.aow.main.Main;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
@@ -26,7 +27,7 @@ public class JoinEvent {
 		event.getPlayer().setHealth(20);
 		event.getPlayer().setFoodLevel(20);
 		event.getPlayer().setSaturation(10000);
-		event.getPlayer().teleport(new Location(Bukkit.getWorld("world"), 958.5f, 55, 1326.5f, -90, 0));
+		event.getPlayer().teleport(Main.SPAWN);
 		PacketInteractListener.init(event.getPlayer(), new NPCListener());
 		spawnNPC(event);
 	}
@@ -38,7 +39,6 @@ public class JoinEvent {
 		spawnArcher(event, 1341.5f, "§4");
 		spawnMount(event, 1313.5f, "§9");
 		spawnMount(event, 1339.5f, "§4");
-		
 	}
 	
 	private void spawnKnight(PlayerJoinEvent event, float Z, String color) {

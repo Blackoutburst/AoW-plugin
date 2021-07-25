@@ -10,9 +10,9 @@ import org.bukkit.entity.Player;
 import com.blackout.aow.core.Base;
 import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.core.Warrior;
+import com.blackout.aow.main.Main;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
-
 
 public class BaseUtils {
 
@@ -24,22 +24,16 @@ public class BaseUtils {
 		lifeBar.getEntity().setCustomName(getLifeBar(lifePercent));
 		HoloManager.hideHolo(gp.getPlayer(), lifeBar);
 		HoloManager.reloadHolo(gp.getPlayer(), lifeBar);
+		if (base.getLife() <= 0) {
+			killBase(base, gp);
+		}
+	}
+	
+	private static void killBase(Base base, GamePlayer gp) {
+		GameUtils.endGame(base, gp);
 		
-//		Location loc = base.getLifeBar().getLocation();
-//		
-//		HoloManager.deleteHolo(gp.getPlayer(), base.getLifeBar());
-//		
-//		String str = "";
-//		
-//		str += (base == Main.player1.getBase()) ? "§9" : "§4";
-//		str += (base == gp.getBase()) ? "Your base health" : "Enemy base health";
-//		
-//		Holo newBar = new Holo(UUID.randomUUID(), str)
-//		        .setLocation(loc)
-//		        .addLine(getLifeBar(lifePercent));
-//		
-//		HoloManager.spawnHolo(newBar, gp.getPlayer());
-//		base.setLifeBar(newBar);
+		Main.player1 = null;
+		Main.player2 = null;
 	}
 	
 	private static String getLifeBar(int lifePercent) {
