@@ -1,6 +1,9 @@
 package com.blackout.aow.main;
 
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -11,10 +14,13 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.blackout.aow.core.Base;
 import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.event.EnableEvent;
 import com.blackout.aow.event.JoinEvent;
 import com.blackout.aow.utils.Utils;
+import com.blackout.holoapi.core.Holo;
+import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
@@ -50,29 +56,48 @@ public class Main extends JavaPlugin implements Listener {
 		switch(command.getName()) {
 			case "setplayer1":
 				if (args.length == 0) {
-					sender.sendMessage("�cInvalid usage");
+					sender.sendMessage("§cInvalid usage");
 					return true;
 				}
 				Player p = Bukkit.getPlayer(args[0]);
 				if (p == null) {
-					sender.sendMessage("�cUnknown player "+ args[0]);
+					sender.sendMessage("§cUnknown player "+ args[0]);
 					return true;
 				}
-				Utils.setNameColor(p, "�9");
-				player1 = new GamePlayer(p);
+				Utils.setNameColor(p, "§9");
+				
+				Holo lifeBar = new Holo(UUID.randomUUID(), "§9Your base health")
+				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1307.5f, 0, 0))
+				        .addLine("§a████████████████████");
+				HoloManager.spawnHolo(lifeBar, p);
+				lifeBar = new Holo(UUID.randomUUID(), "§4Enemy base health")
+				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1345.5f, 0, 0))
+				        .addLine("§a████████████████████");
+				HoloManager.spawnHolo(lifeBar, p);
+				
+				player1 = new GamePlayer(p, new Base(1307.5f, lifeBar));
 			break;
 			case "setplayer2":
 				if (args.length == 0) {
-					sender.sendMessage("�cInvalid usage");
+					sender.sendMessage("§cInvalid usage");
 					return true;
 				}
 				Player p2 = Bukkit.getPlayer(args[0]);
 				if (p2 == null) {
-					sender.sendMessage("�cUnknown player "+ args[0]);
+					sender.sendMessage("§cUnknown player "+ args[0]);
 					return true;
 				}
-				Utils.setNameColor(p2, "�4");
-				player2 = new GamePlayer(p2);
+				Utils.setNameColor(p2, "§4");
+				
+				lifeBar = new Holo(UUID.randomUUID(), "§9Enemy base health")
+				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1307.5f, 0, 0))
+				        .addLine("§a████████████████████");
+				HoloManager.spawnHolo(lifeBar, p2);
+				lifeBar = new Holo(UUID.randomUUID(), "§4Your base health")
+				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1345.5f, 0, 0))
+				        .addLine("§a████████████████████");
+				HoloManager.spawnHolo(lifeBar, p2);
+				player2 = new GamePlayer(p2, new Base(1345.5f, lifeBar));
 			break;
 			default: return true;
 		}
