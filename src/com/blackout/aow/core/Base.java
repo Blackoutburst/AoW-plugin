@@ -6,11 +6,13 @@ public class Base {
 	protected float Z;
 	protected Holo lifeBar;
 	protected int life;
+	protected int maxLife;
 	
 	public Base(float Z, Holo lifeBar) {
 		this.Z = Z;
 		this.lifeBar = lifeBar;
 		this.life = 10000;
+		this.maxLife = 10000;
 	}
 
 	public float getZ() {
@@ -36,5 +38,12 @@ public class Base {
 	public void setLife(int life) {
 		this.life = life;
 	}
-	
+
+	public int getMaxLife() {
+		return maxLife;
+	}
+
+	public void setMaxLife(int maxLife) {
+		this.maxLife = maxLife;
+	}
 }

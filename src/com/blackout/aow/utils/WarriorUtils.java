@@ -1,4 +1,4 @@
-package com.blackout.aow.core;
+package com.blackout.aow.utils;
 
 import java.util.UUID;
 
@@ -9,8 +9,10 @@ import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import com.blackout.aow.core.GamePlayer;
+import com.blackout.aow.core.Warrior;
+import com.blackout.aow.core.WarriorType;
 import com.blackout.aow.main.Main;
-import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
@@ -19,10 +21,8 @@ import com.blackout.npcapi.utils.SkinLoader;
 
 import net.minecraft.server.v1_8_R3.Item;
 import net.minecraft.server.v1_8_R3.ItemStack;
-import net.minecraft.server.v1_8_R3.PacketPlayOutAnimation;
 import net.minecraft.server.v1_8_R3.PacketPlayOutAttachEntity;
 import net.minecraft.server.v1_8_R3.PacketPlayOutEntityEquipment;
-import net.minecraft.server.v1_8_R3.PlayerConnection;
 
 public class WarriorUtils {
 
@@ -91,53 +91,12 @@ public class WarriorUtils {
 		}
 	}
 	
-	public static void fight(int index, Warrior warrior, Player player, GamePlayer gp1, GamePlayer gp2) {
-		if (gp1.getOpponents().size() > 0) {
-			Warrior opponent = gp1.getOpponents().get(0);
-			double myZ = warrior.getNpc().getLocation().getZ();
-			double prevZ = opponent.getNpc().getLocation().getZ();
-			
-			if (Math.abs(prevZ - myZ) < 2 && warrior.type != WarriorType.Archer) {
-				PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
-				connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-				gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				
-				Warrior opp2 = gp2.getWarriors().get(0);
-				connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
-				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
-				gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				
-				updateLife(warrior, opponent, gp1);
-				updateLife(gp2.getOpponents().get(index), opp2, gp2);
-			}
-			
-			if (Math.abs(prevZ - myZ) < 6 && warrior.type == WarriorType.Archer) {
-				PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
-				gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-				connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opponent.getNpc().getEntity(), 1));
-				gp1.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				
-				Warrior opp2 = gp2.getWarriors().get(0);
-				connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
-				gp2.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
-				connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
-				gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
-				
-				updateLife(warrior, opponent, gp1);
-				updateLife(gp2.getOpponents().get(index), opp2, gp2);
-			}
-		}
-	}
 	
-	private static void updateLife(Warrior warrior, Warrior opponent, GamePlayer gp) {
+	public static void updateLife(Warrior warrior, Warrior opponent, GamePlayer gp) {
 		opponent.setLife(opponent.getLife() - warrior.getDamage());
 		int lifePercent = (opponent.getLife() * 100 / opponent.getMaxLife());
 		
-		HoloManager.deleteHolo(gp.getPlayer(), opponent.lifeBar);
+		HoloManager.deleteHolo(gp.getPlayer(), opponent.getLifeBar());
 		
 		Location newLoc = new Location (opponent.getNpc().getLocation().getWorld(), opponent.getNpc().getLocation().getX(), opponent.getNpc().getLocation().getY(), opponent.getNpc().getLocation().getZ());
 		newLoc.setY(newLoc.getY() + 1.4f);
@@ -155,7 +114,7 @@ public class WarriorUtils {
 		Warrior w = gp.getOpponents().get(0);
 		if (w.getLife() <= 0)  {
 			gp.getOpponents().remove(w);
-			HoloManager.deleteHolo(gp.getPlayer(), w.lifeBar);
+			HoloManager.deleteHolo(gp.getPlayer(), w.getLifeBar());
 			NPCManager.deleteNPC(gp.getPlayer(), w.getNpc());
 			
 			gp.setGold(gp.getGold() + w.getGold());
@@ -166,7 +125,7 @@ public class WarriorUtils {
 		w = gp.getWarriors().get(0);
 		if (w.getLife() <= 0) {
 			gp.getWarriors().remove(w);
-			HoloManager.deleteHolo(gp.getPlayer(), w.lifeBar);
+			HoloManager.deleteHolo(gp.getPlayer(), w.getLifeBar());
 			NPCManager.deleteNPC(gp.getPlayer(), w.getNpc());
 		}
 	}

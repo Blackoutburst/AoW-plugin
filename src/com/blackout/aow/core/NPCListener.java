@@ -3,6 +3,7 @@ package com.blackout.aow.core;
 
 import org.bukkit.entity.Player;
 
+import com.blackout.aow.utils.WarriorUtils;
 import com.blackout.npcapi.core.APlayer;
 import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.core.NPCPacket;

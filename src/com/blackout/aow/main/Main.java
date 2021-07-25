@@ -1,9 +1,7 @@
 package com.blackout.aow.main;
 
-import java.util.UUID;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -18,9 +16,9 @@ import com.blackout.aow.core.Base;
 import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.event.EnableEvent;
 import com.blackout.aow.event.JoinEvent;
+import com.blackout.aow.utils.BaseUtils;
 import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.core.Holo;
-import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
@@ -66,15 +64,7 @@ public class Main extends JavaPlugin implements Listener {
 				}
 				Utils.setNameColor(p, "§9");
 				
-				Holo lifeBar = new Holo(UUID.randomUUID(), "§9Your base health")
-				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1307.5f, 0, 0))
-				        .addLine("§a████████████████████");
-				HoloManager.spawnHolo(lifeBar, p);
-				lifeBar = new Holo(UUID.randomUUID(), "§4Enemy base health")
-				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1345.5f, 0, 0))
-				        .addLine("§a████████████████████");
-				HoloManager.spawnHolo(lifeBar, p);
-				
+				Holo lifeBar = BaseUtils.spawnHealthBar(p, true);
 				player1 = new GamePlayer(p, new Base(1307.5f, lifeBar));
 			break;
 			case "setplayer2":
@@ -89,14 +79,7 @@ public class Main extends JavaPlugin implements Listener {
 				}
 				Utils.setNameColor(p2, "§4");
 				
-				lifeBar = new Holo(UUID.randomUUID(), "§9Enemy base health")
-				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1307.5f, 0, 0))
-				        .addLine("§a████████████████████");
-				HoloManager.spawnHolo(lifeBar, p2);
-				lifeBar = new Holo(UUID.randomUUID(), "§4Your base health")
-				        .setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1345.5f, 0, 0))
-				        .addLine("§a████████████████████");
-				HoloManager.spawnHolo(lifeBar, p2);
+				lifeBar = BaseUtils.spawnHealthBar(p2, false);
 				player2 = new GamePlayer(p2, new Base(1345.5f, lifeBar));
 			break;
 			default: return true;
