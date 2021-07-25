@@ -1,9 +1,7 @@
 package com.blackout.aow.event;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.core.Warrior;
@@ -47,19 +45,20 @@ public class EnableEvent {
 	}
 	
 	private void fight() {
-		for (Player player : Bukkit.getOnlinePlayers()) {
-			int index = 0;
-			for (Warrior p : Main.player1.getWarriors()) {
-				WarriorUtils.fight(p, player, index, Main.player1, Main.player2);
-				index++;
-			}
-			
-			index = 0;
-			for (Warrior p : Main.player2.getWarriors()) {
-				WarriorUtils.fight(p, player, index, Main.player2, Main.player1);
-				index++;
-			}
+		int index = 0;
+		for (Warrior p : Main.player1.getWarriors()) {
+			WarriorUtils.fight(index, p, Main.player1.getPlayer(), Main.player1, Main.player2);
+			index++;
 		}
+		
+		index = 0;
+		for (Warrior p : Main.player2.getWarriors()) {
+			WarriorUtils.fight(index, p, Main.player2.getPlayer(), Main.player2, Main.player1);
+			index++;
+		}
+		
+		WarriorUtils.death(Main.player1);
+		WarriorUtils.death(Main.player2);
 	}
 	
 	private void moveToRight() {

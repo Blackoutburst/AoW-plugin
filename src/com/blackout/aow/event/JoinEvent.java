@@ -21,6 +21,9 @@ import net.minecraft.server.v1_8_R3.PlayerConnection;
 public class JoinEvent {
 
 	public void execute(PlayerJoinEvent event) {
+		event.getPlayer().setHealth(20);
+		event.getPlayer().setFoodLevel(20);
+		event.getPlayer().setSaturation(10000);
 		event.getPlayer().teleport(new Location(Bukkit.getWorld("world"), 958.5f, 55, 1326.5f, -90, 0));
 		PacketInteractListener.init(event.getPlayer(), new NPCListener());
 		spawnNPC(event);

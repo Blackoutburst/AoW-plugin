@@ -91,7 +91,7 @@ public class WarriorUtils {
 		}
 	}
 	
-	public static void fight(Warrior warrior, Player player, int index, GamePlayer gp1, GamePlayer gp2) {
+	public static void fight(int index, Warrior warrior, Player player, GamePlayer gp1, GamePlayer gp2) {
 		if (gp1.getOpponents().size() > 0) {
 			Warrior opponent = gp1.getOpponents().get(0);
 			double myZ = warrior.getNpc().getLocation().getZ();
@@ -105,7 +105,7 @@ public class WarriorUtils {
 				
 				Warrior opp2 = gp2.getWarriors().get(0);
 				connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
-				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(0).getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
 				connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
 				gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
 				
@@ -123,7 +123,7 @@ public class WarriorUtils {
 				Warrior opp2 = gp2.getWarriors().get(0);
 				connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
 				gp2.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(0).getNpc().getEntity(), 0));
+				connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
 				connection.sendPacket(new PacketPlayOutAnimation(opp2.getNpc().getEntity(), 1));
 				gp2.getPlayer().playSound(opponent.npc.getLocation(), Sound.HURT_FLESH, 1.0f, 1.0f);
 				
@@ -149,29 +149,26 @@ public class WarriorUtils {
 		opponent.setLifeBar(newBar);
 		
 		((CraftPlayer) gp.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, newBar.getEntity(), opponent.getNpc().getEntity()));
-		
-		if (opponent.life <= 0) 
-			death(opponent, gp);
 	}
 	
-	private static void death(Warrior opponent, GamePlayer gp) {
-		HoloManager.deleteHolo(gp.getPlayer(), opponent.lifeBar);
-		NPCManager.deleteNPC(gp.getPlayer(), opponent.getNpc());
-		
-		for (int i = 0; i < gp.getOpponents().size(); i++) {
-			Warrior w = gp.getOpponents().get(i);
-			if (w.life <= 0) 
-				gp.getOpponents().remove(w);
+	public static void death(GamePlayer gp) {
+		Warrior w = gp.getOpponents().get(0);
+		if (w.getLife() <= 0)  {
+			gp.getOpponents().remove(w);
+			HoloManager.deleteHolo(gp.getPlayer(), w.lifeBar);
+			NPCManager.deleteNPC(gp.getPlayer(), w.getNpc());
+			
+			gp.setGold(gp.getGold() + w.getGold());
+			gp.setXp(gp.getXp() + w.getXp());
+			gp.getPlayer().sendMessage("§aYou earned §6"+w.getGold()+" gold §aand §b"+w.getXp()+"xp");
 		}
-		
-		for (int i = 0; i < gp.getWarriors().size(); i++) {
-			Warrior w = gp.getWarriors().get(i);
-			if (w.life <= 0) 
-				gp.getWarriors().remove(w);
+	
+		w = gp.getWarriors().get(0);
+		if (w.getLife() <= 0) {
+			gp.getWarriors().remove(w);
+			HoloManager.deleteHolo(gp.getPlayer(), w.lifeBar);
+			NPCManager.deleteNPC(gp.getPlayer(), w.getNpc());
 		}
-		gp.setGold(gp.getGold() + opponent.getGold());
-		gp.setXp(gp.getXp() + opponent.getXp());
-		gp.getPlayer().sendMessage("§aYou earned §6"+opponent.getGold()+" gold §aand §b"+opponent.getXp()+"xp");
 	}
 	
 	private static String getLifeBar(int lifePercent) {
