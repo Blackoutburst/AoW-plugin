@@ -1,38 +1,28 @@
 package com.blackout.aow.utils;
 
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
-
 import com.blackout.aow.core.Base;
 import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.core.Warrior;
 import com.blackout.aow.main.Main;
+import com.blackout.holoapi.core.APlayer;
+import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.utils.NPCManager;
-
-import net.minecraft.server.v1_8_R3.PacketPlayOutTitle;
-import net.minecraft.server.v1_8_R3.PlayerConnection;
-import net.minecraft.server.v1_8_R3.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_8_R3.PacketPlayOutTitle.EnumTitleAction;
 
 public class GameUtils {
 
 	public static void endGame(Base base, GamePlayer gp) {
+		Utils.resetNameColor(gp.getPlayer());
 		sendTitle(base, gp);
 		deleteNPCandHolo(gp);
-		gp.getPlayer().teleport(Main.SPAWN);
+		gp.getPlayer().teleport(Main.spawn);
 	}
 	
 	private static void sendTitle(Base base, GamePlayer gp) {
-		PlayerConnection connection = ((CraftPlayer) gp.getPlayer()).getHandle().playerConnection;
-		
 		if (base == gp.getBase()) {
-			connection.sendPacket(new PacketPlayOutTitle(0, 40, 20));
-			connection.sendPacket(new PacketPlayOutTitle(EnumTitleAction.TITLE, ChatSerializer.a("{'text': '�6Game Ended'}")));
-			connection.sendPacket(new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{'text': '�cYou lose!'}")));
+			Utils.sendTitle(gp.getPlayer(), "§6Game Ended", "§cYou lose!", 0, 100, 20);
 		} else {
-			connection.sendPacket(new PacketPlayOutTitle(0, 40, 20));
-			connection.sendPacket(new PacketPlayOutTitle(EnumTitleAction.TITLE, ChatSerializer.a("{'text': '�6Game Ended'}")));
-			connection.sendPacket(new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, ChatSerializer.a("{'text': '�aYou won!'}")));
+			Utils.sendTitle(gp.getPlayer(), "§6Game Ended", "§aYou won!", 0, 100, 20);
 		}
 	}
 	
@@ -52,8 +42,17 @@ public class GameUtils {
 			HoloManager.deleteHolo(gp.getPlayer(), w.getLifeBar());
 			NPCManager.deleteNPC(gp.getPlayer(), w.getNpc());
 		}
-		HoloManager.deleteHolo(gp.getPlayer(), gp.getBase().getLifeBar());
+		HoloManager.deleteHolo(gp.getPlayer(), Main.player1.getBase().getLifeBar());
+		HoloManager.deleteHolo(gp.getPlayer(), Main.player2.getBase().getLifeBar());
 		HoloManager.deleteHolo(gp.getPlayer(), gp.getBaseTitle());
 		HoloManager.deleteHolo(gp.getPlayer(), gp.getOpponentBaseTitle());
+		
+		APlayer ap = APlayer.get(gp.getPlayer());
+		for (int i = 0; i < ap.holos.size(); i++) {
+			Holo h = ap.holos.get(i);
+			if (h.getName().contains("████████████████████"))
+				HoloManager.deleteHolo(gp.getPlayer(), h);
+		}
+		
 	}
 }

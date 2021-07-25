@@ -13,3 +13,6 @@ commands:
   setplayer2:
     description: Set the player 2
     usage: /setplayer2 player
+  start:
+    description: Start the game
+    usage: /start

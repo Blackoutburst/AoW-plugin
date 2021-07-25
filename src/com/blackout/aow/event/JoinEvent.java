@@ -27,7 +27,7 @@ public class JoinEvent {
 		event.getPlayer().setHealth(20);
 		event.getPlayer().setFoodLevel(20);
 		event.getPlayer().setSaturation(10000);
-		event.getPlayer().teleport(Main.SPAWN);
+		event.getPlayer().teleport(Main.spawn);
 		PacketInteractListener.init(event.getPlayer(), new NPCListener());
 		spawnNPC(event);
 	}

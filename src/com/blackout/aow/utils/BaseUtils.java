@@ -25,12 +25,13 @@ public class BaseUtils {
 		HoloManager.hideHolo(gp.getPlayer(), lifeBar);
 		HoloManager.reloadHolo(gp.getPlayer(), lifeBar);
 		if (base.getLife() <= 0) {
-			killBase(base, gp);
+			killBase(base);
 		}
 	}
 	
-	private static void killBase(Base base, GamePlayer gp) {
-		GameUtils.endGame(base, gp);
+	private static void killBase(Base base) {
+		GameUtils.endGame(base, Main.player1);
+		GameUtils.endGame(base, Main.player2);
 		
 		Main.player1 = null;
 		Main.player2 = null;
@@ -61,15 +62,11 @@ public class BaseUtils {
 	}
 	
 	public static Holo spawnHealthBar(Player p, boolean left) {
-		Holo leftLifeBar = new Holo(UUID.randomUUID(), "§a████████████████████")
-				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 55.7f, 1307.5f, 0, 0));
-		HoloManager.spawnHolo(leftLifeBar, p);
+		Holo lifeBar = new Holo(UUID.randomUUID(), "§a████████████████████")
+				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 55.7f, left ? 1307.5f : 1345.5f, 0, 0));
+		HoloManager.spawnHolo(lifeBar, p);
 		
-		Holo rightLifeBar = new Holo(UUID.randomUUID(), "§a████████████████████")
-				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 55.7f, 1345.5f, 0, 0));
-		HoloManager.spawnHolo(rightLifeBar, p);
-		
-		return (left ? leftLifeBar : rightLifeBar);
+		return (lifeBar);
 	}
 	
 	public static void spawnHealthBarTitle(GamePlayer p, boolean left) {
