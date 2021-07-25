@@ -53,5 +53,7 @@ public class GameUtils {
 			NPCManager.deleteNPC(gp.getPlayer(), w.getNpc());
 		}
 		HoloManager.deleteHolo(gp.getPlayer(), gp.getBase().getLifeBar());
+		HoloManager.deleteHolo(gp.getPlayer(), gp.getBaseTitle());
+		HoloManager.deleteHolo(gp.getPlayer(), gp.getOpponentBaseTitle());
 	}
 }

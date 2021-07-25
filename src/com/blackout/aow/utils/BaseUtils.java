@@ -61,26 +61,38 @@ public class BaseUtils {
 	}
 	
 	public static Holo spawnHealthBar(Player p, boolean left) {
-		String str = left ? "§9Your base health" : "§9Enemy base health";
-		
-		Holo lifeBar = new Holo(UUID.randomUUID(), str)
-				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1307.5f, 0, 0));
-		HoloManager.spawnHolo(lifeBar, p);
-		
 		Holo leftLifeBar = new Holo(UUID.randomUUID(), "§a████████████████████")
 				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 55.7f, 1307.5f, 0, 0));
 		HoloManager.spawnHolo(leftLifeBar, p);
-		
-		str = left ? "§4Enemy base health" : "§4Your base health";
-		
-		lifeBar = new Holo(UUID.randomUUID(), str)
-				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1345.5f, 0, 0));
-		HoloManager.spawnHolo(lifeBar, p);
 		
 		Holo rightLifeBar = new Holo(UUID.randomUUID(), "§a████████████████████")
 				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 55.7f, 1345.5f, 0, 0));
 		HoloManager.spawnHolo(rightLifeBar, p);
 		
 		return (left ? leftLifeBar : rightLifeBar);
+	}
+	
+	public static void spawnHealthBarTitle(GamePlayer p, boolean left) {
+		String str = left ? "§9Your base health" : "§9Enemy base health";
+		
+		Holo lifeBar = new Holo(UUID.randomUUID(), str)
+				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1307.5f, 0, 0));
+		HoloManager.spawnHolo(lifeBar, p.getPlayer());
+		if (left) {
+			p.setBaseTitle(lifeBar);
+		} else {
+			p.setOpponentBaseTitle(lifeBar);
+		}
+		
+		str = left ? "§4Enemy base health" : "§4Your base health";
+		
+		lifeBar = new Holo(UUID.randomUUID(), str)
+				.setLocation(new Location(Bukkit.getWorld("world"), 978.5f, 56, 1345.5f, 0, 0));
+		HoloManager.spawnHolo(lifeBar, p.getPlayer());
+		if (left) {
+			p.setOpponentBaseTitle(lifeBar);
+		} else {
+			p.setBaseTitle(lifeBar);
+		}
 	}
 }

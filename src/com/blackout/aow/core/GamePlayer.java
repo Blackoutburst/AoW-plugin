@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.bukkit.entity.Player;
 
+import com.blackout.holoapi.core.Holo;
+
 public class GamePlayer {
 
 	protected Player player;
@@ -13,6 +15,8 @@ public class GamePlayer {
 	protected List<Warrior> warriors;
 	protected List<Warrior> opponents;
 	protected Base base;
+	protected Holo baseTitle;
+	protected Holo opponentBaseTitle;
 	
 	public GamePlayer(Player player, Base base) {
 		this.player = player;
@@ -21,6 +25,8 @@ public class GamePlayer {
 		this.warriors = new ArrayList<Warrior>();
 		this.opponents = new ArrayList<Warrior>();
 		this.base = base;
+		this.baseTitle = null;
+		this.opponentBaseTitle = null;
 	}
  	
 	public Player getPlayer() {
@@ -70,4 +76,21 @@ public class GamePlayer {
 	public void setBase(Base base) {
 		this.base = base;
 	}
+
+	public Holo getBaseTitle() {
+		return baseTitle;
+	}
+
+	public void setBaseTitle(Holo baseTitle) {
+		this.baseTitle = baseTitle;
+	}
+
+	public Holo getOpponentBaseTitle() {
+		return opponentBaseTitle;
+	}
+
+	public void setOpponentBaseTitle(Holo opponentBaseTitle) {
+		this.opponentBaseTitle = opponentBaseTitle;
+	}
+	
 }

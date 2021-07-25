@@ -69,6 +69,7 @@ public class Main extends JavaPlugin implements Listener {
 				
 				Holo lifeBar = BaseUtils.spawnHealthBar(p, true);
 				player1 = new GamePlayer(p, new Base(1307.5f, lifeBar));
+				BaseUtils.spawnHealthBarTitle(player1, true);
 			break;
 			case "setplayer2":
 				if (args.length == 0) {
@@ -84,6 +85,7 @@ public class Main extends JavaPlugin implements Listener {
 				
 				lifeBar = BaseUtils.spawnHealthBar(p2, false);
 				player2 = new GamePlayer(p2, new Base(1345.5f, lifeBar));
+				BaseUtils.spawnHealthBarTitle(player2, false);
 			break;
 			default: return true;
 		}
