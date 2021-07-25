@@ -59,13 +59,13 @@ public class WarriorUtils {
 	
 	private static void createArcher(float Z, float yaw, Player p) {
 		GamePlayer gp = Utils.getGamePlayer(p);
-		if (gp.getGold() < 30) {
+		if (gp.getGold() < 20) {
 			p.sendMessage("§cSorry but you don't have enough gold for this");
 			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
-		gp.setGold(gp.getGold() - 30);
-		p.sendMessage("§aArcher created for 30 gold");
+		gp.setGold(gp.getGold() - 20);
+		p.sendMessage("§aArcher created for 20 gold");
 		
 		if (gp == Main.player1) {
 			sendAddPacket(Z, yaw, Main.player1, Main.player2, WarriorType.Archer, 261);
@@ -76,13 +76,13 @@ public class WarriorUtils {
 	
 	private static void createBerserk(float Z, float yaw, Player p) {
 		GamePlayer gp = Utils.getGamePlayer(p);
-		if (gp.getGold() < 100) {
+		if (gp.getGold() < 300) {
 			p.sendMessage("§cSorry but you don't have enough gold for this");
 			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
-		gp.setGold(gp.getGold() - 100);
-		p.sendMessage("§aBerserk created for 100 gold");
+		gp.setGold(gp.getGold() - 300);
+		p.sendMessage("§aBerserk created for 300 gold");
 		
 		if (gp == Main.player1) {
 			sendAddPacket(Z, yaw, Main.player1, Main.player2, WarriorType.Berserk, 258);

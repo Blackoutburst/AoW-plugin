@@ -66,7 +66,7 @@ public class JoinEvent {
 		PlayerConnection connection = ((CraftPlayer) event.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(261))));
 		
-		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e30 §6gold")
+		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e20 §6gold")
 		        .setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 55.1f, Z, 0, 0));
 		HoloManager.spawnHolo(price, event.getPlayer());
 	}
@@ -81,7 +81,7 @@ public class JoinEvent {
 		PlayerConnection connection = ((CraftPlayer) event.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(258))));
 		
-		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e100 §6gold")
+		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e300 §6gold")
 		        .setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 55.1f, Z, 0, 0));
 		HoloManager.spawnHolo(price, event.getPlayer());
 	}
