@@ -8,6 +8,8 @@ import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import com.blackout.aow.core.NPCListener;
+import com.blackout.holoapi.core.Holo;
+import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.core.PacketInteractListener;
 import com.blackout.npcapi.utils.NPCManager;
@@ -48,6 +50,10 @@ public class JoinEvent {
 		
 		PlayerConnection connection = ((CraftPlayer) event.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(267))));
+		
+		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e15 §6gold")
+		        .setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 55.1f, Z, 0, 0));
+		HoloManager.spawnHolo(price, event.getPlayer());
 	}
 	
 	private void spawnArcher(PlayerJoinEvent event, float Z, String color) {
@@ -59,6 +65,10 @@ public class JoinEvent {
 		
 		PlayerConnection connection = ((CraftPlayer) event.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(261))));
+		
+		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e30 §6gold")
+		        .setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 55.1f, Z, 0, 0));
+		HoloManager.spawnHolo(price, event.getPlayer());
 	}
 	
 	private void spawnMount(PlayerJoinEvent event, float Z, String color) {
@@ -70,6 +80,10 @@ public class JoinEvent {
 		
 		PlayerConnection connection = ((CraftPlayer) event.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutEntityEquipment(npc.getEntityId(), 0, new ItemStack(Item.getById(258))));
+		
+		Holo price = new Holo(UUID.randomUUID(), "§6Cost §e100 §6gold")
+		        .setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 55.1f, Z, 0, 0));
+		HoloManager.spawnHolo(price, event.getPlayer());
 	}
 	
 }
