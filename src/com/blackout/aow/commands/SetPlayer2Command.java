@@ -26,7 +26,7 @@ public class SetPlayer2Command {
 		}
 		Utils.setNameColor(p, "§4");
 		
-		sender.sendMessage(p.getDisplayName()+" §a is now player 1"+ args[0]);
+		sender.sendMessage(p.getDisplayName()+" §a is now player 2");
 		
 		Holo lifeBar = BaseUtils.spawnHealthBar(p, false);
 		Main.player2 = new GamePlayer(p, new Base(1345.5f, lifeBar));
