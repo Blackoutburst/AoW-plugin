@@ -13,37 +13,29 @@ public class NPCListener implements NPCPacket {
 
 	@Override
 	public void onLeftClick(Player p, int id) {
-		APlayer ap = APlayer.get(p);
-		for (NPC npc : ap.npcs) {
-			if (id == npc.getEntityId()) {
-				switch(npc.getName()) {
-					case "§9Knight": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
-					case "§9Archer": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
-					case "§9Berserk": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
-					case "§4Knight": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
-					case "§4Archer": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
-					case "§4Berserk": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
-					default: continue;
-				}
-			}
-		}
+		runAction(p, id);
 	}
 
 	@Override
 	public void onRightClick(Player p, int id) {
+		runAction(p, id);
+	}
+	
+	private void runAction(Player p, int id) {
 		APlayer ap = APlayer.get(p);
 		for (NPC npc : ap.npcs) {
 			if (id == npc.getEntityId()) {
 				switch(npc.getName()) {
-					case "§9Knight": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
-					case "§9Archer": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
-					case "§9Berserk": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
-					case "§4Knight": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
-					case "§4Archer": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
-					case "§4Berserk": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
-					default: continue;
+				case "§9Knight": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
+				case "§9Archer": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
+				case "§9Berserk": WarriorUtils.createNewWarrior(npc, p, 1307.5f, 0); break;
+				case "§4Knight": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
+				case "§4Archer": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
+				case "§4Berserk": WarriorUtils.createNewWarrior(npc, p, 1345.5f, 180); break;
+				default: continue;
 				}
 			}
 		}
+		
 	}
 }
