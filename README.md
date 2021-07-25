@@ -2,7 +2,6 @@
 [![Release](https://img.shields.io/github/release/Blackoutburst/AOW-plugin.svg)](https://github.com/Blackoutburst/AOW-plugin/releases)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8e4206e8498248a28c02f020061cdf82)](https://www.codacy.com/gh/Blackoutburst/AOW-plugin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Blackoutburst/AOW-plugin&amp;utm_campaign=Badge_Grade)
 
-
 # Age of War plugin
 This plugin re create the flash game Age of War\
 Note this is still in early EARLY **EARLY** development and many feature are still missing.
