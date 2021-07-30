@@ -7,7 +7,7 @@ I do not own any right on the original game Age of War, all right belong to the 
 
 # Age of War plugin
 This plugin re create the flash game Age of War\
-Note this is still in early EARLY **EARLY** development and many feature are still missing.
+Note this is still in early EARLY **EARLY** development and many features are still missing.
 
 Screenshot of the current game state\
 ![2021-07-25_11 52 10](https://user-images.githubusercontent.com/30992311/126895107-bf3a2ff4-998c-4526-b9c2-aa2db4a15518.png)
