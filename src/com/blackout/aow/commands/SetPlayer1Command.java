@@ -11,6 +11,7 @@ import com.blackout.aow.main.Main;
 import com.blackout.aow.utils.BaseUtils;
 import com.blackout.aow.utils.GameUtils;
 import com.blackout.holoapi.core.Holo;
+import com.blackout.holoapi.utils.HoloManager;
 
 public class SetPlayer1Command {
 
@@ -29,8 +30,8 @@ public class SetPlayer1Command {
 		Holo lifeBar = BaseUtils.spawnHealthBar(p, true);
 		Board board = new Board(p);
 		GameUtils.setDefaultScoreboard(board);
-		
 		Main.player1 = new GamePlayer(p, new Base(1307.5f, lifeBar), board);
+		HoloManager.hideHolo(p, lifeBar);
 		sender.sendMessage(p.getDisplayName()+" §a is now player 1");
 	}
 }

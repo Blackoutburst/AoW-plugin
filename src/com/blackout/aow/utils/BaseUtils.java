@@ -29,6 +29,15 @@ public class BaseUtils {
 		}
 	}
 	
+	public static void refreshLife(Base base, GamePlayer gp) {
+		int lifePercent = (base.getLife() * 100 / base.getMaxLife());
+		
+		Holo lifeBar = base.getLifeBar();
+		lifeBar.getEntity().setCustomName(getLifeBar(lifePercent));
+		HoloManager.hideHolo(gp.getPlayer(), lifeBar);
+		HoloManager.reloadHolo(gp.getPlayer(), lifeBar);
+	}
+	
 	private static void killBase(Base base) {
 		base.setLife(0);
 		GameUtils.endGame(base, Main.player1);
