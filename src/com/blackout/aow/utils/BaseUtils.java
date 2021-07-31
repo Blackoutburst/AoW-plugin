@@ -39,26 +39,26 @@ public class BaseUtils {
 	}
 	
 	private static String getLifeBar(int lifePercent) {
-		if (lifePercent <= 5) return "§c████████████████████";
-		if (lifePercent <= 10) return "§a█§c███████████████████";
-		if (lifePercent <= 15) return "§a██§c██████████████████";
-		if (lifePercent <= 20) return "§a███§c█████████████████";
-		if (lifePercent <= 25) return "§a████§c████████████████";
-		if (lifePercent <= 30) return "§a█████§c███████████████";
-		if (lifePercent <= 35) return "§a██████§c██████████████";
-		if (lifePercent <= 40) return "§a███████§c█████████████";
-		if (lifePercent <= 45) return "§a████████§c████████████";
-		if (lifePercent <= 50) return "§a█████████§c███████████";
-		if (lifePercent <= 55) return "§a██████████§c██████████";
-		if (lifePercent <= 60) return "§a███████████§c█████████";
-		if (lifePercent <= 65) return "§a████████████§c████████";
-		if (lifePercent <= 70) return "§a█████████████§c███████";
-		if (lifePercent <= 75) return "§a██████████████§c██████";
-		if (lifePercent <= 80) return "§a███████████████§c█████";
-		if (lifePercent <= 85) return "§a████████████████§c████";
-		if (lifePercent <= 90) return "§a█████████████████§c███";
-		if (lifePercent <= 95) return "§a██████████████████§c██";
-		if (lifePercent < 100) return "§a███████████████████§c█";
+		if (lifePercent <= 5) return "§8████████████████████";
+		if (lifePercent <= 10) return "§4█§8███████████████████";
+		if (lifePercent <= 15) return "§c██§8██████████████████";
+		if (lifePercent <= 20) return "§c███§8█████████████████";
+		if (lifePercent <= 25) return "§c████§8████████████████";
+		if (lifePercent <= 30) return "§6█████§8███████████████";
+		if (lifePercent <= 35) return "§6██████§8██████████████";
+		if (lifePercent <= 40) return "§6███████§8█████████████";
+		if (lifePercent <= 45) return "§6████████§8████████████";
+		if (lifePercent <= 50) return "§6█████████§8███████████";
+		if (lifePercent <= 55) return "§e██████████§8██████████";
+		if (lifePercent <= 60) return "§e███████████§8█████████";
+		if (lifePercent <= 65) return "§e████████████§8████████";
+		if (lifePercent <= 70) return "§e█████████████§8███████";
+		if (lifePercent <= 75) return "§e██████████████§8██████";
+		if (lifePercent <= 80) return "§a███████████████§8█████";
+		if (lifePercent <= 85) return "§a████████████████§8████";
+		if (lifePercent <= 90) return "§a█████████████████§8███";
+		if (lifePercent <= 95) return "§a██████████████████§8██";
+		if (lifePercent < 100) return "§a███████████████████§8█";
 		return "§a████████████████████";
 	}
 	

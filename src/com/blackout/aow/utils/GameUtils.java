@@ -7,8 +7,6 @@ import com.blackout.aow.core.Board;
 import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.core.Warrior;
 import com.blackout.aow.main.Main;
-import com.blackout.holoapi.core.APlayer;
-import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.utils.NPCManager;
 
@@ -18,9 +16,14 @@ public class GameUtils {
 		Utils.resetNameColor(gp.getPlayer());
 		sendTitle(base, gp);
 		deleteNPCandHolo(gp);
-		gp.getPlayer().teleport(Main.spawn);
 		GameUtils.updateScoreboard(gp);
 		Main.gameRunning = false;
+		
+		new BukkitRunnable() {
+			public void run() {
+				gp.getPlayer().teleport(Main.spawn);
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 100L);
 	}
 	
 	private static void sendTitle(Base base, GamePlayer gp) {
@@ -51,13 +54,6 @@ public class GameUtils {
 		HoloManager.deleteHolo(gp.getPlayer(), Main.player2.getBase().getLifeBar());
 		HoloManager.deleteHolo(gp.getPlayer(), gp.getBaseTitle());
 		HoloManager.deleteHolo(gp.getPlayer(), gp.getOpponentBaseTitle());
-		
-		APlayer ap = APlayer.get(gp.getPlayer());
-		for (int i = 0; i < ap.holos.size(); i++) {
-			Holo h = ap.holos.get(i);
-			if (h.getName().contains("████████████████████"))
-				HoloManager.deleteHolo(gp.getPlayer(), h);
-		}
 	}
 	
 	public static void setDefaultScoreboard(Board board) {

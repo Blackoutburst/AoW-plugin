@@ -29,68 +29,37 @@ public class WarriorUtils {
 	public static void createNewWarrior(NPC npc, Player p, float Z, float yaw) {
 		new BukkitRunnable() {
 			public void run() {
-					if (npc.getName().contains("Knight"))
-						createKnight(Z, yaw, p);
-					if (npc.getName().contains("Archer"))
-						createArcher(Z, yaw, p);
-					if (npc.getName().contains("Berserk"))
-						createBerserk(Z, yaw, p);
+					switch(npc.getName().substring(2)) {
+						case "Clubman": purchaseWarrior(Z, yaw, p, "Clubman", WarriorType.Type.Clubman); break;
+						case "Slingshot": purchaseWarrior(Z, yaw, p, "Slingshot", WarriorType.Type.Slingshot); break;
+						case "Spearman": purchaseWarrior(Z, yaw, p, "Spearman", WarriorType.Type.Spearman); break;
+						case "Knight": purchaseWarrior(Z, yaw, p, "Knight", WarriorType.Type.Knight); break;
+						case "Archer": purchaseWarrior(Z, yaw, p, "Archer", WarriorType.Type.Archer); break;
+						case "Berserk": purchaseWarrior(Z, yaw, p, "Berserk", WarriorType.Type.Berserk); break;
+					}
 			}
 		}.runTaskLater(Main.getPlugin(Main.class), 5L);
 	}
 	
-	private static void createKnight(float Z, float yaw, Player p) {
+	private static void purchaseWarrior(float Z, float yaw, Player p, String warriorName, WarriorType.Type type) {
+		Warrior w = getWarriorType(type, null, null);
+		
 		GamePlayer gp = Utils.getGamePlayer(p);
-		if (gp.getGold() < 15) {
+		if (gp.getGold() < w.getCost()) {
 			p.sendMessage("§cSorry but you don't have enough gold for this");
 			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
-		gp.setGold(gp.getGold() - 15);
-		p.sendMessage("§aKnight created for 15 gold");
-		
+		gp.setGold(gp.getGold() - w.getCost());
+		p.sendMessage("§b"+warriorName+" §acreated for §6"+w.getCost()+" §agold");
+		p.playSound(p.getLocation(), Sound.NOTE_PLING, 1.0f, 1.0f);
 		if (gp == Main.player1) {
-			sendAddPacket(Z, yaw, Main.player1, Main.player2, WarriorType.Knight, 267);
+			sendAddPacket(Z, yaw, Main.player1, Main.player2, type);
 		} else {
-			sendAddPacket(Z, yaw, Main.player2, Main.player1, WarriorType.Knight, 267);
+			sendAddPacket(Z, yaw, Main.player2, Main.player1, type);
 		}
 		
 	}
-	
-	private static void createArcher(float Z, float yaw, Player p) {
-		GamePlayer gp = Utils.getGamePlayer(p);
-		if (gp.getGold() < 20) {
-			p.sendMessage("§cSorry but you don't have enough gold for this");
-			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
-			return;
-		}
-		gp.setGold(gp.getGold() - 20);
-		p.sendMessage("§aArcher created for 20 gold");
-		
-		if (gp == Main.player1) {
-			sendAddPacket(Z, yaw, Main.player1, Main.player2, WarriorType.Archer, 261);
-		} else {
-			sendAddPacket(Z, yaw, Main.player2, Main.player1, WarriorType.Archer, 261);
-		}
-	}
-	
-	private static void createBerserk(float Z, float yaw, Player p) {
-		GamePlayer gp = Utils.getGamePlayer(p);
-		if (gp.getGold() < 300) {
-			p.sendMessage("§cSorry but you don't have enough gold for this");
-			p.playSound(p.getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
-			return;
-		}
-		gp.setGold(gp.getGold() - 300);
-		p.sendMessage("§aBerserk created for 300 gold");
-		
-		if (gp == Main.player1) {
-			sendAddPacket(Z, yaw, Main.player1, Main.player2, WarriorType.Berserk, 258);
-		} else {
-			sendAddPacket(Z, yaw, Main.player2, Main.player1, WarriorType.Berserk, 258);
-		}
-	}
-	
 	
 	public static void updateLife(Warrior warrior, Warrior opponent, GamePlayer gp) {
 		opponent.setLife(opponent.getLife() - warrior.getDamage());
@@ -131,20 +100,20 @@ public class WarriorUtils {
 	}
 	
 	private static String getLifeBar(int lifePercent) {
-		if (lifePercent <= 10) return "§c██████████";
-		if (lifePercent <= 20) return "§a█§c█████████";
-		if (lifePercent <= 30) return "§a██§c████████";
-		if (lifePercent <= 40) return "§a███§c███████";
-		if (lifePercent <= 50) return "§a████§c██████";
-		if (lifePercent < 60) return "§a█████§c█████";
-		if (lifePercent < 70) return "§a██████§c████";
-		if (lifePercent < 80) return "§a███████§c███";
-		if (lifePercent < 90) return "§a████████§c██";
-		if (lifePercent < 100) return "§a█████████§c█";
+		if (lifePercent <= 10) return "§8██████████";
+		if (lifePercent <= 20) return "§4█§8█████████";
+		if (lifePercent <= 30) return "§e██§8████████";
+		if (lifePercent <= 40) return "§6███§8███████";
+		if (lifePercent <= 50) return "§6████§8██████";
+		if (lifePercent <= 60) return "§e█████§8█████";
+		if (lifePercent <= 70) return "§e██████§8████";
+		if (lifePercent <= 80) return "§a███████§8███";
+		if (lifePercent <= 90) return "§a████████§8██";
+		if (lifePercent < 100) return "§a█████████§8█";
 		return "§a██████████";
 	}
 	
-	private static void sendAddPacket(float Z, float yaw, GamePlayer player1, GamePlayer player2, WarriorType type, int item) {
+	private static void sendAddPacket(float Z, float yaw, GamePlayer player1, GamePlayer player2, WarriorType.Type type) {
 		GameUtils.updateScoreboard(player1);
 		
 		NPC warrior = new NPC(UUID.randomUUID(), "Warrior")
@@ -159,17 +128,11 @@ public class WarriorUtils {
 		HoloManager.spawnHolo(lifeBar, player1.getPlayer());
 		NPCManager.spawnNPC(warrior, player1.getPlayer());
 		
-		Warrior w = null;
-		if (type == WarriorType.Knight)
-			w = knight(warrior, lifeBar);
-		if (type == WarriorType.Archer)
-			w = archer(warrior, lifeBar);
-		if (type == WarriorType.Berserk)
-			w = berserk(warrior, lifeBar);
+		Warrior w = getWarriorType(type, warrior, lifeBar);
 		
 		player1.getWarriors().add(w);
 		
-		((CraftPlayer) player1.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(item))));
+		((CraftPlayer) player1.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(w.getHeldItemID()))));
 		((CraftPlayer) player1.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, lifeBar.getEntity(), warrior.getEntity()));
 		
 		warrior = new NPC(UUID.randomUUID(), "Warrior")
@@ -183,27 +146,22 @@ public class WarriorUtils {
 		HoloManager.spawnHolo(lifeBar, player2.getPlayer());
 		NPCManager.spawnNPC(warrior, player2.getPlayer());
 		
-		if (type == WarriorType.Knight)
-			w = knight(warrior, lifeBar);
-		if (type == WarriorType.Archer)
-			w = archer(warrior, lifeBar);
-		if (type == WarriorType.Berserk)
-			w = berserk(warrior, lifeBar);
+		w = getWarriorType(type, warrior, lifeBar);
 		
 		player2.getOpponents().add(w);
-		((CraftPlayer) player2.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(item))));
+		((CraftPlayer) player2.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityEquipment(warrior.getEntityId(), 0, new ItemStack(Item.getById(w.getHeldItemID()))));
 		((CraftPlayer) player2.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, lifeBar.getEntity(), warrior.getEntity()));
 	}
 	
-	private static Warrior knight(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 100, 20, 15, 5, 20, WarriorType.Knight);
-	}
-	
-	private static Warrior archer(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 60, 10, 20, 10, 25, WarriorType.Archer);
-	}
-	
-	private static Warrior berserk(NPC warrior, Holo lifeBar) {
-		return new Warrior(warrior, lifeBar, 400, 50, 300, 20, 150, WarriorType.Berserk);
+	private static Warrior getWarriorType(WarriorType.Type type, NPC warrior, Holo lifeBar) {
+		switch(type) {
+			case Clubman: return (WarriorType.clubman(warrior, lifeBar));
+			case Slingshot: return (WarriorType.slingshot(warrior, lifeBar));
+			case Spearman: return (WarriorType.spearman(warrior, lifeBar));
+			case Knight: return (WarriorType.knight(warrior, lifeBar));
+			case Archer: return (WarriorType.archer(warrior, lifeBar));
+			case Berserk: return (WarriorType.berserk(warrior, lifeBar));
+		}
+		return null;
 	}
 }

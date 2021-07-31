@@ -9,6 +9,11 @@ import com.blackout.holoapi.core.Holo;
 
 public class GamePlayer {
 
+	public enum Age {
+		prehistoric,
+		medieval
+	}
+	
 	protected Player player;
 	protected int gold;
 	protected int xp;
@@ -18,6 +23,7 @@ public class GamePlayer {
 	protected Holo baseTitle;
 	protected Holo opponentBaseTitle;
 	protected Board board;
+	protected Age age;
 	
 	public GamePlayer(Player player, Base base, Board board) {
 		this.player = player;
@@ -29,6 +35,7 @@ public class GamePlayer {
 		this.baseTitle = null;
 		this.opponentBaseTitle = null;
 		this.board = board;
+		this.age = Age.prehistoric;
 	}
  	
 	public Player getPlayer() {
@@ -101,5 +108,13 @@ public class GamePlayer {
 
 	public void setBoard(Board board) {
 		this.board = board;
+	}
+
+	public Age getAge() {
+		return age;
+	}
+
+	public void setAge(Age age) {
+		this.age = age;
 	}
 }

@@ -14,10 +14,12 @@ public class Warrior {
 	protected int cost;
 	protected int xp;
 	protected int gold;
-	protected WarriorType type;
+	protected float range;
+	protected WarriorType.Type type;
+	protected int heldItemID;
 	
 	
-	public Warrior(NPC npc, Holo lifeBar, int life, int damage, int cost, int xp, int gold, WarriorType type) {
+	public Warrior(NPC npc, Holo lifeBar, int life, int damage, int cost, int xp, int gold, float range, WarriorType.Type type, int heldItemID) {
 		this.npc = npc;
 		this.lifeBar = lifeBar;
 		this.life = life;
@@ -26,7 +28,9 @@ public class Warrior {
 		this.cost = cost;
 		this.xp = xp;
 		this.gold = gold;
+		this.range = range;
 		this.type = type;
+		this.heldItemID = heldItemID;
 	}
 
 	public NPC getNpc() {
@@ -77,11 +81,11 @@ public class Warrior {
 		this.gold = gold;
 	}
 
-	public WarriorType getType() {
+	public WarriorType.Type getType() {
 		return type;
 	}
 
-	public void setType(WarriorType type) {
+	public void setType(WarriorType.Type type) {
 		this.type = type;
 	}
 	
@@ -133,4 +137,21 @@ public class Warrior {
 		
 		return (Math.abs(prevZ - myZ) >= 2);
 	}
+
+	public float getRange() {
+		return range;
+	}
+
+	public void setRange(float range) {
+		this.range = range;
+	}
+
+	public int getHeldItemID() {
+		return heldItemID;
+	}
+
+	public void setHeldItemID(int heldItemID) {
+		this.heldItemID = heldItemID;
+	}
+	
 }

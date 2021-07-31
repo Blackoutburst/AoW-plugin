@@ -4,9 +4,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.main.Main;
+import com.blackout.aow.utils.BaseUtils;
 import com.blackout.aow.utils.GameUtils;
+import com.blackout.aow.utils.PurchaseNPC;
 import com.blackout.aow.utils.Utils;
-import com.blackout.holoapi.utils.HoloManager;
 
 public class StartCommand {
 
@@ -20,9 +21,6 @@ public class StartCommand {
 			sender.sendMessage("§cPlayer 2 is not defined");
 			return;
 		}
-		
-		HoloManager.spawnHolo(Main.player2.getBase().getLifeBar(), Main.player1.getPlayer());
-		HoloManager.spawnHolo(Main.player1.getBase().getLifeBar(), Main.player2.getPlayer());
 		
 		scheduleStart();
 		teleport();
@@ -47,8 +45,13 @@ public class StartCommand {
 		new BukkitRunnable(){
 			@Override
 			public void run(){
+				PurchaseNPC.spawnNPC(Main.player1.getPlayer());
+				PurchaseNPC.spawnNPC(Main.player2.getPlayer());
+				BaseUtils.spawnHealthBarTitle(Main.player1, true);
+				BaseUtils.spawnHealthBarTitle(Main.player2, true);
 				Main.player1.getPlayer().teleport(Main.spawnP1);
 				Main.player2.getPlayer().teleport(Main.spawnP2);
+
 				GameUtils.gameTimer();
 			}
 		}.runTaskLaterAsynchronously(Main.getPlugin(Main.class), 100L);

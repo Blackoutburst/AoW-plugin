@@ -17,9 +17,6 @@ public class Board {
 		this.objective.setDisplaySlot(DisplaySlot.SIDEBAR);
 		this.objective.setDisplayName(player.getDisplayName());
 		player.setScoreboard(this.scoreboard);
-		if (this.scoreboard.getTeam(player.getName()) == null) {
-			this.scoreboard.registerNewTeam(player.getName());
-		}
 	}
  
 	public Scoreboard getScoreboard() {

@@ -26,9 +26,7 @@ public class SetPlayer2Command {
 			sender.sendMessage("§cUnknown player "+ args[0]);
 			return;
 		}
-		Utils.setNameColor(p, "§4");
 		
-		sender.sendMessage(p.getDisplayName()+" §a is now player 2");
 		
 		Holo lifeBar = BaseUtils.spawnHealthBar(p, false);
 		Board board = new Board(p);
@@ -36,5 +34,7 @@ public class SetPlayer2Command {
 		
 		Main.player2 = new GamePlayer(p, new Base(1345.5f, lifeBar), board);
 		BaseUtils.spawnHealthBarTitle(Main.player2, false);
+		Utils.setNameColor(p, "§4");
+		sender.sendMessage(p.getDisplayName()+" §a is now player 2");
 	}
 }
