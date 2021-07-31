@@ -36,6 +36,7 @@ public class WarriorUtils {
 						case "Knight": purchaseWarrior(Z, yaw, p, "Knight", WarriorType.Type.Knight); break;
 						case "Archer": purchaseWarrior(Z, yaw, p, "Archer", WarriorType.Type.Archer); break;
 						case "Berserk": purchaseWarrior(Z, yaw, p, "Berserk", WarriorType.Type.Berserk); break;
+						default: return;
 					}
 			}
 		}.runTaskLater(Main.getPlugin(Main.class), 5L);
@@ -161,7 +162,7 @@ public class WarriorUtils {
 			case Knight: return (WarriorType.knight(warrior, lifeBar));
 			case Archer: return (WarriorType.archer(warrior, lifeBar));
 			case Berserk: return (WarriorType.berserk(warrior, lifeBar));
+			default: return null;
 		}
-		return null;
 	}
 }
