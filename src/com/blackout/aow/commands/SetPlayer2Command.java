@@ -10,7 +10,6 @@ import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.utils.BaseUtils;
 import com.blackout.aow.utils.GameUtils;
-import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.core.Holo;
 
 public class SetPlayer2Command {
@@ -34,7 +33,6 @@ public class SetPlayer2Command {
 		
 		Main.player2 = new GamePlayer(p, new Base(1345.5f, lifeBar), board);
 		BaseUtils.spawnHealthBarTitle(Main.player2, false);
-		Utils.setNameColor(p, "§4");
 		sender.sendMessage(p.getDisplayName()+" §a is now player 2");
 	}
 }

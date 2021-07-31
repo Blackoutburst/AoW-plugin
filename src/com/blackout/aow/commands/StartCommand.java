@@ -51,6 +51,8 @@ public class StartCommand {
 				BaseUtils.spawnHealthBarTitle(Main.player2, true);
 				Main.player1.getPlayer().teleport(Main.spawnP1);
 				Main.player2.getPlayer().teleport(Main.spawnP2);
+				Utils.setNameColor(Main.player1.getPlayer(), "§9");
+				Utils.setNameColor(Main.player2.getPlayer(), "§4");
 
 				GameUtils.gameTimer();
 			}

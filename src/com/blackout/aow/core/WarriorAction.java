@@ -100,31 +100,16 @@ public class WarriorAction {
 		double myZ = warrior.getNpc().getLocation().getZ();
 		double prevZ = gp2.getBase().getZ();
 		
-		if (Math.abs(prevZ - myZ) < warrior.range && warrior.type != WarriorType.Type.Archer) {
-			PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
-			connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-			gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
-			
-			connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
-			connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
-			gp2.getPlayer().playSound(gp2.getOpponents().get(index).getNpc().getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
-			
-			BaseUtils.updateLife(warrior, gp2.getBase(), gp1);
-			BaseUtils.updateLife(warrior, gp2.getBase(), gp2);
-		}
 		
 		if (Math.abs(prevZ - myZ) < warrior.range && warrior.type == WarriorType.Type.Archer) {
-			PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
 			gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-			connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
-			gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
-			
-			connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
 			gp2.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
-			connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
-			gp2.getPlayer().playSound(gp2.getOpponents().get(index).getNpc().getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
-			BaseUtils.updateLife(warrior, gp2.getBase(), gp1);
-			BaseUtils.updateLife(warrior, gp2.getBase(), gp2);
+			sendBaseDamagePacket(index, warrior, gp1, gp2);
+			return;
+		}
+		
+		if (Math.abs(prevZ - myZ) < warrior.range) {
+			sendBaseDamagePacket(index, warrior, gp1, gp2);
 		}
 	}
 	
@@ -133,12 +118,14 @@ public class WarriorAction {
 		double myZ = warrior.getNpc().getLocation().getZ();
 		double prevZ = opponent.getNpc().getLocation().getZ();
 		
-		if (Math.abs(prevZ - myZ) < 1.5f && warrior.type != WarriorType.Type.Archer) {
-			sendDamagePacket(index, warrior, gp1, gp2, opponent);
-		}
-		if (Math.abs(prevZ - myZ) < 5.5f && warrior.type == WarriorType.Type.Archer) {
+		if (Math.abs(prevZ - myZ) < warrior.range && warrior.type == WarriorType.Type.Archer) {
 			gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
 			gp2.getPlayer().playSound(warrior.npc.getLocation(), Sound.SHOOT_ARROW, 1.0f, 1.0f);
+			sendDamagePacket(index, warrior, gp1, gp2, opponent);
+			return;
+		}
+		
+		if (Math.abs(prevZ - myZ) < warrior.range) {
 			sendDamagePacket(index, warrior, gp1, gp2, opponent);
 		}
 	}
@@ -157,5 +144,18 @@ public class WarriorAction {
 		
 		WarriorUtils.updateLife(warrior, opponent, gp1);
 		WarriorUtils.updateLife(gp2.getOpponents().get(index), opp2, gp2);
+	}
+	
+	private static void sendBaseDamagePacket(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2) {
+		PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
+		connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
+		gp1.getPlayer().playSound(warrior.npc.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+		
+		connection = ((CraftPlayer) gp2.getPlayer()).getHandle().playerConnection;
+		connection.sendPacket(new PacketPlayOutAnimation(gp2.getOpponents().get(index).getNpc().getEntity(), 0));
+		gp2.getPlayer().playSound(gp2.getOpponents().get(index).getNpc().getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+		
+		BaseUtils.updateLife(warrior, gp2.getBase(), gp1);
+		BaseUtils.updateLife(warrior, gp2.getBase(), gp2);
 	}
 }

@@ -10,7 +10,6 @@ import com.blackout.aow.core.GamePlayer;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.utils.BaseUtils;
 import com.blackout.aow.utils.GameUtils;
-import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.core.Holo;
 
 public class SetPlayer1Command {
@@ -32,7 +31,6 @@ public class SetPlayer1Command {
 		GameUtils.setDefaultScoreboard(board);
 		
 		Main.player1 = new GamePlayer(p, new Base(1307.5f, lifeBar), board);
-		Utils.setNameColor(p, "§9");
 		sender.sendMessage(p.getDisplayName()+" §a is now player 1");
 	}
 }
