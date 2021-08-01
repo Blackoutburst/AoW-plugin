@@ -12,6 +12,11 @@ import com.blackout.npcapi.utils.NPCManager;
 
 public class GameUtils {
 
+	/**
+	 * Clean game value when a game is over
+	 * @param base
+	 * @param gp
+	 */
 	public static void endGame(Base base, GamePlayer gp) {
 		Utils.resetNameColor(gp.getPlayer());
 		sendTitle(base, gp);
@@ -26,6 +31,11 @@ public class GameUtils {
 		}.runTaskLater(Main.getPlugin(Main.class), 100L);
 	}
 	
+	/**
+	 * Send the end game title saying if you won or lose the game
+	 * @param base
+	 * @param gp
+	 */
 	private static void sendTitle(Base base, GamePlayer gp) {
 		if (base == gp.getBase()) {
 			Utils.sendTitle(gp.getPlayer(), "§6Game Ended", "§cYou lose!", 0, 100, 20);
@@ -34,6 +44,10 @@ public class GameUtils {
 		}
 	}
 	
+	/**
+	 * Clean all holograms and NPC 
+	 * @param gp
+	 */
 	private static void deleteNPCandHolo(GamePlayer gp) {
 		for (Warrior w : gp.getWarriors()) {
 			HoloManager.deleteHolo(gp.getPlayer(), w.getLifeBar());
@@ -56,6 +70,10 @@ public class GameUtils {
 		HoloManager.deleteHolo(gp.getPlayer(), gp.getOpponentBaseTitle());
 	}
 	
+	/**
+	 * Set the default scoreboard
+	 * @param board
+	 */
 	public static void setDefaultScoreboard(Board board) {
 		board.setTitle("§6§lAge of War");
 		board.set(9, "§6§m--------------------");
@@ -69,6 +87,10 @@ public class GameUtils {
 		board.set(1, "§6§m--------------------§r");
 	}
 	
+	/**
+	 * Update the game score board
+	 * @param gp
+	 */
 	public static void updateScoreboard(GamePlayer gp) {
 		int minutes = Main.seconds / 60;
 		int seconds = Main.seconds % 60;
@@ -91,6 +113,12 @@ public class GameUtils {
 		gp.getBoard().set(2, "Enemy Base: " + getHealthColor(oplifePercent) + opbaseHP + "§r/§a" + opbaseMaxHP);
 	}
 	
+	/**
+	 * Return base health color for the score board 
+	 * using the current base health percentage
+	 * @param lifePercent
+	 * @return
+	 */
 	private static String getHealthColor(int lifePercent) {
 		if (lifePercent <= 10) return "§4";
 		if (lifePercent <= 25) return "§c";
@@ -99,6 +127,9 @@ public class GameUtils {
 		return "§a";
 	}
 	
+	/**
+	 * Increase the game time every second and update the score board
+	 */
 	public static void gameTimer() {
 		Main.gameRunning = true;
 		new BukkitRunnable(){

@@ -15,6 +15,15 @@ import com.blackout.holoapi.utils.HoloManager;
 
 public class SetPlayer2Command {
 
+	/**
+	 * Get the player from the 1st argument
+	 * Set this player as game player 2 and generate
+	 * important default value such as the player base
+	 * the player score board and save all of this in a
+	 * new Game Player instance
+	 * @param sender
+	 * @param args
+	 */
 	@SuppressWarnings("deprecation")
 	public void run(CommandSender sender, String[] args) {
 		if (args.length == 0) {

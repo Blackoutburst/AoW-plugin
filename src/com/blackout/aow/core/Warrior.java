@@ -101,6 +101,14 @@ public class Warrior {
 		this.lifeBar = lifeBar;
 	}
 
+	/**
+	 * Check if a warrior is able to walk to the right
+	 * if a warrior is in front of another warrior,
+	 * behind one of his team mate or in front of
+	 * the enemy base he will no longer walk
+	 * @param index
+	 * @return
+	 */
 	public boolean canWalkRight(int index) {
 		if (this.getNpc().getLocation().getZ() > 1345.5f) return false;
 		
@@ -120,6 +128,15 @@ public class Warrior {
 		return (Math.abs(prevZ - myZ) >= 2);
 	}
 	
+	
+	/**
+	 * Check if a warrior is able to walk to the left
+	 * if a warrior is in front of another warrior,
+	 * behind one of his team mate or in front of
+	 * the enemy base he will no longer walk
+	 * @param index
+	 * @return
+	 */
 	public boolean canWalkLeft(int index) {
 		if (this.getNpc().getLocation().getZ() < 1307.5f) return false;
 		

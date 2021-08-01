@@ -26,6 +26,13 @@ import net.minecraft.server.v1_8_R3.PacketPlayOutEntityEquipment;
 
 public class WarriorUtils {
 
+	/**
+	 * Purchase a new warrior at the correct position using the purchase NPC name
+	 * @param npc
+	 * @param p
+	 * @param Z
+	 * @param yaw
+	 */
 	public static void createNewWarrior(NPC npc, Player p, float Z, float yaw) {
 		new BukkitRunnable() {
 			public void run() {
@@ -42,6 +49,15 @@ public class WarriorUtils {
 		}.runTaskLater(Main.getPlugin(Main.class), 5L);
 	}
 	
+	/**
+	 * Check if the player has enough gold to purchase a warrior
+	 * Then purchase the warrior or not  
+	 * @param Z
+	 * @param yaw
+	 * @param p
+	 * @param warriorName
+	 * @param type
+	 */
 	private static void purchaseWarrior(float Z, float yaw, Player p, String warriorName, WarriorType.Type type) {
 		Warrior w = getWarriorType(type, null, null);
 		
@@ -62,6 +78,13 @@ public class WarriorUtils {
 		
 	}
 	
+	/**
+	 * Update a warrior life and set his new life bar
+	 * using the warrior life percentage
+	 * @param warrior
+	 * @param opponent
+	 * @param gp
+	 */
 	public static void updateLife(Warrior warrior, Warrior opponent, GamePlayer gp) {
 		opponent.setLife(opponent.getLife() - warrior.getDamage());
 		int lifePercent = (opponent.getLife() * 100 / opponent.getMaxLife());
@@ -76,10 +99,15 @@ public class WarriorUtils {
 		
 		HoloManager.spawnHolo(newBar, gp.getPlayer());
 		opponent.setLifeBar(newBar);
-		
 		((CraftPlayer) gp.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, newBar.getEntity(), opponent.getNpc().getEntity()));
 	}
 	
+	/**
+	 * Used when a warrior health reach 0
+	 * we remove the warrior visually and physically
+	 * and give gold and xp to the player who killed the warrior
+	 * @param gp
+	 */
 	public static void death(GamePlayer gp) {
 		Warrior w = gp.getOpponents().get(0);
 		if (w.getLife() <= 0)  {
@@ -100,6 +128,12 @@ public class WarriorUtils {
 		}
 	}
 	
+	/**
+	 * Get the life bar color using the warrior life
+	 * percentage
+	 * @param lifePercent
+	 * @return
+	 */
 	private static String getLifeBar(int lifePercent) {
 		if (lifePercent <= 10) return "§8██████████";
 		if (lifePercent <= 20) return "§4█§8█████████";
@@ -114,6 +148,15 @@ public class WarriorUtils {
 		return "§a██████████";
 	}
 	
+	/**
+	 * Create a new warrior using packet, the warrior type stats and position are set here
+	 * we also add the warrior physically to make the game run properly
+	 * @param Z
+	 * @param yaw
+	 * @param player1
+	 * @param player2
+	 * @param type
+	 */
 	private static void sendAddPacket(float Z, float yaw, GamePlayer player1, GamePlayer player2, WarriorType.Type type) {
 		GameUtils.updateScoreboard(player1);
 		
@@ -154,6 +197,13 @@ public class WarriorUtils {
 		((CraftPlayer) player2.getPlayer()).getHandle().playerConnection.sendPacket(new PacketPlayOutAttachEntity(0, lifeBar.getEntity(), warrior.getEntity()));
 	}
 	
+	/**
+	 * Get the warrior type to set their stat, skin and equipment correctly
+	 * @param type
+	 * @param warrior
+	 * @param lifeBar
+	 * @return
+	 */
 	private static Warrior getWarriorType(WarriorType.Type type, NPC warrior, Holo lifeBar) {
 		switch(type) {
 			case Clubman: return (WarriorType.clubman(warrior, lifeBar));

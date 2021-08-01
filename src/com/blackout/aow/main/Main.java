@@ -43,7 +43,6 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		new JoinEvent().execute(event);
-		event.getPlayer().setAllowFlight(true);
 	}
 	
 	@EventHandler

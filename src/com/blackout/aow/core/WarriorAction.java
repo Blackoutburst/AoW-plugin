@@ -16,6 +16,9 @@ import net.minecraft.server.v1_8_R3.PacketPlayOutEntity.PacketPlayOutRelEntityMo
 
 public class WarriorAction {
 
+	/**
+	 * This scheduler make the warrior move toward the enemy base
+	 */
 	public static void moveAction() {
 		new BukkitRunnable(){
 			@Override
@@ -28,6 +31,9 @@ public class WarriorAction {
 		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 1L);
 	}
 	
+	/**
+	 * This scheduler is responsible for the fight action
+	 */
 	public static void fightAction() {
 		new BukkitRunnable(){
 			@Override
@@ -36,9 +42,15 @@ public class WarriorAction {
 					fight();
 				} catch(Exception e) {}
 			}
-		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 20L);
+		}.runTaskTimerAsynchronously(Main.getPlugin(Main.class), 0L, 15L);
 	}
 	
+	/**
+	 * Make warrior fight each other or fight the enemy base
+	 * Note the warrior death is called here after all warrior
+	 * have already fought, this why it make two warrior of the
+	 * same type in the same condition die at the same time
+	 */
 	private static void fight() {
 		int index = 0;
 		for (Warrior p : Main.player1.getWarriors()) {
@@ -58,6 +70,9 @@ public class WarriorAction {
 		GameUtils.updateScoreboard(Main.player2);
 	}
 	
+	/**
+	 * Make warrior move toward the right
+	 */
 	private static void moveToRight() {
 		for (int i = 0; i < Main.player1.getWarriors().size(); i++) {
 			Warrior p = Main.player1.getWarriors().get(i);
@@ -73,6 +88,10 @@ public class WarriorAction {
 		}
 	}
 	
+	
+	/**
+	 * Make warrior move toward the left side
+	 */
 	private static void moveToLeft() {
 		for (int i = 0; i < Main.player2.getWarriors().size(); i++) {
 			Warrior p = Main.player2.getWarriors().get(i);
@@ -88,6 +107,14 @@ public class WarriorAction {
 		}
 	}
 	
+	/**
+	 * Define if a warrior should attack a NPC or a base
+	 * Always attack enemy warrior instead of base
+	 * @param index
+	 * @param warrior
+	 * @param gp1
+	 * @param gp2
+	 */
 	private static void fight(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2) {
 		if (gp1.getOpponents().size() > 0) {
 			fightNPC(index, warrior, gp1, gp2);
@@ -96,6 +123,13 @@ public class WarriorAction {
 		}
 	}
 	
+	/**
+	 * Make a warrior fight a base if it is withing his range
+	 * @param index
+	 * @param warrior
+	 * @param gp1
+	 * @param gp2
+	 */
 	private static void fightBase(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2) {
 		double myZ = warrior.getNpc().getLocation().getZ();
 		double prevZ = gp2.getBase().getZ();
@@ -113,6 +147,13 @@ public class WarriorAction {
 		}
 	}
 	
+	/**
+	 * Make a warrior fight another warrior if it's within his range
+	 * @param index
+	 * @param warrior
+	 * @param gp1
+	 * @param gp2
+	 */
 	private static void fightNPC(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2) {
 		Warrior opponent = gp1.getOpponents().get(0);
 		double myZ = warrior.getNpc().getLocation().getZ();
@@ -130,6 +171,15 @@ public class WarriorAction {
 		}
 	}
 	
+	
+	/**
+	 * Simulate a warrior taking damage and set their new health
+	 * @param index
+	 * @param warrior
+	 * @param gp1
+	 * @param gp2
+	 * @param opponent
+	 */
 	private static void sendDamagePacket(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2, Warrior opponent) {
 		PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));
@@ -146,6 +196,13 @@ public class WarriorAction {
 		WarriorUtils.updateLife(gp2.getOpponents().get(index), opp2, gp2);
 	}
 	
+	/**
+	 * Simulate a base taking damage and set their new health
+	 * @param index
+	 * @param warrior
+	 * @param gp1
+	 * @param gp2
+	 */
 	private static void sendBaseDamagePacket(int index, Warrior warrior, GamePlayer gp1, GamePlayer gp2) {
 		PlayerConnection connection = ((CraftPlayer) gp1.getPlayer()).getHandle().playerConnection;
 		connection.sendPacket(new PacketPlayOutAnimation(warrior.getNpc().getEntity(), 0));

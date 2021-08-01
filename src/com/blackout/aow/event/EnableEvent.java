@@ -5,6 +5,10 @@ import com.blackout.npcapi.utils.SkinLoader;
 
 public class EnableEvent {
 
+	/**
+	 * Called when the plugin is loaded,
+	 * this pre load warrior skins and start important scheduler
+	 */
 	public void execute() {
 		SkinLoader.loadSkinFromUUID(0, "b82b0a57c0f0435fa0bb63e9475497e3");
 		SkinLoader.loadSkinFromUUID(1, "f500906232e54acdbd97e6c8fc523131");

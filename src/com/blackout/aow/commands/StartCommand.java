@@ -24,9 +24,12 @@ public class StartCommand {
 		}
 		
 		scheduleStart();
-		teleport();
+		startGame();
 	}
 	
+	/**
+	 * Show the countdown before the game start
+	 */
 	private void scheduleStart() {
 		final int seconds = 5;
 		
@@ -42,7 +45,14 @@ public class StartCommand {
 		}
 	}
 	
-	private void teleport() {
+	/**
+	 * Teleport the player and set all default value
+	 * This function load shop NPC base health and title
+	 * set the players to their respective area set their
+	 * name color to their corresponding team
+	 * and start the game timer
+	 */
+	private void startGame() {
 		new BukkitRunnable(){
 			@Override
 			public void run(){
@@ -63,6 +73,11 @@ public class StartCommand {
 		}.runTaskLaterAsynchronously(Main.getPlugin(Main.class), 100L);
 	}
 	
+	/**
+	 * Get the number displayed on the count down
+	 * @param index
+	 * @return
+	 */
 	private String getCountdownNumber(int index) {
 		switch(index) {
 			case 5: return "§c5";

@@ -35,6 +35,11 @@ public class NPCListener implements NPCPacket {
 		}.runTaskLater(Main.getPlugin(Main.class), 1L);
 	}
 	
+	/**
+	 * Create the corresponding warrior using the NPC name
+	 * @param p
+	 * @param id
+	 */
 	private void runAction(Player p, int id) {
 		APlayer ap = APlayer.get(p);
 		for (NPC npc : ap.npcs) {

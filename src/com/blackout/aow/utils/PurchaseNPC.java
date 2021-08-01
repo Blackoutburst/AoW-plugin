@@ -20,6 +20,11 @@ import net.minecraft.server.v1_8_R3.PlayerConnection;
 
 public class PurchaseNPC {
 
+	/**
+	 * Spawn default purchase NPC
+	 * used to buy warrior
+	 * @param p
+	 */
 	public static void spawnNPC(Player p) {
 		spawnMelee(p, 1309.5f, "§9");
 		spawnMelee(p, 1343.5f, "§4");
@@ -29,6 +34,12 @@ public class PurchaseNPC {
 		spawnSpecial(p, 1339.5f, "§4");
 	}
 	
+	/**
+	 * Spawn the melee NPC with the default price and name
+	 * @param p
+	 * @param Z
+	 * @param color
+	 */
 	private static void spawnMelee(Player p, float Z, String color) {
 		NPC npc = new NPC(UUID.randomUUID(), color + "Clubman")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))
@@ -44,6 +55,12 @@ public class PurchaseNPC {
 		HoloManager.spawnHolo(price, p);
 	}
 	
+	/**
+	 * Spawn the ranged NPC with the default price and name
+	 * @param p
+	 * @param Z
+	 * @param color
+	 */
 	private static void spawnRanged(Player p, float Z, String color) {
 		NPC npc = new NPC(UUID.randomUUID(), color + "Slingshot")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))
@@ -59,6 +76,12 @@ public class PurchaseNPC {
 		HoloManager.spawnHolo(price, p);
 	}
 	
+	/**
+	 * Spawn the special NPC with the default price and name
+	 * @param p
+	 * @param Z
+	 * @param color
+	 */
 	private static void spawnSpecial(Player p, float Z, String color) {
 		NPC npc = new NPC(UUID.randomUUID(), color + "Spearman")
 				.setLocation(new Location(Bukkit.getWorld("world"), 973.5f, 54, Z, 90, 0))

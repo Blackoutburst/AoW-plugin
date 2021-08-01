@@ -17,12 +17,23 @@ import net.minecraft.server.v1_8_R3.PacketPlayOutTitle.EnumTitleAction;
 
 public class Utils {
 
+	/**
+	 * Get a game player using a regular player
+	 * @param p
+	 * @return
+	 */
 	public static GamePlayer getGamePlayer(Player p) {
 		if (Main.player1.getPlayer() == p) return Main.player1;
 		if (Main.player2.getPlayer() == p) return Main.player2;
 		return null;
 	}
 	
+	/**
+	 * Set the player name color in the tab list
+	 * in the chat and above their name
+	 * @param p
+	 * @param color
+	 */
 	public static void setNameColor(Player p, String color) {
 		p.setDisplayName(color+p.getName()+"§r");
 		p.setPlayerListName(p.getDisplayName());
@@ -41,6 +52,11 @@ public class Utils {
 		}
 	}
 	
+	/**
+	 * Reset a player name color in the tab list
+	 * in the chat and above their name
+	 * @param p
+	 */
 	public static void resetNameColor(Player p) {
 		p.setDisplayName("§r"+p.getName());
 		p.setPlayerListName(p.getDisplayName());
@@ -59,6 +75,15 @@ public class Utils {
 		}
 	}
 	
+	/**
+	 * A small function used to send title to a player
+	 * @param player
+	 * @param title
+	 * @param subtitle
+	 * @param fadeIn
+	 * @param stay
+	 * @param fadeOut
+	 */
     public static void sendTitle(Player player, String title, String subtitle, int fadeIn, int stay, int fadeOut) {
         PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
         
