@@ -198,7 +198,7 @@ public class WarriorUtils {
 	}
 	
 	/**
-	 * Get the warrior type to set their stat, skin and equipment correctly
+	 * Get the warrior type to set their stats, skin and equipment correctly
 	 * @param type
 	 * @param warrior
 	 * @param lifeBar
