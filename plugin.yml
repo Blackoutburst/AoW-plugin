@@ -5,7 +5,6 @@ api-version: 1.13
 author: Blackoutburst
 description: Age of War plugin
 depend: [NPCAPI]
-depend: [HoloAPI]
 commands:
   setplayer1:
     description: Set the player 1
@@ -16,3 +15,6 @@ commands:
   start:
     description: Start the game
     usage: /start
+  end:
+    description: End the game
+    usage: /end
