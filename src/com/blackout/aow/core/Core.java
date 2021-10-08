@@ -6,7 +6,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import com.blackout.aow.main.Main;
-import com.blackout.aow.npc.ShopNPC;
+import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
 
 public class Core {
@@ -51,8 +51,8 @@ public class Core {
 		setPlayers();
 		Main.gameRunning = true;
 		Main.gameTime = 0;
-		ShopNPC.addNPC(Main.player1);
-		ShopNPC.addNPC(Main.player2);
+		ShopNPCManager.addNPC(Main.player1);
+		ShopNPCManager.addNPC(Main.player2);
 	}
 	
 	public static void endGame() {
@@ -61,8 +61,8 @@ public class Core {
 		for (AowPlayer p : Main.aowplayers) {
 			p.getPlayer().teleport(Main.spawn);
 			p.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
-			ShopNPC.removeNPC(p.getLeftShop(), p.getPlayer());
-			ShopNPC.removeNPC(p.getRightShop(), p.getPlayer());
+			ShopNPCManager.removeNPC(p.getLeftShop(), p.getPlayer());
+			ShopNPCManager.removeNPC(p.getRightShop(), p.getPlayer());
 		}
 		Main.player1 = null;
 		Main.player2 = null;

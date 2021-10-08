@@ -6,8 +6,8 @@ import java.util.List;
 import org.bukkit.entity.Player;
 
 import com.blackout.aow.main.Main;
+import com.blackout.aow.npc.ShopNPC;
 import com.blackout.aow.utils.Board;
-import com.blackout.npcapi.core.NPC;
 
 public class AowPlayer {
 	
@@ -18,8 +18,8 @@ public class AowPlayer {
 	protected int gold;
 	protected Ages age;
 	
-	protected List<NPC> leftShop = new ArrayList<NPC>();
-	protected List<NPC> rightShop = new ArrayList<NPC>();
+	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
+	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
 	
 	public AowPlayer(int playerID, Player player, Board board) {
 		this.playerID = playerID;
@@ -82,19 +82,19 @@ public class AowPlayer {
 		return (this);
 	}
 
-	public List<NPC> getLeftShop() {
+	public List<ShopNPC> getLeftShop() {
 		return leftShop;
 	}
 
-	public void setLeftShop(List<NPC> leftShop) {
+	public void setLeftShop(List<ShopNPC> leftShop) {
 		this.leftShop = leftShop;
 	}
 
-	public List<NPC> getRightShop() {
+	public List<ShopNPC> getRightShop() {
 		return rightShop;
 	}
 
-	public void setRightShop(List<NPC> rightShop) {
+	public void setRightShop(List<ShopNPC> rightShop) {
 		this.rightShop = rightShop;
 	}
 	

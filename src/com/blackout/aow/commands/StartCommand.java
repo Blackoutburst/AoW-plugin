@@ -1,6 +1,8 @@
 package com.blackout.aow.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.core.Core;
@@ -32,8 +34,9 @@ public class StartCommand {
 			new BukkitRunnable(){
 				@Override
 				public void run(){
-					NMSTitle.sendTitle(Main.player1.getPlayer(), getCountdownNumber(number), "", 0, 20, 0);
-					NMSTitle.sendTitle(Main.player2.getPlayer(), getCountdownNumber(number), "", 0, 20, 0);
+					for (Player p : Bukkit.getOnlinePlayers()) {
+						NMSTitle.sendTitle(p, getCountdownNumber(number), "", 0, 20, 0);
+					}
 				}
 			}.runTaskLaterAsynchronously(Main.getPlugin(Main.class), 20L * (seconds - i));
 		}
