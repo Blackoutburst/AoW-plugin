@@ -20,6 +20,7 @@ public class AowPlayer {
 	
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
+	protected List<Warrior> warriors = new ArrayList<Warrior>();
 	
 	public AowPlayer(int playerID, Player player, Board board) {
 		this.playerID = playerID;
@@ -98,6 +99,14 @@ public class AowPlayer {
 		this.rightShop = rightShop;
 	}
 	
+	public List<Warrior> getWarriors() {
+		return warriors;
+	}
+
+	public void setWarriors(List<Warrior> warriors) {
+		this.warriors = warriors;
+	}
+
 	public static AowPlayer getFromPlayer(Player p) {
 		for (AowPlayer ap : Main.aowplayers) {
 			if (ap.player.getUniqueId().equals(p.getUniqueId())) {

@@ -63,6 +63,7 @@ public class Core {
 			p.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
 			ShopNPCManager.removeNPC(p.getLeftShop(), p.getPlayer());
 			ShopNPCManager.removeNPC(p.getRightShop(), p.getPlayer());
+			WarriorManager.clearWarrior(p);
 		}
 		Main.player1 = null;
 		Main.player2 = null;

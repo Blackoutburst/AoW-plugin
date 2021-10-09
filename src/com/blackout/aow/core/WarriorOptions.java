@@ -2,18 +2,18 @@ package com.blackout.aow.core;
 
 public class WarriorOptions {
 	
-	protected int xpDrop;
-	protected int goldDrop;
-	protected int health;
-	protected int maxHealth;
+	protected float xpDrop;
+	protected float goldDrop;
+	protected float health;
+	protected float maxHealth;
 	protected float range;
-	protected int damage;
-	protected int cost;
-	protected int heldItemID;
-	protected int combatDelay;
+	protected float damage;
+	protected float cost;
+	protected float heldItemID;
+	protected float combatDelay;
 	
-	public WarriorOptions(int xpDrop, int goldDrop, int health, int maxHealth, float range, int damage, int cost,
-			int heldItemID, int combatDelay) {
+	public WarriorOptions(float xpDrop, float goldDrop, float health, float maxHealth, float range, float damage, float cost,
+			float heldItemID, float combatDelay) {
 		this.xpDrop = xpDrop;
 		this.goldDrop = goldDrop;
 		this.health = health;
@@ -25,35 +25,35 @@ public class WarriorOptions {
 		this.combatDelay = combatDelay;
 	}
 
-	public int getXpDrop() {
+	public float getXpDrop() {
 		return xpDrop;
 	}
 
-	public void setXpDrop(int xpDrop) {
+	public void setXpDrop(float xpDrop) {
 		this.xpDrop = xpDrop;
 	}
 
-	public int getGoldDrop() {
+	public float getGoldDrop() {
 		return goldDrop;
 	}
 
-	public void setGoldDrop(int goldDrop) {
+	public void setGoldDrop(float goldDrop) {
 		this.goldDrop = goldDrop;
 	}
 
-	public int getHealth() {
+	public float getHealth() {
 		return health;
 	}
 
-	public void setHealth(int health) {
+	public void setHealth(float health) {
 		this.health = health;
 	}
 
-	public int getMaxHealth() {
+	public float getMaxHealth() {
 		return maxHealth;
 	}
 
-	public void setMaxHealth(int maxHealth) {
+	public void setMaxHealth(float maxHealth) {
 		this.maxHealth = maxHealth;
 	}
 
@@ -65,35 +65,35 @@ public class WarriorOptions {
 		this.range = range;
 	}
 
-	public int getDamage() {
+	public float getDamage() {
 		return damage;
 	}
 
-	public void setDamage(int damage) {
+	public void setDamage(float damage) {
 		this.damage = damage;
 	}
 
-	public int getCost() {
+	public float getCost() {
 		return cost;
 	}
 
-	public void setCost(int cost) {
+	public void setCost(float cost) {
 		this.cost = cost;
 	}
 
-	public int getHeldItemID() {
+	public float getHeldItemID() {
 		return heldItemID;
 	}
 
-	public void setHeldItemID(int heldItemID) {
+	public void setHeldItemID(float heldItemID) {
 		this.heldItemID = heldItemID;
 	}
 
-	public int getCombatDelay() {
+	public float getCombatDelay() {
 		return combatDelay;
 	}
 
-	public void setCombatDelay(int combatDelay) {
+	public void setCombatDelay(float combatDelay) {
 		this.combatDelay = combatDelay;
 	}
 	

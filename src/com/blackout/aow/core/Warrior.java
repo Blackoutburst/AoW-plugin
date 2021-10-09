@@ -2,19 +2,22 @@ package com.blackout.aow.core;
 
 import org.bukkit.Location;
 
+import com.blackout.holoapi.core.Holo;
 import com.blackout.npcapi.core.NPC;
 
 public class Warrior {
 	
 	protected NPC npc;
 	protected AowPlayer owner;
+	protected Holo lifeBar;
 	protected WarriorOptions options;
 	protected Location position;
 	protected boolean dead;
 	
-	public Warrior(NPC npc, AowPlayer owner, WarriorOptions options, Location position) {
+	public Warrior(NPC npc, AowPlayer owner, Holo lifeBar, WarriorOptions options, Location position) {
 		this.npc = npc;
 		this.owner = owner;
+		this.lifeBar = lifeBar;
 		this.options = options;
 		this.position = position;
 		this.dead = false;
@@ -34,6 +37,14 @@ public class Warrior {
 
 	public void setOwner(AowPlayer owner) {
 		this.owner = owner;
+	}
+
+	public Holo getLifeBar() {
+		return lifeBar;
+	}
+
+	public void setLifeBar(Holo lifeBar) {
+		this.lifeBar = lifeBar;
 	}
 
 	public WarriorOptions getOptions() {

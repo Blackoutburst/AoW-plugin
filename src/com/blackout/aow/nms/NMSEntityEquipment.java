@@ -7,7 +7,6 @@ import org.bukkit.entity.Player;
 
 public class NMSEntityEquipment {
 
-	//new PacketPlayOutEntityEquipment(i, 0, new ItemStack(Item.getById(267)));
 	public static void giveItem(Player player, int entityID, int itemID) {
 		try {
 			Class<?> packetClass = NMS.getClass("PacketPlayOutEntityEquipment");

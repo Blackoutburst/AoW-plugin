@@ -86,7 +86,7 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onEntityDamage(EntityDamageEvent event) {
 		event.setCancelled(true);
-	}
+	}	
 	
 	@EventHandler
 	public void onWeatherChange(WeatherChangeEvent event) {

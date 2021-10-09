@@ -8,9 +8,9 @@ public class ShopNPC {
 	protected NPC npc;
 	protected Holo name;
 	protected Holo price;
-	protected int unitCost;
+	protected float unitCost;
 	
-	public ShopNPC(NPC npc, Holo name, Holo price, int unitCost) {
+	public ShopNPC(NPC npc, Holo name, Holo price, float unitCost) {
 		this.npc = npc;
 		this.name = name;
 		this.price = price;
@@ -41,11 +41,11 @@ public class ShopNPC {
 		this.price = price;
 	}
 
-	public int getUnitCost() {
+	public float getUnitCost() {
 		return unitCost;
 	}
 
-	public void setUnitCost(int unitCost) {
+	public void setUnitCost(float unitCost) {
 		this.unitCost = unitCost;
 	}
 	
