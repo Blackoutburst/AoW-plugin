@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.npc.ShopNPC;
 import com.blackout.aow.utils.Board;
+import com.blackout.aow.warrior.Warrior;
 
 public class AowPlayer {
 	
@@ -21,13 +22,14 @@ public class AowPlayer {
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
 	protected List<Warrior> warriors = new ArrayList<Warrior>();
+	protected List<Warrior> opponent = new ArrayList<Warrior>();
 	
 	public AowPlayer(int playerID, Player player, Board board) {
 		this.playerID = playerID;
 		this.player = player;
 		this.board = board;
-		this.xp = 0;
-		this.gold = 100;
+		this.xp = 1000000;
+		this.gold = 1000000;
 		this.age = Ages.PREHISTORIC;
 	}
 
@@ -105,6 +107,14 @@ public class AowPlayer {
 
 	public void setWarriors(List<Warrior> warriors) {
 		this.warriors = warriors;
+	}
+	
+	public List<Warrior> getOpponent() {
+		return opponent;
+	}
+
+	public void setOpponent(List<Warrior> opponent) {
+		this.opponent = opponent;
 	}
 
 	public static AowPlayer getFromPlayer(Player p) {

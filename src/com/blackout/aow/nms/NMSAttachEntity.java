@@ -24,5 +24,4 @@ public class NMSAttachEntity {
 			e.printStackTrace();
 		}
 	}
-	
 }

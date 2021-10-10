@@ -9,9 +9,9 @@ import org.bukkit.entity.Player;
 
 import com.blackout.aow.core.Ages;
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.core.WarriorManager;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.nms.NMSEntityEquipment;
+import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
@@ -42,7 +42,11 @@ public class ShopNPCManager {
 						.setNameVisible(false)
 						.setLocation(locations[locationIndex + i]);
 				NPCManager.spawnNPC(npc, p.getPlayer());
-				NMSEntityEquipment.giveItem(p.getPlayer(), npc.getEntityId(), WarriorManager.items[skinIndex + i]);
+				NMSEntityEquipment.giveItem(p.getPlayer(), npc.getEntityId(), WarriorManager.items[skinIndex + i], 0);
+				if (skinIndex + i == 6) 
+					NMSEntityEquipment.giveItem(p.getPlayer(), npc.getEntityId(), 303, 3);
+				if (skinIndex + i == 8) 
+					NMSEntityEquipment.giveItem(p.getPlayer(), npc.getEntityId(), 307, 3);
 				
 				Location loc = locations[locationIndex + i].clone();
 				loc.setY(loc.getY() + 1);

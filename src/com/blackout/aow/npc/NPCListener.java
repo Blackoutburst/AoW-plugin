@@ -4,8 +4,8 @@ package com.blackout.aow.npc;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import com.blackout.aow.core.WarriorManager;
 import com.blackout.aow.main.Main;
+import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.npcapi.core.APlayer;
 import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.core.NPCPacket;
@@ -46,7 +46,7 @@ public class NPCListener implements NPCPacket {
 						public void run() {
 							WarriorManager.createNewWarrior(npc.getName(), p);
 						}
-					}.runTaskLater(Main.getPlugin(Main.class), 1L);
+					}.runTaskLater(Main.getPlugin(Main.class), 5L);
 				}
 			}
 		}

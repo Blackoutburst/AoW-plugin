@@ -8,6 +8,7 @@ import org.bukkit.potion.PotionEffectType;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
+import com.blackout.aow.warrior.WarriorManager;
 
 public class Core {
 

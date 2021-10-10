@@ -1,5 +1,6 @@
 package com.blackout.aow.events;
 
+import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.npcapi.utils.SkinLoader;
 
 public class EnableEvent {
@@ -24,5 +25,7 @@ public class EnableEvent {
 		SkinLoader.loadSkinFromUUID(12, "63dc6bf1b5af4a3a8d59456d74bc99bb"); //Space soldier
 		SkinLoader.loadSkinFromUUID(13, "a2530b4f6ce54c2da8edfdd1f7af4483"); //Space gunner
 		SkinLoader.loadSkinFromUUID(14, "7af7cf026d1d419cbbceef32944f812e"); //Super soldier
+		
+		WarriorManager.doActions();
 	}
 }
