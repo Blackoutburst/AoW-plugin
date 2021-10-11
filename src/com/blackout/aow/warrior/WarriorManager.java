@@ -100,20 +100,16 @@ public class WarriorManager {
 		int unitIndex = p.getAge().ordinal() * 3 + index;
 		
 		if (p.getGold() < unitsStats[unitIndex][5]) {
-			p.getPlayer().sendMessage("Â§cYou don't have enough gold for that!");
+			p.getPlayer().sendMessage("§cYou don't have enough gold for that!");
 			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
 		p.setGold((int)(p.getGold() - unitsStats[unitIndex][5]));
-		p.getPlayer().sendMessage("Â§b"+names[unitIndex]+" Â§acreated for Â§6"+(int)(unitsStats[unitIndex][5])+" gold!");
+		p.getPlayer().sendMessage("§b"+names[unitIndex]+" §acreated for §6"+(int)(unitsStats[unitIndex][5])+" gold!");
 		p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
 		
 		
 		for (AowPlayer ap : Main.aowplayers) {
-			WarriorOptions opt = new WarriorOptions(unitsStats[unitIndex][0], unitsStats[unitIndex][1], 
-					unitsStats[unitIndex][2], unitsStats[unitIndex][3], 
-					unitsStats[unitIndex][4], unitsStats[unitIndex][5], items[unitIndex], unitsStats[unitIndex][6]);
-			
 			NPC npc = new NPC(UUID.randomUUID(), names[unitIndex])
 					.setCapeVisible(false)
 					.setSkin(SkinLoader.getSkinById(unitIndex))
@@ -123,7 +119,7 @@ public class WarriorManager {
 			Location loc = p.getPlayerID() == 0 ? player1Base.clone() : player2Base.clone();
 			loc.setY(loc.getY() + 1);
 			
-			Holo life = new Holo(UUID.randomUUID(), "Â§8[Â§a||||||||||Â§8]")
+			Holo life = new Holo(UUID.randomUUID(), "§8[§a||||||||||§8]")
 			        .setLocation(loc);
 			HoloManager.spawnHolo(life, ap.getPlayer());
 			
@@ -136,33 +132,45 @@ public class WarriorManager {
 				NMSEntityEquipment.giveItem(ap.getPlayer(), npc.getEntityId(), 307, 3);
 			
 			NMSAttachEntity.attach(ap.getPlayer(), life, npc);
-			Warrior w = selectWarriorType(names[unitIndex], p, opt, npc, life);
+			WarriorVisual wv = new WarriorVisual(npc, life);
 			
 			if (p.getPlayerID() == 0) {
-				ap.getWarriors().add(w);
+				ap.getBlueNPC().add(wv);
 			} else {
-				ap.getOpponent().add(w);
+				ap.getRedNPC().add(wv);
 			}
+		}
+		
+		WarriorOptions opt = new WarriorOptions(unitsStats[unitIndex][0], unitsStats[unitIndex][1], 
+				unitsStats[unitIndex][2], unitsStats[unitIndex][3], 
+				unitsStats[unitIndex][4], unitsStats[unitIndex][5], items[unitIndex], unitsStats[unitIndex][6]);
+		
+		WarriorLogical w = selectWarriorType(names[unitIndex], p, opt, p.getPlayerID() == 0 ? player1Base : player2Base);
+		
+		if (p.getPlayerID() == 0) {
+			Main.blueWarrior.add(w);
+		} else {
+			Main.redWarrior.add(w);
 		}
 	}
 	
-	private static Warrior selectWarriorType(String name, AowPlayer p, WarriorOptions opt, NPC npc, Holo life) {
+	private static WarriorLogical selectWarriorType(String name, AowPlayer p, WarriorOptions opt, Location loc) {
 		switch (name) {
-			case "Cave man": return (new CaveMan(npc, p, life, opt, npc.getLocation().clone()));
-			case "Slingshot": return (new Slingshot(npc, p, life, opt, npc.getLocation().clone())); 
-			case "Steve": return (new Steve(npc, p, life, opt, npc.getLocation().clone()));
-			case "Swordsman": return (new Swordsman(npc, p, life, opt, npc.getLocation().clone())); 
-			case "Archer": return (new Archer(npc, p, life, opt, npc.getLocation().clone()));
-			case "Knight": return (new Knight(npc, p, life, opt, npc.getLocation().clone()));
-			case "Musketeer": return (new Musketeer(npc, p, life, opt, npc.getLocation().clone()));
-			case "Rifleman": return (new Rifleman(npc, p, life, opt, npc.getLocation().clone()));
-			case "Cannoneer": return (new Cannoneer(npc, p, life, opt, npc.getLocation().clone()));
-			case "Soldier": return (new Soldier(npc, p, life, opt, npc.getLocation().clone()));
-			case "Gunner": return (new Gunner(npc, p, life, opt, npc.getLocation().clone()));
-			case "Bomber": return (new Bomber(npc, p, life, opt, npc.getLocation().clone()));
-			case "Space soldier": return (new SpaceSoldier(npc, p, life, opt, npc.getLocation().clone()));
-			case "Space gunner": return (new SpaceGunner(npc, p, life, opt, npc.getLocation().clone()));
-			case "Super soldier": return (new SuperSoldier(npc, p, life, opt, npc.getLocation().clone()));
+			case "Cave man": return (new CaveMan(p, opt, loc.clone()));
+			case "Slingshot": return (new Slingshot(p, opt, loc.clone())); 
+			case "Steve": return (new Steve(p, opt, loc.clone()));
+			case "Swordsman": return (new Swordsman(p, opt, loc.clone())); 
+			case "Archer": return (new Archer(p, opt, loc.clone()));
+			case "Knight": return (new Knight(p, opt, loc.clone()));
+			case "Musketeer": return (new Musketeer(p, opt, loc.clone()));
+			case "Rifleman": return (new Rifleman(p, opt, loc.clone()));
+			case "Cannoneer": return (new Cannoneer(p, opt, loc.clone()));
+			case "Soldier": return (new Soldier(p, opt, loc.clone()));
+			case "Gunner": return (new Gunner(p, opt, loc.clone()));
+			case "Bomber": return (new Bomber(p, opt, loc.clone()));
+			case "Space soldier": return (new SpaceSoldier(p, opt, loc.clone()));
+			case "Space gunner": return (new SpaceGunner(p, opt, loc.clone()));
+			case "Super soldier": return (new SuperSoldier(p, opt, loc.clone()));
 			default: return (null);
 		}
 	}
@@ -191,17 +199,19 @@ public class WarriorManager {
 	}
 	
 	public static void clearWarrior(AowPlayer p) {
-		for(Warrior warrior : p.getWarriors()) {
+		for(WarriorVisual warrior : p.getBlueNPC()) {
 			HoloManager.deleteHolo(p.getPlayer(), warrior.getLifeBar());
 			NPCManager.deleteNPC(p.getPlayer(), warrior.getNpc());
 		}
-		p.getWarriors().clear();
+		p.getBlueNPC().clear();
 		
-		for(Warrior warrior : p.getOpponent()) {
+		for(WarriorVisual warrior : p.getRedNPC()) {
 			HoloManager.deleteHolo(p.getPlayer(), warrior.getLifeBar());
 			NPCManager.deleteNPC(p.getPlayer(), warrior.getNpc());
 		}
-		p.getOpponent().clear();
+		p.getRedNPC().clear();
+		Main.blueWarrior.clear();
+		Main.redWarrior.clear();
 	}
 	
 	public static void doActions() {
@@ -211,40 +221,32 @@ public class WarriorManager {
 				if (Main.gameRunning) {
 					Main.gameTime++;
 					
-					for (AowPlayer ap : Main.aowplayers) {
-						int i = ap.getWarriors().size();
-						for (int j = 0; j < i; j++) {
-							Warrior w = ap.getWarriors().get(j);
-							if (w.isDead()) {
-								HoloManager.deleteHolo(ap.getPlayer(), w.lifeBar);
-								NPCManager.deleteNPC(ap.getPlayer(), w.npc);
-								ap.getWarriors().remove(w);
-								i--;
-							}
-						}
-						i = ap.getOpponent().size();
-						for (int j = 0; j < i; j++) {
-							Warrior w = ap.getOpponent().get(j);
-							if (w.isDead()) {
-								HoloManager.deleteHolo(ap.getPlayer(), w.lifeBar);
-								NPCManager.deleteNPC(ap.getPlayer(), w.npc);
-								ap.getOpponent().remove(w);
-								i--;
-							}
+					int j = Main.blueWarrior.size();
+					for (int i = 0; i < j; i++) {
+						WarriorLogical w = Main.blueWarrior.get(i);
+						if (w.dead) {
+							Main.blueWarrior.remove(i);
+							j--;
 						}
 					}
 					
-					for (AowPlayer ap : Main.aowplayers) {
-						int i = 0;
-						for (Warrior w : ap.getWarriors()) {
-							w.update(ap.getPlayer(), i);
-							i++;
+					j = Main.redWarrior.size();
+					for (int i = 0; i < j; i++) {
+						WarriorLogical w = Main.redWarrior.get(i);
+						if (w.dead) {
+							Main.redWarrior.remove(i);
+							j--;
 						}
-						i = 0;
-						for (Warrior w : ap.getOpponent()) {
-							w.update(ap.getPlayer(), i);
-							i++;
-						}
+					}
+					
+					for (int i = 0; i < Main.blueWarrior.size(); i++) {
+						WarriorLogical w = Main.blueWarrior.get(i);
+						w.update(i);
+					}
+					
+					for (int i = 0; i < Main.redWarrior.size(); i++) {
+						WarriorLogical w = Main.redWarrior.get(i);
+						w.update(i);
 					}
 				}
 			}

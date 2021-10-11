@@ -24,6 +24,7 @@ import com.blackout.aow.core.AowPlayer;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.events.EnableEvent;
 import com.blackout.aow.events.JoinEvent;
+import com.blackout.aow.warrior.WarriorLogical;
 import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
@@ -40,6 +41,10 @@ public class Main extends JavaPlugin implements Listener {
 	public static boolean gameRunning = false;
 	
 	public static List<AowPlayer> aowplayers = new ArrayList<AowPlayer>();
+	
+	public static List<WarriorLogical> blueWarrior = new ArrayList<WarriorLogical>();
+	public static List<WarriorLogical> redWarrior = new ArrayList<WarriorLogical>();
+	
 	
 	@Override
 	public void onEnable() {

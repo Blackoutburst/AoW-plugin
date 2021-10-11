@@ -46,7 +46,7 @@ public class NPCListener implements NPCPacket {
 						public void run() {
 							WarriorManager.createNewWarrior(npc.getName(), p);
 						}
-					}.runTaskLater(Main.getPlugin(Main.class), 5L);
+					}.runTaskLater(Main.getPlugin(Main.class), 1L);
 				}
 			}
 		}

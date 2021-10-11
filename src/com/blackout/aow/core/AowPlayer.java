@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.npc.ShopNPC;
 import com.blackout.aow.utils.Board;
-import com.blackout.aow.warrior.Warrior;
+import com.blackout.aow.warrior.WarriorVisual;
 
 public class AowPlayer {
 	
@@ -21,8 +21,8 @@ public class AowPlayer {
 	
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
-	protected List<Warrior> warriors = new ArrayList<Warrior>();
-	protected List<Warrior> opponent = new ArrayList<Warrior>();
+	protected List<WarriorVisual> blueNPC = new ArrayList<WarriorVisual>();
+	protected List<WarriorVisual> redNPC = new ArrayList<WarriorVisual>();
 	
 	public AowPlayer(int playerID, Player player, Board board) {
 		this.playerID = playerID;
@@ -101,20 +101,20 @@ public class AowPlayer {
 		this.rightShop = rightShop;
 	}
 	
-	public List<Warrior> getWarriors() {
-		return warriors;
+	public List<WarriorVisual> getBlueNPC() {
+		return blueNPC;
 	}
 
-	public void setWarriors(List<Warrior> warriors) {
-		this.warriors = warriors;
-	}
-	
-	public List<Warrior> getOpponent() {
-		return opponent;
+	public void setBlueNPC(List<WarriorVisual> blueNPC) {
+		this.blueNPC = blueNPC;
 	}
 
-	public void setOpponent(List<Warrior> opponent) {
-		this.opponent = opponent;
+	public List<WarriorVisual> getRedNPC() {
+		return redNPC;
+	}
+
+	public void setRedNPC(List<WarriorVisual> redNPC) {
+		this.redNPC = redNPC;
 	}
 
 	public static AowPlayer getFromPlayer(Player p) {
