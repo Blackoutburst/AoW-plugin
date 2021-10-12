@@ -1,6 +1,9 @@
 package com.blackout.aow.core;
 
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -9,20 +12,24 @@ import com.blackout.aow.main.Main;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
 import com.blackout.aow.warrior.WarriorManager;
+import com.blackout.holoapi.core.Holo;
+import com.blackout.holoapi.utils.HoloManager;
 
 public class Core {
 
 	private static void setPlayers() {
 		Main.aowplayers.add(Main.player1);
 		Main.aowplayers.add(Main.player2);
+		Main.blueBase = new Base(Main.player1, 5000, new Location(Bukkit.getWorld("world"), 983.5f, 54, 1307.5f, 0, 0));
+		Main.redBase = new Base(Main.player2, 5000, new Location(Bukkit.getWorld("world"), 983.5f, 54, 1345.5f, 180, 0));
 		
 		for (Player p : Bukkit.getOnlinePlayers()) {
 			if (p != Main.player1.getPlayer() && p != Main.player2.getPlayer()) {
 				Board b = new Board(p, "", "");
 				AowPlayer spec = new AowPlayer(-1, p, b);
 				p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100000, 0, false, false));
-				p.setDisplayName("�7�o"+p.getName());
-				p.setPlayerListName("�7�o"+p.getName());
+				p.setDisplayName("§7§o"+p.getName());
+				p.setPlayerListName("§7§o"+p.getName());
 				p.teleport(Main.spawnSpec);
 				spec.getBoard().addTeam(Main.player1, false);
 				spec.getBoard().addTeam(Main.player2, false);
@@ -33,10 +40,10 @@ public class Core {
 		Main.player2.getPlayer().teleport(Main.spawnP2);
 		Main.player1.getBoard().addTeam(Main.player2, false);
 		Main.player2.getBoard().addTeam(Main.player1, false);
-		Main.player1.getPlayer().setDisplayName("�9"+Main.player1.getPlayer().getName());
-		Main.player2.getPlayer().setDisplayName("�4"+Main.player2.getPlayer().getName());
-		Main.player1.getPlayer().setPlayerListName("�9"+Main.player1.getPlayer().getName());
-		Main.player2.getPlayer().setPlayerListName("�4"+Main.player2.getPlayer().getName());
+		Main.player1.getPlayer().setDisplayName("§9"+Main.player1.getPlayer().getName());
+		Main.player2.getPlayer().setDisplayName("§4"+Main.player2.getPlayer().getName());
+		Main.player1.getPlayer().setPlayerListName("§9"+Main.player1.getPlayer().getName());
+		Main.player2.getPlayer().setPlayerListName("§4"+Main.player2.getPlayer().getName());
 	}
 	
 	private static void resetNameColor() {
@@ -48,8 +55,22 @@ public class Core {
 		}
 	}
 	
+	private static void setBaseLife() {
+		for (AowPlayer p : Main.aowplayers) {
+			Holo blueLife = new Holo(UUID.randomUUID(), "§7[§a████████████████████§7]")
+			        .setLocation(new Location(Bukkit.getWorld("world"), 977.5f, 55, 1307.5f));
+			HoloManager.spawnHolo(blueLife, p.getPlayer());
+			Holo redLife = new Holo(UUID.randomUUID(), "§7[§a████████████████████§7]")
+			        .setLocation(new Location(Bukkit.getWorld("world"), 977.5f, 55, 1345.5f));
+			HoloManager.spawnHolo(redLife, p.getPlayer());
+			p.setBlueBaseLife(blueLife);
+			p.setRedBaseLife(redLife);
+		}
+	}
+	
 	public static void startGame() {
 		setPlayers();
+		setBaseLife();
 		Main.gameRunning = true;
 		Main.gameTime = 0;
 		ShopNPCManager.addNPC(Main.player1);
@@ -65,9 +86,13 @@ public class Core {
 			ShopNPCManager.removeNPC(p.getLeftShop(), p.getPlayer());
 			ShopNPCManager.removeNPC(p.getRightShop(), p.getPlayer());
 			WarriorManager.clearWarrior(p);
+			HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseLife());
+			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseLife());
 		}
 		Main.player1 = null;
 		Main.player2 = null;
+		Main.blueBase = null;
+		Main.redBase = null;
 		Main.aowplayers.clear();
 	}
 }

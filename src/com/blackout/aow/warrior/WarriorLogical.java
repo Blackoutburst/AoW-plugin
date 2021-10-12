@@ -32,14 +32,14 @@ public abstract class WarriorLogical {
 
 	protected void walk(int index) {
 		if (this.owner.getPlayerID() == 0) { //Toward right
-			if (this.position.getZ() < WarriorManager.player2Base.getZ() && canWalk(index)) {
+			if (this.position.getZ() < Main.redBase.getLocation().getZ() && canWalk(index)) {
 				this.position.setZ((this.position.getZ() + (5.0f / 32.0f)));
 				for (AowPlayer p : Main.aowplayers) {
 					NMSEntityMove.move(p.getPlayer(), p.getBlueNPC().get(index).getNpc().getEntityId(), (byte)(0), (byte)(0), (byte)(5));
 				}
 			}
 		} else { // Toward left
-			if (this.position.getZ() > WarriorManager.player1Base.getZ() && canWalk(index)) {
+			if (this.position.getZ() > Main.blueBase.getLocation().getZ() && canWalk(index)) {
 				position.setZ(position.getZ() - (5.0f / 32.0f));
 				for (AowPlayer p : Main.aowplayers) {
 					NMSEntityMove.move(p.getPlayer(), p.getRedNPC().get(index).getNpc().getEntityId(), (byte)(0), (byte)(0), (byte)(-5));
@@ -101,6 +101,29 @@ public abstract class WarriorLogical {
 			if (Main.blueWarrior.size() > 0) {
 				prevZ = Main.blueWarrior.get(0).getPosition().getZ();
 				if (Math.abs(prevZ - myZ) < this.options.range) {
+					return (true);
+				}
+			}
+		}
+		return (false);
+	}
+	
+	protected boolean canFightBase(int index) {
+		if (this.owner.getPlayerID() == 0) {//Toward right
+			double baseZ = Main.redBase.getLocation().getZ();
+			double myZ = this.position.getZ();
+			
+			if (Main.redWarrior.size() == 0) {
+				if (Math.abs(baseZ - myZ) < this.options.range) {
+					return (true);
+				}
+			}
+		} else { // Toward left
+			double baseZ = Main.blueBase.getLocation().getZ();
+			double myZ = this.position.getZ();
+			
+			if (Main.blueWarrior.size() == 0) {
+				if (Math.abs(baseZ - myZ) < this.options.range) {
 					return (true);
 				}
 			}

@@ -46,5 +46,30 @@ public class Rifleman extends WarriorLogical {
 				}
 			}
 		}
+		
+		if (this.getOptions().combatDelay <= 0 && canFightBase(index)) {
+			this.getOptions().combatDelay = this.getOptions().maxCombatDelay;
+			Bukkit.getWorld("world").playSound(this.position, Sound.IRONGOLEM_HIT, 1.0f, 4.0f);
+			
+			if (this.owner.getPlayerID() == 0) {
+				Main.redBase.setLife((int) (Main.redBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Main.redBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+			} else {
+				Main.blueBase.setLife((int) (Main.blueBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Main.blueBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+			}
+			
+			Location baseLoc = this.owner.getPlayerID() == 0 ? Main.redBase.getLocation() :  Main.blueBase.getLocation(); 
+			for (AowPlayer p : Main.aowplayers) {
+				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_NORMAL, (float)(baseLoc.getX()), (float)(baseLoc.getY()), (float)(baseLoc.getZ()));
+				if (this.owner.getPlayerID() == 0) {
+					Main.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
+					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
+				} else {
+					Main.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
+					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
+				}
+			}
+		}
 	}
 }

@@ -2,7 +2,6 @@ package com.blackout.aow.warrior;
 
 import java.util.UUID;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -22,9 +21,6 @@ import com.blackout.npcapi.utils.SkinLoader;
 
 public class WarriorManager {
 
-	public static Location player1Base = new Location(Bukkit.getWorld("world"), 983.5f, 54, 1307.5f, 0, 0);
-	public static Location player2Base = new Location(Bukkit.getWorld("world"), 983.5f, 54, 1345.5f, 180, 0);
-	
 	public static int[] items = new int[] {
 			280, //stick
 			420, //lead
@@ -75,10 +71,10 @@ public class WarriorManager {
 		{100, 200, 700, 2.0f, 100, 200, 20}, //Knight
 		{100, 240, 800, 2.0f, 160, 200, 18}, //Musketeer
 		{120, 270, 600, 8.0f, 120, 260, 16}, //Rifleman
-		{250, 350, 1000, 4.0f, 400, 400, 30}, //Cannoneer
+		{250, 350, 1000, 5.0f, 400, 400, 30}, //Cannoneer
 		{250, 400, 1500, 2.0f, 400, 350, 15}, //Soldier
 		{280, 440, 1000, 8.0f, 100, 450, 5}, //Gunner
-		{400, 550, 1500, 2.0f, 600, 600, 30}, //Bomber
+		{400, 550, 1500, 5.0f, 600, 600, 30}, //Bomber
 		{400, 600, 2000, 2.0f, 750, 550, 10}, //Space soldier
 		{600, 740, 1600, 10.0f, 200, 700, 5}, //Space gunner
 		{1000, 2500, 50000, 2.0f, 700, 5000, 5}, //Super soldier
@@ -114,12 +110,12 @@ public class WarriorManager {
 					.setCapeVisible(false)
 					.setSkin(SkinLoader.getSkinById(unitIndex))
 					.setNameVisible(false)
-					.setLocation(p.getPlayerID() == 0 ? player1Base : player2Base);
+					.setLocation(p.getPlayerID() == 0 ? Main.blueBase.getLocation().clone() : Main.redBase.getLocation().clone());
 			
-			Location loc = p.getPlayerID() == 0 ? player1Base.clone() : player2Base.clone();
+			Location loc = p.getPlayerID() == 0 ? Main.blueBase.getLocation().clone() : Main.redBase.getLocation().clone();
 			loc.setY(loc.getY() + 1);
 			
-			Holo life = new Holo(UUID.randomUUID(), "§8[§a||||||||||§8]")
+			Holo life = new Holo(UUID.randomUUID(), "§7[§a||||||||||§7]")
 			        .setLocation(loc);
 			HoloManager.spawnHolo(life, ap.getPlayer());
 			
@@ -145,7 +141,7 @@ public class WarriorManager {
 				unitsStats[unitIndex][2], unitsStats[unitIndex][3], 
 				unitsStats[unitIndex][4], unitsStats[unitIndex][5], items[unitIndex], unitsStats[unitIndex][6]);
 		
-		WarriorLogical w = selectWarriorType(names[unitIndex], p, opt, p.getPlayerID() == 0 ? player1Base : player2Base);
+		WarriorLogical w = selectWarriorType(names[unitIndex], p, opt, p.getPlayerID() == 0 ? Main.blueBase.getLocation().clone() : Main.redBase.getLocation().clone());
 		
 		if (p.getPlayerID() == 0) {
 			Main.blueWarrior.add(w);
@@ -185,11 +181,17 @@ public class WarriorManager {
 			
 			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.LEVEL_UP, 1.0f, 1.0f);
 			if (p.getPlayerID() == 0) {
+				Main.blueBase.setLife(Main.blueBase.getLife() + 5000);
+				Main.blueBase.setMaxLife(Main.blueBase.getMaxLife() + 5000);
+				Main.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
 				for (AowPlayer ap : Main.aowplayers) {
 					ShopNPCManager.removeNPC(ap.getLeftShop(), ap.getPlayer());
 				}
 				ShopNPCManager.addNPC(Main.player1);
 			} else {
+				Main.redBase.setLife(Main.redBase.getLife() + 5000);
+				Main.redBase.setMaxLife(Main.redBase.getMaxLife() + 5000);
+				Main.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
 				for (AowPlayer ap : Main.aowplayers) {
 					ShopNPCManager.removeNPC(ap.getRightShop(), ap.getPlayer());
 				}

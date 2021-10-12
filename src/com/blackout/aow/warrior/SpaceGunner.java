@@ -49,5 +49,29 @@ public class SpaceGunner extends WarriorLogical {
 				}
 			}
 		}
+		
+		if (this.getOptions().combatDelay <= 0 && canFightBase(index)) {
+			this.getOptions().combatDelay = this.getOptions().maxCombatDelay;
+			Bukkit.getWorld("world").playSound(this.position, Sound.BLAZE_HIT, 1.0f, 3.0f);
+			
+			if (this.owner.getPlayerID() == 0) {
+				Main.redBase.setLife((int) (Main.redBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Main.redBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+			} else {
+				Main.blueBase.setLife((int) (Main.blueBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Main.blueBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+			}
+			
+			for (AowPlayer p : Main.aowplayers) {
+				for (int i = 0; i < 10; i++) {
+					NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.CRIT_MAGIC, (float)(this.position.getX()), (float)(this.position.getY()) + 1.5f, (float)(this.position.getZ()) + (this.owner.getPlayerID() == 0 ?  (0.2f * i) : -(0.2f * i)));
+				}
+				if (this.owner.getPlayerID() == 0) {
+					Main.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
+				} else {
+					Main.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
+				}
+			}
+		}
 	}
 }

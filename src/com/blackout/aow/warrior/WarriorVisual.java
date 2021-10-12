@@ -25,7 +25,7 @@ public class WarriorVisual {
 		HoloManager.deleteHolo(p, this.lifeBar);
 		
 		Location loc = w.getPosition().clone();
-		loc.setY(loc.getY() + 1.45f);
+		loc.setY(loc.getY() + 1.38f);
 		
 		Holo life = new Holo(UUID.randomUUID(), getLifeBarString(lifePercent))
 		        .setLocation(loc);
@@ -35,17 +35,17 @@ public class WarriorVisual {
 	}
 	
 	private String getLifeBarString(int lifePercent) {
-		if (lifePercent <= 10) return "§8[§c||||||||||§8]";
-		if (lifePercent <= 20) return "§8[§a|§c|||||||||§8]";
-		if (lifePercent <= 30) return "§8[§a||§c||||||||§8]";
-		if (lifePercent <= 40) return "§8[§a|||§c|||||||§8]";
-		if (lifePercent <= 50) return "§8[§a||||§c||||||§8]";
-		if (lifePercent <= 60) return "§8[§a|||||§c|||||§8]";
-		if (lifePercent <= 70) return "§8[§a||||||§c||||§8]";
-		if (lifePercent <= 80) return "§8[§a|||||||§c|||§8]";
-		if (lifePercent <= 90) return "§8[§a||||||||§c||§8]";
-		if (lifePercent < 100) return "§8[§a|||||||||§c|§8]";
-		return "§8[§a||||||||||§8]";
+		if (lifePercent <= 10) return "§7[§8||||||||||§7]";
+		if (lifePercent <= 20) return "§7[§4|§8|||||||||§7]";
+		if (lifePercent <= 30) return "§7[§c||§8||||||||§7]";
+		if (lifePercent <= 40) return "§7[§c|||§8|||||||§7]";
+		if (lifePercent <= 50) return "§7[§6||||§8||||||§7]";
+		if (lifePercent <= 60) return "§7[§6|||||§8|||||§7]";
+		if (lifePercent <= 70) return "§7[§e||||||§8||||§7]";
+		if (lifePercent <= 80) return "§7[§e|||||||§8|||§7]";
+		if (lifePercent <= 90) return "§7[§a||||||||§8||§7]";
+		if (lifePercent < 100) return "§7[§a|||||||||§8|§7]";
+		return "§7[§a||||||||||§7]";
 	}
 
 	public NPC getNpc() {

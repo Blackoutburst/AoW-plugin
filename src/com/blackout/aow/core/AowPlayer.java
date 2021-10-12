@@ -9,6 +9,7 @@ import com.blackout.aow.main.Main;
 import com.blackout.aow.npc.ShopNPC;
 import com.blackout.aow.utils.Board;
 import com.blackout.aow.warrior.WarriorVisual;
+import com.blackout.holoapi.core.Holo;
 
 public class AowPlayer {
 	
@@ -18,6 +19,8 @@ public class AowPlayer {
 	protected int xp;
 	protected int gold;
 	protected Ages age;
+	protected Holo blueBaseLife;
+	protected Holo redBaseLife;
 	
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
@@ -115,6 +118,22 @@ public class AowPlayer {
 
 	public void setRedNPC(List<WarriorVisual> redNPC) {
 		this.redNPC = redNPC;
+	}
+	
+	public Holo getBlueBaseLife() {
+		return blueBaseLife;
+	}
+
+	public void setBlueBaseLife(Holo blueBaseLife) {
+		this.blueBaseLife = blueBaseLife;
+	}
+
+	public Holo getRedBaseLife() {
+		return redBaseLife;
+	}
+
+	public void setRedBaseLife(Holo redBaseLife) {
+		this.redBaseLife = redBaseLife;
 	}
 
 	public static AowPlayer getFromPlayer(Player p) {

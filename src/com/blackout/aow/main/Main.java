@@ -21,6 +21,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.blackout.aow.commands.CommandManager;
 import com.blackout.aow.core.AowPlayer;
+import com.blackout.aow.core.Base;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.events.EnableEvent;
 import com.blackout.aow.events.JoinEvent;
@@ -29,13 +30,16 @@ import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
 
-	public static Location spawn;
-	public static Location spawnSpec;
-	public static Location spawnP1;
-	public static Location spawnP2;
+	public static Location spawn = null;
+	public static Location spawnSpec = null;
+	public static Location spawnP1 = null;
+	public static Location spawnP2 = null;
 	
-	public static AowPlayer player1;
-	public static AowPlayer player2;
+	public static AowPlayer player1 = null;
+	public static AowPlayer player2 = null;
+	
+	public static Base blueBase = null;
+	public static Base redBase = null;
 	
 	public static int gameTime = 0;
 	public static boolean gameRunning = false;
@@ -44,7 +48,6 @@ public class Main extends JavaPlugin implements Listener {
 	
 	public static List<WarriorLogical> blueWarrior = new ArrayList<WarriorLogical>();
 	public static List<WarriorLogical> redWarrior = new ArrayList<WarriorLogical>();
-	
 	
 	@Override
 	public void onEnable() {
