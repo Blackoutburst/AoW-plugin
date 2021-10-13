@@ -14,11 +14,10 @@ import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.blackout.aow.commands.CommandManager;
-import com.blackout.aow.core.AowPlayer;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.events.EnableEvent;
 import com.blackout.aow.events.JoinEvent;
-import com.blackout.npcapi.core.PacketInteractListener;
+import com.blackout.aow.events.LeaveEvent;
 
 public class Main extends JavaPlugin implements Listener {
 
@@ -36,18 +35,7 @@ public class Main extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void onPlayerLeave(PlayerQuitEvent event) {
-		PacketInteractListener.remove(event.getPlayer());
-		event.getPlayer().setDisplayName(event.getPlayer().getName());
-		event.getPlayer().setPlayerListName(event.getPlayer().getName());
-		AowPlayer p = AowPlayer.getFromPlayer(event.getPlayer());
-		
-		if (Core.player1 != null && p.getPlayer().getUniqueId() == Core.player1.getPlayer().getUniqueId()) {
-			Core.endGame();
-		}
-		if (Core.player2 != null && p.getPlayer().getUniqueId() == Core.player2.getPlayer().getUniqueId()) {
-			Core.endGame();
-		}
-		Core.aowplayers.remove(p);
+		new LeaveEvent().execute(event);
 	}
 	
 	@EventHandler
