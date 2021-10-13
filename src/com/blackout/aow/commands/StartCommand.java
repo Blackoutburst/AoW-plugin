@@ -12,12 +12,12 @@ import com.blackout.aow.nms.NMSTitle;
 public class StartCommand {
 
 	public void run(CommandSender sender) {
-		if (Main.player1 == null) {
+		if (Core.player1 == null) {
 			sender.sendMessage("§cPlayer 1 is not defined");
 			return;
 		}
 		
-		if (Main.player2 == null) {
+		if (Core.player2 == null) {
 			sender.sendMessage("§cPlayer 2 is not defined");
 			return;
 		}

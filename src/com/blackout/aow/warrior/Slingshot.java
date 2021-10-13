@@ -5,7 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.Sound;
 
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.main.Main;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.nms.NMSAnimation;
 
 public class Slingshot extends WarriorLogical {
@@ -29,10 +29,10 @@ public class Slingshot extends WarriorLogical {
 			this.getOptions().combatDelay = this.getOptions().maxCombatDelay;
 			Bukkit.getWorld("world").playSound(this.position, Sound.SHOOT_ARROW, 1.0f, 2.0f);
 
-			WarriorLogical op = this.owner.getPlayerID() == 0 ? Main.redWarrior.get(0) : Main.blueWarrior.get(0);
+			WarriorLogical op = this.owner.getPlayerID() == 0 ? Core.redWarrior.get(0) : Core.blueWarrior.get(0);
 			op.getOptions().setHealth(op.getOptions().getHealth() - this.options.damage);
 			
-			for (AowPlayer p : Main.aowplayers) {
+			for (AowPlayer p : Core.aowplayers) {
 				if (this.owner.getPlayerID() == 0) {
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(0).getNpc(), 1);
@@ -50,19 +50,19 @@ public class Slingshot extends WarriorLogical {
 			Bukkit.getWorld("world").playSound(this.position, Sound.SHOOT_ARROW, 1.0f, 2.0f);
 			
 			if (this.owner.getPlayerID() == 0) {
-				Main.redBase.setLife((int) (Main.redBase.getLife() - this.options.damage));
-				Bukkit.getWorld("world").playSound(Main.redBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+				Core.redBase.setLife((int) (Core.redBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Core.redBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
 			} else {
-				Main.blueBase.setLife((int) (Main.blueBase.getLife() - this.options.damage));
-				Bukkit.getWorld("world").playSound(Main.blueBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+				Core.blueBase.setLife((int) (Core.blueBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Core.blueBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
 			}
 			
-			for (AowPlayer p : Main.aowplayers) {
+			for (AowPlayer p : Core.aowplayers) {
 				if (this.owner.getPlayerID() == 0) {
-					Main.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
+					Core.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 				} else {
-					Main.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
+					Core.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 				}
 			}

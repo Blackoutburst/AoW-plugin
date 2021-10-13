@@ -5,7 +5,7 @@ import java.util.Random;
 import org.bukkit.Location;
 
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.main.Main;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.nms.NMSEntityMove;
 import com.blackout.aow.nms.NMSParticle;
 import com.blackout.holoapi.utils.HoloManager;
@@ -32,16 +32,16 @@ public abstract class WarriorLogical {
 
 	protected void walk(int index) {
 		if (this.owner.getPlayerID() == 0) { //Toward right
-			if (this.position.getZ() < Main.redBase.getLocation().getZ() && canWalk(index)) {
+			if (this.position.getZ() < Core.redBase.getLocation().getZ() && canWalk(index)) {
 				this.position.setZ((this.position.getZ() + (5.0f / 32.0f)));
-				for (AowPlayer p : Main.aowplayers) {
+				for (AowPlayer p : Core.aowplayers) {
 					NMSEntityMove.move(p.getPlayer(), p.getBlueNPC().get(index).getNpc().getEntityId(), (byte)(0), (byte)(0), (byte)(5));
 				}
 			}
 		} else { // Toward left
-			if (this.position.getZ() > Main.blueBase.getLocation().getZ() && canWalk(index)) {
+			if (this.position.getZ() > Core.blueBase.getLocation().getZ() && canWalk(index)) {
 				position.setZ(position.getZ() - (5.0f / 32.0f));
-				for (AowPlayer p : Main.aowplayers) {
+				for (AowPlayer p : Core.aowplayers) {
 					NMSEntityMove.move(p.getPlayer(), p.getRedNPC().get(index).getNpc().getEntityId(), (byte)(0), (byte)(0), (byte)(-5));
 				}
 			}
@@ -54,30 +54,30 @@ public abstract class WarriorLogical {
 			double prevZ = 0;
 			double myZ = this.position.getZ();
 			
-			if (Main.redWarrior.size() > 0) {
-				prevZ = Main.redWarrior.get(0).getPosition().getZ();
+			if (Core.redWarrior.size() > 0) {
+				prevZ = Core.redWarrior.get(0).getPosition().getZ();
 				if (Math.abs(prevZ - myZ) < 1.5f) {
 					return (false);
 				}
 			}
 			
 			if (index == 0) return (true);
-			prevZ = Main.blueWarrior.get(index - 1).getPosition().getZ();
+			prevZ = Core.blueWarrior.get(index - 1).getPosition().getZ();
 			
 			return (prevZ - myZ > 1.5f);
 		} else { // Toward left
 			double prevZ = 0;
 			double myZ = this.position.getZ();
 			
-			if (Main.blueWarrior.size() > 0) {
-				prevZ = Main.blueWarrior.get(0).getPosition().getZ();
+			if (Core.blueWarrior.size() > 0) {
+				prevZ = Core.blueWarrior.get(0).getPosition().getZ();
 				if (Math.abs(prevZ - myZ) < 1.5f) {
 					return (false);
 				}
 			}
 			
 			if (index == 0) return (true);
-			prevZ = Main.redWarrior.get(index - 1).getPosition().getZ();
+			prevZ = Core.redWarrior.get(index - 1).getPosition().getZ();
 		
 			return (myZ - prevZ > 1.5f);
 		}
@@ -88,8 +88,8 @@ public abstract class WarriorLogical {
 			double prevZ = 0;
 			double myZ = this.position.getZ();
 			
-			if (Main.redWarrior.size() > 0) {
-				prevZ = Main.redWarrior.get(0).getPosition().getZ();
+			if (Core.redWarrior.size() > 0) {
+				prevZ = Core.redWarrior.get(0).getPosition().getZ();
 				if (Math.abs(prevZ - myZ) < this.options.range) {
 					return (true);
 				}
@@ -98,8 +98,8 @@ public abstract class WarriorLogical {
 			double prevZ = 0;
 			double myZ = this.position.getZ();
 			
-			if (Main.blueWarrior.size() > 0) {
-				prevZ = Main.blueWarrior.get(0).getPosition().getZ();
+			if (Core.blueWarrior.size() > 0) {
+				prevZ = Core.blueWarrior.get(0).getPosition().getZ();
 				if (Math.abs(prevZ - myZ) < this.options.range) {
 					return (true);
 				}
@@ -110,19 +110,19 @@ public abstract class WarriorLogical {
 	
 	protected boolean canFightBase(int index) {
 		if (this.owner.getPlayerID() == 0) {//Toward right
-			double baseZ = Main.redBase.getLocation().getZ();
+			double baseZ = Core.redBase.getLocation().getZ();
 			double myZ = this.position.getZ();
 			
-			if (Main.redWarrior.size() == 0) {
+			if (Core.redWarrior.size() == 0) {
 				if (Math.abs(baseZ - myZ) < this.options.range) {
 					return (true);
 				}
 			}
 		} else { // Toward left
-			double baseZ = Main.blueBase.getLocation().getZ();
+			double baseZ = Core.blueBase.getLocation().getZ();
 			double myZ = this.position.getZ();
 			
-			if (Main.blueWarrior.size() == 0) {
+			if (Core.blueWarrior.size() == 0) {
 				if (Math.abs(baseZ - myZ) < this.options.range) {
 					return (true);
 				}
@@ -135,15 +135,15 @@ public abstract class WarriorLogical {
 		if ((int) (this.options.health) <= 0 && !this.dead) {
 			this.dead = true;
 			if (this.owner.getPlayerID() == 0) {
-				Main.player2.setXp((int) (Main.player2.getXp() + this.options.xpDrop));
-				Main.player2.setGold((int) (Main.player2.getGold() + this.options.goldDrop));
-				Main.player2.getPlayer().sendMessage("§aYou received §6"+(int) (this.options.goldDrop)+" gold and §b"+(int) (this.options.xpDrop)+" xp§a!");
+				Core.player2.setXp((int) (Core.player2.getXp() + this.options.xpDrop));
+				Core.player2.setGold((int) (Core.player2.getGold() + this.options.goldDrop));
+				Core.player2.getPlayer().sendMessage("§aYou received §6"+(int) (this.options.goldDrop)+" gold and §b"+(int) (this.options.xpDrop)+" xp§a!");
 			} else if (this.owner.getPlayerID() == 1) {
-				Main.player1.setXp((int) (Main.player1.getXp() + this.options.xpDrop));
-				Main.player1.setGold((int) (Main.player1.getGold() + this.options.goldDrop));
-				Main.player1.getPlayer().sendMessage("§aYou received §6"+(int) (this.options.goldDrop)+" gold and §b"+(int) (this.options.xpDrop)+" xp§a!");
+				Core.player1.setXp((int) (Core.player1.getXp() + this.options.xpDrop));
+				Core.player1.setGold((int) (Core.player1.getGold() + this.options.goldDrop));
+				Core.player1.getPlayer().sendMessage("§aYou received §6"+(int) (this.options.goldDrop)+" gold and §b"+(int) (this.options.xpDrop)+" xp§a!");
 			}
-			for (AowPlayer p : Main.aowplayers) {
+			for (AowPlayer p : Core.aowplayers) {
 				for (int i = 0; i < 10; i++) {
 					NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.CLOUD, (float)(this.position.getX()) + new Random().nextFloat() - 0.5f, (float)(this.position.getY()) + 1.6f - (0.1f * i), (float)(this.position.getZ()) + new Random().nextFloat() - 0.5f);
 				}

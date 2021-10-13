@@ -5,7 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.Sound;
 
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.main.Main;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.nms.NMSAnimation;
 import com.blackout.aow.nms.NMSParticle;
 
@@ -32,11 +32,11 @@ public class Bomber extends WarriorLogical {
 			this.getOptions().combatDelay = this.getOptions().maxCombatDelay;
 			Bukkit.getWorld("world").playSound(this.position, Sound.EXPLODE, 1.0f, 1.0f);
 			
-			WarriorLogical op = this.owner.getPlayerID() == 0 ? Main.redWarrior.get(0) : Main.blueWarrior.get(0);
+			WarriorLogical op = this.owner.getPlayerID() == 0 ? Core.redWarrior.get(0) : Core.blueWarrior.get(0);
 			op.getOptions().setHealth(op.getOptions().getHealth() - this.options.damage);
 			
 			
-			for (AowPlayer p : Main.aowplayers) {
+			for (AowPlayer p : Core.aowplayers) {
 				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float)(op.getPosition().getX()), (float)(op.getPosition().getY()), (float)(op.getPosition().getZ()));
 				if (this.owner.getPlayerID() == 0) {
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
@@ -55,21 +55,21 @@ public class Bomber extends WarriorLogical {
 			Bukkit.getWorld("world").playSound(this.position, Sound.EXPLODE, 1.0f, 1.0f);
 			
 			if (this.owner.getPlayerID() == 0) {
-				Main.redBase.setLife((int) (Main.redBase.getLife() - this.options.damage));
-				Bukkit.getWorld("world").playSound(Main.redBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+				Core.redBase.setLife((int) (Core.redBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Core.redBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
 			} else {
-				Main.blueBase.setLife((int) (Main.blueBase.getLife() - this.options.damage));
-				Bukkit.getWorld("world").playSound(Main.blueBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
+				Core.blueBase.setLife((int) (Core.blueBase.getLife() - this.options.damage));
+				Bukkit.getWorld("world").playSound(Core.blueBase.getLocation(), Sound.ZOMBIE_WOODBREAK, 1.0f, 1.0f);
 			}
 			
-			Location baseLoc = this.owner.getPlayerID() == 0 ? Main.redBase.getLocation() :  Main.blueBase.getLocation(); 
-			for (AowPlayer p : Main.aowplayers) {
+			Location baseLoc = this.owner.getPlayerID() == 0 ? Core.redBase.getLocation() :  Core.blueBase.getLocation(); 
+			for (AowPlayer p : Core.aowplayers) {
 				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float)(baseLoc.getX()), (float)(baseLoc.getY()), (float)(baseLoc.getZ()));
 				if (this.owner.getPlayerID() == 0) {
-					Main.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
+					Core.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 				} else {
-					Main.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
+					Core.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 				}
 			}

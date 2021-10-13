@@ -5,7 +5,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.main.Main;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.utils.Board;
 
 
@@ -24,7 +24,7 @@ public class SetPlayer1Command {
 			return;
 		}
 		Board board = new Board(p, "§9", "");
-		Main.player1 = new AowPlayer(0, p, board);
+		Core.player1 = new AowPlayer(0, p, board);
 		sender.sendMessage(p.getDisplayName()+" §a is now player 1");
 	}
 }

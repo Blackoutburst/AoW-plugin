@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import com.blackout.aow.core.Ages;
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.main.Main;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.nms.NMSEntityEquipment;
 import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.holoapi.core.Holo;
@@ -35,7 +35,7 @@ public class ShopNPCManager {
 		int locationIndex = owner.getPlayerID() * 4;
 		
 		for (int i = 0; i < 3 + (owner.getAge().equals(Ages.FUTURISTIC) ? 0 : 1); i++) {
-			for (AowPlayer p : Main.aowplayers) {
+			for (AowPlayer p : Core.aowplayers) {
 				NPC npc = new NPC(UUID.randomUUID(), "shop"+i)
 						.setCapeVisible(false)
 						.setSkin(SkinLoader.getSkinById(skinIndex + i))

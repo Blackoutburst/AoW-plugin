@@ -9,6 +9,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.core.Ages;
 import com.blackout.aow.core.AowPlayer;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.nms.NMSAttachEntity;
 import com.blackout.aow.nms.NMSEntityEquipment;
@@ -105,14 +106,14 @@ public class WarriorManager {
 		p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
 		
 		
-		for (AowPlayer ap : Main.aowplayers) {
+		for (AowPlayer ap : Core.aowplayers) {
 			NPC npc = new NPC(UUID.randomUUID(), names[unitIndex])
 					.setCapeVisible(false)
 					.setSkin(SkinLoader.getSkinById(unitIndex))
 					.setNameVisible(false)
-					.setLocation(p.getPlayerID() == 0 ? Main.blueBase.getLocation().clone() : Main.redBase.getLocation().clone());
+					.setLocation(p.getPlayerID() == 0 ? Core.blueBase.getLocation().clone() : Core.redBase.getLocation().clone());
 			
-			Location loc = p.getPlayerID() == 0 ? Main.blueBase.getLocation().clone() : Main.redBase.getLocation().clone();
+			Location loc = p.getPlayerID() == 0 ? Core.blueBase.getLocation().clone() : Core.redBase.getLocation().clone();
 			loc.setY(loc.getY() + 1);
 			
 			Holo life = new Holo(UUID.randomUUID(), "§7[§a||||||||||§7]")
@@ -141,12 +142,12 @@ public class WarriorManager {
 				unitsStats[unitIndex][2], unitsStats[unitIndex][3], 
 				unitsStats[unitIndex][4], unitsStats[unitIndex][5], items[unitIndex], unitsStats[unitIndex][6]);
 		
-		WarriorLogical w = selectWarriorType(names[unitIndex], p, opt, p.getPlayerID() == 0 ? Main.blueBase.getLocation().clone() : Main.redBase.getLocation().clone());
+		WarriorLogical w = selectWarriorType(names[unitIndex], p, opt, p.getPlayerID() == 0 ? Core.blueBase.getLocation().clone() : Core.redBase.getLocation().clone());
 		
 		if (p.getPlayerID() == 0) {
-			Main.blueWarrior.add(w);
+			Core.blueWarrior.add(w);
 		} else {
-			Main.redWarrior.add(w);
+			Core.redWarrior.add(w);
 		}
 	}
 	
@@ -181,21 +182,21 @@ public class WarriorManager {
 			
 			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.LEVEL_UP, 1.0f, 1.0f);
 			if (p.getPlayerID() == 0) {
-				Main.blueBase.setLife(Main.blueBase.getLife() + 5000);
-				Main.blueBase.setMaxLife(Main.blueBase.getMaxLife() + 5000);
-				Main.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
-				for (AowPlayer ap : Main.aowplayers) {
+				Core.blueBase.setLife(Core.blueBase.getLife() + 5000);
+				Core.blueBase.setMaxLife(Core.blueBase.getMaxLife() + 5000);
+				Core.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
+				for (AowPlayer ap : Core.aowplayers) {
 					ShopNPCManager.removeNPC(ap.getLeftShop(), ap.getPlayer());
 				}
-				ShopNPCManager.addNPC(Main.player1);
+				ShopNPCManager.addNPC(Core.player1);
 			} else {
-				Main.redBase.setLife(Main.redBase.getLife() + 5000);
-				Main.redBase.setMaxLife(Main.redBase.getMaxLife() + 5000);
-				Main.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
-				for (AowPlayer ap : Main.aowplayers) {
+				Core.redBase.setLife(Core.redBase.getLife() + 5000);
+				Core.redBase.setMaxLife(Core.redBase.getMaxLife() + 5000);
+				Core.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
+				for (AowPlayer ap : Core.aowplayers) {
 					ShopNPCManager.removeNPC(ap.getRightShop(), ap.getPlayer());
 				}
-				ShopNPCManager.addNPC(Main.player2);
+				ShopNPCManager.addNPC(Core.player2);
 			}
 		}
 	}
@@ -212,42 +213,42 @@ public class WarriorManager {
 			NPCManager.deleteNPC(p.getPlayer(), warrior.getNpc());
 		}
 		p.getRedNPC().clear();
-		Main.blueWarrior.clear();
-		Main.redWarrior.clear();
+		Core.blueWarrior.clear();
+		Core.redWarrior.clear();
 	}
 	
 	public static void doActions() {
 		new BukkitRunnable(){
 			@Override
 			public void run(){
-				if (Main.gameRunning) {
-					Main.gameTime++;
+				if (Core.gameRunning) {
+					Core.gameTime++;
 					
-					int j = Main.blueWarrior.size();
+					int j = Core.blueWarrior.size();
 					for (int i = 0; i < j; i++) {
-						WarriorLogical w = Main.blueWarrior.get(i);
+						WarriorLogical w = Core.blueWarrior.get(i);
 						if (w.dead) {
-							Main.blueWarrior.remove(i);
+							Core.blueWarrior.remove(i);
 							j--;
 						}
 					}
 					
-					j = Main.redWarrior.size();
+					j = Core.redWarrior.size();
 					for (int i = 0; i < j; i++) {
-						WarriorLogical w = Main.redWarrior.get(i);
+						WarriorLogical w = Core.redWarrior.get(i);
 						if (w.dead) {
-							Main.redWarrior.remove(i);
+							Core.redWarrior.remove(i);
 							j--;
 						}
 					}
 					
-					for (int i = 0; i < Main.blueWarrior.size(); i++) {
-						WarriorLogical w = Main.blueWarrior.get(i);
+					for (int i = 0; i < Core.blueWarrior.size(); i++) {
+						WarriorLogical w = Core.blueWarrior.get(i);
 						w.update(i);
 					}
 					
-					for (int i = 0; i < Main.redWarrior.size(); i++) {
-						WarriorLogical w = Main.redWarrior.get(i);
+					for (int i = 0; i < Core.redWarrior.size(); i++) {
+						WarriorLogical w = Core.redWarrior.get(i);
 						w.update(i);
 					}
 				}

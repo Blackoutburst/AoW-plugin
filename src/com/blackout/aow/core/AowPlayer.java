@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.bukkit.entity.Player;
 
-import com.blackout.aow.main.Main;
 import com.blackout.aow.npc.ShopNPC;
 import com.blackout.aow.utils.Board;
 import com.blackout.aow.warrior.WarriorVisual;
@@ -137,7 +136,7 @@ public class AowPlayer {
 	}
 
 	public static AowPlayer getFromPlayer(Player p) {
-		for (AowPlayer ap : Main.aowplayers) {
+		for (AowPlayer ap : Core.aowplayers) {
 			if (ap.player.getUniqueId().equals(p.getUniqueId())) {
 				return (ap);
 			}

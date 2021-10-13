@@ -4,7 +4,7 @@ import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import com.blackout.aow.main.Main;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.npc.NPCListener;
 import com.blackout.npcapi.core.PacketInteractListener;
 
@@ -15,7 +15,7 @@ public class JoinEvent {
 		p.setAllowFlight(true);
 		p.setHealth(p.getMaxHealth());
 		p.setSaturation(100000);
-		p.teleport(Main.spawn);
+		p.teleport(Core.spawn);
 	}
 	
 	public void execute(PlayerJoinEvent event) {

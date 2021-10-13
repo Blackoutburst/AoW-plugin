@@ -4,6 +4,7 @@ package com.blackout.aow.npc;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import com.blackout.aow.core.Core;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.npcapi.core.APlayer;
@@ -38,8 +39,8 @@ public class NPCListener implements NPCPacket {
 	private void runAction(Player p, int id) {
 		APlayer ap = APlayer.get(p);
 		
-		if (p.getPlayer().getUniqueId() ==  Main.player1.getPlayer().getUniqueId() ||
-				p.getPlayer().getUniqueId() ==  Main.player2.getPlayer().getUniqueId()) {
+		if (p.getPlayer().getUniqueId() ==  Core.player1.getPlayer().getUniqueId() ||
+				p.getPlayer().getUniqueId() ==  Core.player2.getPlayer().getUniqueId()) {
 			for (NPC npc : ap.npcs) {
 				if (id == npc.getEntityId()) {
 					new BukkitRunnable() {

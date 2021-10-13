@@ -1,12 +1,6 @@
 package com.blackout.aow.main;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
-import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
@@ -21,42 +15,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.blackout.aow.commands.CommandManager;
 import com.blackout.aow.core.AowPlayer;
-import com.blackout.aow.core.Base;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.events.EnableEvent;
 import com.blackout.aow.events.JoinEvent;
-import com.blackout.aow.warrior.WarriorLogical;
 import com.blackout.npcapi.core.PacketInteractListener;
 
 public class Main extends JavaPlugin implements Listener {
 
-	public static Location spawn = null;
-	public static Location spawnSpec = null;
-	public static Location spawnP1 = null;
-	public static Location spawnP2 = null;
-	
-	public static AowPlayer player1 = null;
-	public static AowPlayer player2 = null;
-	
-	public static Base blueBase = null;
-	public static Base redBase = null;
-	
-	public static int gameTime = 0;
-	public static boolean gameRunning = false;
-	
-	public static List<AowPlayer> aowplayers = new ArrayList<AowPlayer>();
-	
-	public static List<WarriorLogical> blueWarrior = new ArrayList<WarriorLogical>();
-	public static List<WarriorLogical> redWarrior = new ArrayList<WarriorLogical>();
-	
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);
 		new EnableEvent().execute();
-		spawn = new Location(Bukkit.getWorld("world"), 958.5f, 56, 1326.5f, -90, 0);
-		spawnP1 = new Location(Bukkit.getWorld("world"), 970.5f, 55, 1311.5f, -90, 0);
-		spawnP2 = new Location(Bukkit.getWorld("world"), 970.5f, 55, 1341.5f, -90, 0);
-		spawnSpec = new Location(Bukkit.getWorld("world"), 992.5f, 55, 1326.5f, 90, 0);
+		Core.loadLocations();
 	}
 	
 	@EventHandler
@@ -70,13 +40,14 @@ public class Main extends JavaPlugin implements Listener {
 		event.getPlayer().setDisplayName(event.getPlayer().getName());
 		event.getPlayer().setPlayerListName(event.getPlayer().getName());
 		AowPlayer p = AowPlayer.getFromPlayer(event.getPlayer());
-		if (p.getPlayer().getUniqueId() ==  Main.player1.getPlayer().getUniqueId() ||
-				p.getPlayer().getUniqueId() ==  Main.player2.getPlayer().getUniqueId()) {
-			aowplayers.remove(p);
+		
+		if (Core.player1 != null && p.getPlayer().getUniqueId() == Core.player1.getPlayer().getUniqueId()) {
 			Core.endGame();
-		} else {
-			aowplayers.remove(p);
 		}
+		if (Core.player2 != null && p.getPlayer().getUniqueId() == Core.player2.getPlayer().getUniqueId()) {
+			Core.endGame();
+		}
+		Core.aowplayers.remove(p);
 	}
 	
 	@EventHandler
