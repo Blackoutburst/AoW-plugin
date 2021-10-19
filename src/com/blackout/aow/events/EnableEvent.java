@@ -8,7 +8,7 @@ public class EnableEvent {
 	public void execute() {
 		SkinLoader.loadSkinFromUUID(0, "db2a372876b24b4b9d9d4fa70fa6f2fc"); //Cave man
 		SkinLoader.loadSkinFromUUID(1, "db2a372876b24b4b9d9d4fa70fa6f2fc"); //Slingshot
-		SkinLoader.loadSkinFromUUID(2, "b82b0a57c0f0435fa0bb63e9475497e3"); //Steve
+		SkinLoader.loadSkinFromUUID(2, "8a64d406893744d8810ec5410ac47b8c"); //Steve
 		
 		SkinLoader.loadSkinFromUUID(3, "d09accabcb4c4549bebeab3612bff0b9"); //Swordsmand
 		SkinLoader.loadSkinFromUUID(4, "8ff7507bc9394abd9b9791bc437c0568"); //Archer
