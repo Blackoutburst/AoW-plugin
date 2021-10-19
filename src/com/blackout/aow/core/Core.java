@@ -93,6 +93,28 @@ public class Core {
 			HoloManager.spawnHolo(redLife, p.getPlayer());
 			p.setBlueBaseLife(blueLife);
 			p.setRedBaseLife(redLife);
+			
+			String blue = "§9Blue base health points";
+			String red = "§4Red base health points";
+			
+			if (p == Core.player1) {
+				blue = "§9Your base health points";
+				red = "§4Opponent base health points";
+			}
+			
+			if (p == Core.player2) {
+				blue = "§9Opponent base health points";
+				red = "§4Your base health points";
+			}
+			
+			Holo blueName = new Holo(UUID.randomUUID(), blue)
+			        .setLocation(new Location(Bukkit.getWorld("world"), 977.5f, 55.3f, 1307.5f));
+			HoloManager.spawnHolo(blueName, p.getPlayer());
+			Holo redName = new Holo(UUID.randomUUID(), red)
+			        .setLocation(new Location(Bukkit.getWorld("world"), 977.5f, 55.3f, 1345.5f));
+			HoloManager.spawnHolo(redName, p.getPlayer());
+			p.setBlueBaseName(blueName);
+			p.setRedBaseName(redName);
 		}
 	}
 	
@@ -116,6 +138,8 @@ public class Core {
 			WarriorManager.clearWarrior(p);
 			HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseLife());
 			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseLife());
+			HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseName());
+			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseName());
 		}
 		player1 = null;
 		player2 = null;

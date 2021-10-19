@@ -20,6 +20,8 @@ public class AowPlayer {
 	protected Ages age;
 	protected Holo blueBaseLife;
 	protected Holo redBaseLife;
+	protected Holo blueBaseName;
+	protected Holo redBaseName;
 	
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
@@ -133,6 +135,22 @@ public class AowPlayer {
 
 	public void setRedBaseLife(Holo redBaseLife) {
 		this.redBaseLife = redBaseLife;
+	}
+	
+	public Holo getBlueBaseName() {
+		return blueBaseName;
+	}
+
+	public void setBlueBaseName(Holo blueBaseName) {
+		this.blueBaseName = blueBaseName;
+	}
+
+	public Holo getRedBaseName() {
+		return redBaseName;
+	}
+
+	public void setRedBaseName(Holo redBaseName) {
+		this.redBaseName = redBaseName;
 	}
 
 	public static AowPlayer getFromPlayer(Player p) {
