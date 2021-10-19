@@ -21,7 +21,7 @@ public class Base {
 	}
 
 	public void updateLifeBar(AowPlayer p, Holo lifeBar, boolean blue) {
-		int lifePercent = (int) (life * 100 / maxLife);
+		int lifePercent = (int) (this.life * 100 / this.maxLife);
 		Location loc = lifeBar.getLocation().clone();
 		
 		HoloManager.deleteHolo(p.getPlayer(), lifeBar);
@@ -33,6 +33,10 @@ public class Base {
 			p.setBlueBaseLife(life);
 		} else {
 			p.setRedBaseLife(life);
+		}
+		
+		if (this.life <= 0) {
+			Core.endGame();
 		}
 	}
 	

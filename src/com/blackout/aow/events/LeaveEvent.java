@@ -15,11 +15,15 @@ public class LeaveEvent {
 		AowPlayer p = AowPlayer.getFromPlayer(event.getPlayer());
 		
 		if (Core.player1 != null && p.getPlayer().getUniqueId() == Core.player1.getPlayer().getUniqueId()) {
+			Core.aowplayers.remove(p);
 			Core.endGame();
 		}
-		if (Core.player2 != null && p.getPlayer().getUniqueId() == Core.player2.getPlayer().getUniqueId()) {
+		else if (Core.player2 != null && p.getPlayer().getUniqueId() == Core.player2.getPlayer().getUniqueId()) {
+			Core.aowplayers.remove(p);
 			Core.endGame();
+		} else {
+			Core.aowplayers.remove(p);
 		}
-		Core.aowplayers.remove(p);
+		
 	}
 }

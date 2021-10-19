@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import com.blackout.aow.nms.NMSTitle;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
 import com.blackout.aow.warrior.WarriorLogical;
@@ -131,6 +132,27 @@ public class Core {
 		resetNameColor();
 		gameRunning = false;
 		for (AowPlayer p : aowplayers) {
+			
+			if (blueBase.getLife() > redBase.getLife()) {
+				if (p == player1) {
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 80, 20);
+				} else if (p == player2) {
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§cYou lost the game!", 0, 80, 20);
+				} else {
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", player1.getPlayer().getDisplayName()+"§a won the game!", 0, 80, 20);
+				}
+			} else if (blueBase.getLife() < redBase.getLife()){
+				if (p == player2) {
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 80, 20);
+				} else if (p == player1) {
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§cYou lost!", 0, 80, 20);
+				} else {
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", player2.getPlayer().getDisplayName()+"§a won the game!", 0, 80, 20);
+				}
+			} else {
+				NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§eDraw!", 0, 80, 20);
+			}
+			
 			p.getPlayer().teleport(spawn);
 			p.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
 			ShopNPCManager.removeNPC(p.getLeftShop(), p.getPlayer());
