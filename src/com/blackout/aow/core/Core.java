@@ -9,10 +9,13 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 
+import com.blackout.aow.main.Main;
 import com.blackout.aow.nms.NMSTitle;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
+import com.blackout.aow.utils.ScoreboardManager;
 import com.blackout.aow.warrior.WarriorLogical;
 import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.holoapi.core.Holo;
@@ -38,6 +41,21 @@ public class Core {
 	
 	public static List<WarriorLogical> blueWarrior = new ArrayList<WarriorLogical>();
 	public static List<WarriorLogical> redWarrior = new ArrayList<WarriorLogical>();
+	
+	public static void update() {
+		new BukkitRunnable(){
+			@Override
+			public void run(){
+				if (Core.gameRunning) {
+					Core.gameTime++;
+
+					for (AowPlayer p : Core.aowplayers) {
+						ScoreboardManager.update(p);
+					}
+				}
+			}
+		}.runTaskTimer(Main.getPlugin(Main.class), 0L, 20L);
+	}
 	
 	public static void loadLocations() {
 		spawn = new Location(Bukkit.getWorld("world"), 958.5f, 56, 1326.5f, -90, 0);
@@ -126,6 +144,8 @@ public class Core {
 		gameTime = 0;
 		ShopNPCManager.addNPC(player1);
 		ShopNPCManager.addNPC(player2);
+		for (AowPlayer p : aowplayers)
+			ScoreboardManager.init(p);
 	}
 	
 	public static void endGame() {
@@ -152,7 +172,6 @@ public class Core {
 			} else {
 				NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§eDraw!", 0, 80, 20);
 			}
-			
 			p.getPlayer().teleport(spawn);
 			p.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
 			ShopNPCManager.removeNPC(p.getLeftShop(), p.getPlayer());
@@ -162,6 +181,7 @@ public class Core {
 			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseLife());
 			HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseName());
 			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseName());
+			ScoreboardManager.clear(p);
 		}
 		player1 = null;
 		player2 = null;

@@ -222,7 +222,6 @@ public class WarriorManager {
 			@Override
 			public void run(){
 				if (Core.gameRunning) {
-					Core.gameTime++;
 					
 					int j = Core.blueWarrior.size();
 					for (int i = 0; i < j; i++) {
