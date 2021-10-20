@@ -48,7 +48,8 @@ public class Core {
 			public void run(){
 				if (Core.gameRunning) {
 					Core.gameTime++;
-
+					player1.gold += 5 * (player1.getAge().ordinal() + 1);
+					player2.gold += 5 * (player1.getAge().ordinal() + 1);
 					for (AowPlayer p : Core.aowplayers) {
 						ScoreboardManager.update(p);
 					}
