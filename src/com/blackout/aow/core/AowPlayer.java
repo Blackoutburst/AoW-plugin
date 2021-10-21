@@ -18,6 +18,8 @@ public class AowPlayer {
 	protected int xp;
 	protected int gold;
 	protected Ages age;
+	protected float spawnUnitsDelay;
+	protected float spawnUnitsDelayInit;
 	protected Holo blueBaseLife;
 	protected Holo redBaseLife;
 	protected Holo blueBaseName;
@@ -35,6 +37,8 @@ public class AowPlayer {
 		this.xp = 0;
 		this.gold = 100;
 		this.age = Ages.PREHISTORIC;
+		this.spawnUnitsDelay = 0;
+		this.spawnUnitsDelayInit = 0;
 	}
 
 	public Board getBoard() {
@@ -87,6 +91,23 @@ public class AowPlayer {
 	public AowPlayer setAge(Ages age) {
 		this.age = age;
 		return (this);
+	}
+	
+	public float getSpawnUnitsDelay() {
+		return spawnUnitsDelay;
+	}
+
+	public AowPlayer setSpawnUnitsDelay(float spawnUnits) {
+		this.spawnUnitsDelay = spawnUnits;
+		return (this);
+	}
+
+	public float getSpawnUnitsDelayInit() {
+		return spawnUnitsDelayInit;
+	}
+
+	public void setSpawnUnitsDelayInit(float spawnUnitsDelayInit) {
+		this.spawnUnitsDelayInit = spawnUnitsDelayInit;
 	}
 
 	public List<ShopNPC> getLeftShop() {

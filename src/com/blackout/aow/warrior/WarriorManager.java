@@ -13,6 +13,7 @@ import com.blackout.aow.core.Core;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.nms.NMSAttachEntity;
 import com.blackout.aow.nms.NMSEntityEquipment;
+import com.blackout.aow.nms.NMSExperience;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
@@ -62,23 +63,23 @@ public class WarriorManager {
 			"Space gunner",
 			"Super soldier"};
 	
-	//xp |     gold | hp |   range | dmg | cost | combat delay
+	//     xp | gold | hp |  range | dmg | cost | combat delay | spawn delay
 	public static float[][] unitsStats = new float[][] {
-		{  20,   30,    100,  2.0f,  25,   15,    20}, //Cave man
-		{  30,   35,     80,  5.0f,  20,   25,    25}, //Slingshot
-		{  80,   90,    250,  2.0f,  30,  100,    20}, //Steve
-		{ 100,  100,    400,  2.0f,  80,   70,    20}, //Swordsman
-		{ 120,  120,    300,  5.0f,  60,   90,    18}, //Archer
-		{ 200,  180,    700,  2.0f, 100,  200,    20}, //Knight
-		{ 200,  240,    800,  2.0f, 160,  200,    18}, //Musketeer
-		{ 240,  280,    600,  5.0f, 120,  260,    16}, //Rifleman
-		{ 400,  350,   1000,  5.0f, 400,  400,    30}, //Cannoneer
-		{ 500,  400,   1500,  2.0f, 400,  350,    15}, //Soldier
-		{ 560,  420,   1000,  6.0f,  80,  450,     5}, //Gunner
-		{ 800,  550,   1500,  4.0f, 450,  600,    30}, //Bomber
-		{ 800,  600,   2000,  2.0f, 600,  550,    10}, //Space soldier
-		{1200,  740,   1600,  7.0f, 200,  700,     5}, //Space gunner
-		{2000, 3500,  50000,  2.0f, 700, 5000,     5}, //Super soldier
+		{  20,   30,    100,  2.0f,  25,   15,    20, 10}, //Cave man
+		{  30,   35,     80,  5.0f,  20,   25,    25, 10}, //Slingshot
+		{  80,   90,    250,  2.0f,  30,  100,    20, 20}, //Steve
+		{ 100,  100,    400,  2.0f,  80,   70,    20, 15}, //Swordsman
+		{ 120,  120,    300,  5.0f,  60,   90,    18, 15}, //Archer
+		{ 200,  180,    700,  2.0f, 100,  200,    20, 30}, //Knight
+		{ 200,  240,    800,  2.0f, 160,  200,    18, 20}, //Musketeer
+		{ 240,  280,    600,  5.0f, 120,  260,    16, 20}, //Rifleman
+		{ 400,  350,   1000,  5.0f, 400,  400,    30, 35}, //Cannoneer
+		{ 500,  400,   1500,  2.0f, 400,  350,    15, 25}, //Soldier
+		{ 560,  420,   1000,  6.0f,  80,  450,     5, 25}, //Gunner
+		{ 800,  550,   1500,  4.0f, 450,  600,    30, 40}, //Bomber
+		{ 800,  600,   2000,  2.0f, 600,  550,    10, 30}, //Space soldier
+		{1200,  740,   1600,  7.0f, 200,  700,     5, 30}, //Space gunner
+		{2000, 3500,  50000,  2.0f, 700, 5000,     5, 50}, //Super soldier
 	};
 	
 	public static void createNewWarrior(String name, Player p) {
@@ -101,6 +102,15 @@ public class WarriorManager {
 			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 			return;
 		}
+		
+		if (p.getSpawnUnitsDelay() > 0) {
+			p.getPlayer().sendMessage("§cYou must wait "+p.getSpawnUnitsDelay()/20+"s before spawning a new units!");
+			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ANVIL_BREAK, 1.0f, 1.0f);
+			return;
+		}
+		
+		p.setSpawnUnitsDelay(unitsStats[unitIndex][7]);
+		p.setSpawnUnitsDelayInit(p.getSpawnUnitsDelay());
 		p.setGold((int)(p.getGold() - unitsStats[unitIndex][5]));
 		p.getPlayer().sendMessage("§b"+names[unitIndex]+" §acreated for §6"+(int)(unitsStats[unitIndex][5])+" gold!");
 		p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
@@ -217,11 +227,23 @@ public class WarriorManager {
 		Core.redWarrior.clear();
 	}
 	
+	
+	private static float map(float value, float min1, float max1, float min2, float max2) {
+		  return min2 + (value - min1) * (max2 - min2) / (max1 - min1);
+	}
+	
 	public static void doActions() {
 		new BukkitRunnable(){
 			@Override
 			public void run(){
 				if (Core.gameRunning) {
+					
+					for (AowPlayer p : Core.aowplayers) {
+						if (p.getSpawnUnitsDelay() > 0) {
+							p.setSpawnUnitsDelay(p.getSpawnUnitsDelay() - 1);
+							NMSExperience.setXp(p.getPlayer(), map(p.getSpawnUnitsDelay(), 0, p.getSpawnUnitsDelayInit(), 0, 1));
+						}
+					}
 					
 					int j = Core.blueWarrior.size();
 					for (int i = 0; i < j; i++) {
