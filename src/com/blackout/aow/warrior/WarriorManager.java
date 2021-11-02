@@ -105,7 +105,7 @@ public class WarriorManager {
 		
 		if (p.getSpawnUnitsDelay() > 0) {
 			p.getPlayer().sendMessage("§cYou must wait "+p.getSpawnUnitsDelay()/20+"s before spawning a new units!");
-			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ANVIL_BREAK, 1.0f, 1.0f);
+			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.VILLAGER_NO, 1.0f, 1.0f);
 			return;
 		}
 		

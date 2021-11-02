@@ -63,9 +63,11 @@ public class Rifleman extends WarriorLogical {
 			for (AowPlayer p : Core.aowplayers) {
 				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_NORMAL, (float)(baseLoc.getX()), (float)(baseLoc.getY()), (float)(baseLoc.getZ()));
 				if (this.owner.getPlayerID() == 0) {
+					if (p.getBlueNPC().size() <= index) continue;
 					Core.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 				} else {
+					if (p.getRedNPC().size() <= index) continue;
 					Core.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 				}

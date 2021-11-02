@@ -34,11 +34,13 @@ public class Musketeer extends WarriorLogical {
 			
 			for (AowPlayer p : Core.aowplayers) {
 				if (this.owner.getPlayerID() == 0) {
-					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(0).getNpc(), 0);
+					if (p.getBlueNPC().size() <= index) continue;
+					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(0).getNpc(), 1);
 					p.getRedNPC().get(0).updateLifeBar(p.getPlayer(), op);
 				} else {
-					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(0).getNpc(), 0);
+					if (p.getRedNPC().size() <= index) continue;
+					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(0).getNpc(), 1);
 					p.getBlueNPC().get(0).updateLifeBar(p.getPlayer(), op);
 				}
@@ -58,9 +60,11 @@ public class Musketeer extends WarriorLogical {
 			
 			for (AowPlayer p : Core.aowplayers) {
 				if (this.owner.getPlayerID() == 0) {
+					if (p.getBlueNPC().size() <= index) continue;
 					Core.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 				} else {
+					if (p.getRedNPC().size() <= index) continue;
 					Core.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 				}

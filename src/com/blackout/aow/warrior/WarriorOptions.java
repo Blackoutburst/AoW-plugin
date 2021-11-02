@@ -23,7 +23,7 @@ public class WarriorOptions {
 		this.damage = damage;
 		this.cost = cost;
 		this.heldItemID = heldItemID;
-		this.combatDelay = combatDelay;
+		this.combatDelay = 0;
 		this.maxCombatDelay = combatDelay;
 	}
 

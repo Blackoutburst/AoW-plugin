@@ -35,14 +35,15 @@ public class Bomber extends WarriorLogical {
 			WarriorLogical op = this.owner.getPlayerID() == 0 ? Core.redWarrior.get(0) : Core.blueWarrior.get(0);
 			op.getOptions().setHealth(op.getOptions().getHealth() - this.options.damage);
 			
-			
 			for (AowPlayer p : Core.aowplayers) {
 				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float)(op.getPosition().getX()), (float)(op.getPosition().getY()), (float)(op.getPosition().getZ()));
 				if (this.owner.getPlayerID() == 0) {
+					if (p.getBlueNPC().size() <= index) continue;
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(0).getNpc(), 1);
 					p.getRedNPC().get(0).updateLifeBar(p.getPlayer(), op);
 				} else {
+					if (p.getRedNPC().size() <= index) continue;
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(0).getNpc(), 1);
 					p.getBlueNPC().get(0).updateLifeBar(p.getPlayer(), op);
@@ -66,9 +67,11 @@ public class Bomber extends WarriorLogical {
 			for (AowPlayer p : Core.aowplayers) {
 				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float)(baseLoc.getX()), (float)(baseLoc.getY()), (float)(baseLoc.getZ()));
 				if (this.owner.getPlayerID() == 0) {
+					if (p.getBlueNPC().size() <= index) continue;
 					Core.redBase.updateLifeBar(p, p.getRedBaseLife(), false);
 					NMSAnimation.animation(p.getPlayer(), p.getBlueNPC().get(index).getNpc(), 0);
 				} else {
+					if (p.getRedNPC().size() <= index) continue;
 					Core.blueBase.updateLifeBar(p, p.getBlueBaseLife(), true);
 					NMSAnimation.animation(p.getPlayer(), p.getRedNPC().get(index).getNpc(), 0);
 				}

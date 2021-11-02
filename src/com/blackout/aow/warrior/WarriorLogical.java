@@ -35,6 +35,7 @@ public abstract class WarriorLogical {
 			if (this.position.getZ() < Core.redBase.getLocation().getZ() && canWalk(index)) {
 				this.position.setZ((this.position.getZ() + (5.0f / 32.0f)));
 				for (AowPlayer p : Core.aowplayers) {
+					if (p.getBlueNPC().size() <= index) continue;
 					NMSEntityMove.move(p.getPlayer(), p.getBlueNPC().get(index).getNpc().getEntityId(), (byte)(0), (byte)(0), (byte)(5));
 				}
 			}
@@ -42,6 +43,7 @@ public abstract class WarriorLogical {
 			if (this.position.getZ() > Core.blueBase.getLocation().getZ() && canWalk(index)) {
 				position.setZ(position.getZ() - (5.0f / 32.0f));
 				for (AowPlayer p : Core.aowplayers) {
+					if (p.getRedNPC().size() <= index) continue;
 					NMSEntityMove.move(p.getPlayer(), p.getRedNPC().get(index).getNpc().getEntityId(), (byte)(0), (byte)(0), (byte)(-5));
 				}
 			}
