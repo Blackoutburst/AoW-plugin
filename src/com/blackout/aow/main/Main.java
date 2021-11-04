@@ -6,7 +6,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -41,6 +43,18 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent event) {
 		if (!event.getPlayer().getGameMode().equals(GameMode.CREATIVE))
+			event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void onBlockPlace(BlockPlaceEvent event) {
+		if (!event.getPlayer().getGameMode().equals(GameMode.CREATIVE))
+			event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void onInventoryClick(InventoryClickEvent  event) {
+		if (!event.getWhoClicked().getGameMode().equals(GameMode.CREATIVE))
 			event.setCancelled(true);
 	}
 	

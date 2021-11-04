@@ -16,6 +16,7 @@ import com.blackout.aow.nms.NMSTitle;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
 import com.blackout.aow.utils.ScoreboardManager;
+import com.blackout.aow.utils.Utils;
 import com.blackout.aow.warrior.WarriorLogical;
 import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.holoapi.core.Holo;
@@ -156,6 +157,8 @@ public class Core {
 		gameTime = 0;
 		ShopNPCManager.addNPC(player1);
 		ShopNPCManager.addNPC(player2);
+		Utils.giveItems(player1);
+		Utils.giveItems(player2);
 		for (AowPlayer p : aowplayers)
 			ScoreboardManager.init(p);
 	}
@@ -166,7 +169,7 @@ public class Core {
 		rsp.setPlaying(false);
 		rsp.destroy();
 		for (AowPlayer p : aowplayers) {
-			
+			p.getPlayer().getInventory().clear();
 			if (blueBase.getLife() > redBase.getLife()) {
 				if (p == player1) {
 					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 80, 20);
