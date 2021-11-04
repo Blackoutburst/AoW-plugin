@@ -11,7 +11,6 @@ import com.blackout.aow.utils.Board;
 
 public class SetPlayer1Command {
 
-	@SuppressWarnings("deprecation")
 	public void run(CommandSender sender, String[] args) {
 		if (args.length == 0) {
 			sender.sendMessage("§cInvalid usage");

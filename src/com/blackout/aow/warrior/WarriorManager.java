@@ -15,6 +15,7 @@ import com.blackout.aow.nms.NMSAttachEntity;
 import com.blackout.aow.nms.NMSEntityEquipment;
 import com.blackout.aow.nms.NMSExperience;
 import com.blackout.aow.npc.ShopNPCManager;
+import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
@@ -199,6 +200,7 @@ public class WarriorManager {
 					ShopNPCManager.removeNPC(ap.getLeftShop(), ap.getPlayer());
 				}
 				ShopNPCManager.addNPC(Core.player1);
+				Utils.giveItems(Core.player1);
 			} else {
 				Core.redBase.setLife(Core.redBase.getLife() + 5000);
 				Core.redBase.setMaxLife(Core.redBase.getMaxLife() + 5000);
@@ -207,6 +209,7 @@ public class WarriorManager {
 					ShopNPCManager.removeNPC(ap.getRightShop(), ap.getPlayer());
 				}
 				ShopNPCManager.addNPC(Core.player2);
+				Utils.giveItems(Core.player2);
 			}
 		} else {
 			p.getPlayer().sendMessage("§cYou don't have enough xp for that!");

@@ -10,6 +10,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
@@ -18,6 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.blackout.aow.commands.CommandManager;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.events.EnableEvent;
+import com.blackout.aow.events.InteractEvent;
 import com.blackout.aow.events.JoinEvent;
 import com.blackout.aow.events.LeaveEvent;
 
@@ -62,6 +64,11 @@ public class Main extends JavaPlugin implements Listener {
 	public void onItemDrop(PlayerDropItemEvent event) {
 		if (!event.getPlayer().getGameMode().equals(GameMode.CREATIVE))
 			event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void onInteractEvent(PlayerInteractEvent event) {
+		new InteractEvent().execute(event);
 	}
 	
 	@EventHandler
