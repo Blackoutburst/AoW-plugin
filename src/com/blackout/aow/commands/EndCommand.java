@@ -7,7 +7,9 @@ import com.blackout.aow.core.Core;
 public class EndCommand {
 
 	public void run(CommandSender sender) {
-		Core.endGame();
+		if (Core.gameRunning)
+			Core.endGame();
+		else
+			sender.sendMessage("§cThe game is not running!");
 	}
-	
 }

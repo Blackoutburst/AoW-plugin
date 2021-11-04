@@ -11,6 +11,7 @@ import com.blackout.npcapi.core.PacketInteractListener;
 public class JoinEvent {
 
 	private void setplayer(Player p) {
+		p.getInventory().clear();
 		p.setGameMode(GameMode.ADVENTURE);
 		p.setAllowFlight(true);
 		p.setHealth(p.getMaxHealth());

@@ -34,7 +34,7 @@ public class AowPlayer {
 		this.playerID = playerID;
 		this.player = player;
 		this.board = board;
-		this.xp = 0;
+		this.xp = 100000;
 		this.gold = 100;
 		this.age = Ages.PREHISTORIC;
 		this.spawnUnitsDelay = 0;

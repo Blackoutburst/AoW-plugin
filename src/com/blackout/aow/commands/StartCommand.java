@@ -22,8 +22,13 @@ public class StartCommand {
 			return;
 		}
 		
-		scheduleStart();
-		startGame();
+		if (Core.gameRunning) {
+			sender.sendMessage("§cThe game is alredy running!");
+		} else {
+			scheduleStart();
+			startGame();
+		}
+		
 	}
 	
 	private void scheduleStart() {

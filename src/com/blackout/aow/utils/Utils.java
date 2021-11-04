@@ -66,8 +66,10 @@ public class Utils {
 			meta = item.getItemMeta();
 			meta.setDisplayName("§bEvolve to the next age");
 			item.setItemMeta(meta);
-			player.getInventory().setItem(8, item);
+		} else {
+			item = new ItemStack(Material.AIR);
 		}
+		player.getInventory().setItem(8, item);
 	}
 	
 	public static AowPlayer getGamePlayer(Player p) {

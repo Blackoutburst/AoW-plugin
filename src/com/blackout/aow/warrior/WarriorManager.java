@@ -184,6 +184,8 @@ public class WarriorManager {
 	}
 	
 	private static void evolve(AowPlayer p) {
+		if (p.getAge().ordinal() >= ageCost.length) return;
+		
 		int cost = ageCost[p.getAge().ordinal()];
 		if (p.getXp() >= cost) {
 			if (p.getAge() == Ages.MODERN) p.setAge(Ages.FUTURISTIC);
