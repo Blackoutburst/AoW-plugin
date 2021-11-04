@@ -208,6 +208,9 @@ public class WarriorManager {
 				}
 				ShopNPCManager.addNPC(Core.player2);
 			}
+		} else {
+			p.getPlayer().sendMessage("§cYou don't have enough xp for that!");
+			p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ANVIL_LAND, 1.0f, 1.0f);
 		}
 	}
 	
