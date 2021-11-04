@@ -20,6 +20,9 @@ import com.blackout.aow.warrior.WarriorLogical;
 import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.holoapi.core.Holo;
 import com.blackout.holoapi.utils.HoloManager;
+import com.xxmicloxx.NoteBlockAPI.model.RepeatMode;
+import com.xxmicloxx.NoteBlockAPI.model.Song;
+import com.xxmicloxx.NoteBlockAPI.songplayer.RadioSongPlayer;
 
 public class Core {
 
@@ -33,6 +36,9 @@ public class Core {
 	
 	public static Base blueBase = null;
 	public static Base redBase = null;
+	
+	public static Song song;
+	public static RadioSongPlayer rsp;
 	
 	public static int gameTime = 0;
 	public static boolean gameRunning = false;
@@ -71,7 +77,10 @@ public class Core {
 		blueBase = new Base(player1, 5000, new Location(Bukkit.getWorld("world"), 983.5f, 54, 1307.5f, 0, 0));
 		redBase = new Base(player2, 5000, new Location(Bukkit.getWorld("world"), 983.5f, 54, 1345.5f, 180, 0));
 		
+		rsp = new RadioSongPlayer(song);
+		
 		for (Player p : Bukkit.getOnlinePlayers()) {
+			rsp.addPlayer(p);
 			if (p != player1.getPlayer() && p != player2.getPlayer()) {
 				Board b = new Board(p, "", "");
 				AowPlayer spec = new AowPlayer(-1, p, b);
@@ -84,6 +93,8 @@ public class Core {
 				aowplayers.add(spec);
 			}
 		}
+		rsp.setRepeatMode(RepeatMode.ONE);
+		rsp.setPlaying(true);
 		player1.getPlayer().teleport(spawnP1);
 		player2.getPlayer().teleport(spawnP2);
 		player1.getBoard().addTeam(player2, false);
@@ -152,6 +163,8 @@ public class Core {
 	public static void endGame() {
 		resetNameColor();
 		gameRunning = false;
+		rsp.setPlaying(false);
+		rsp.destroy();
 		for (AowPlayer p : aowplayers) {
 			
 			if (blueBase.getLife() > redBase.getLife()) {

@@ -6,6 +6,7 @@ author: Blackoutburst
 description: Age of War plugin
 depend: [NPCAPI]
 depend: [HoloAPI]
+depend: [NoteBlockAPI]
 commands:
   setplayer1:
     description: Set the player 1

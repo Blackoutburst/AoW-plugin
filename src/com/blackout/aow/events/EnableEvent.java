@@ -1,8 +1,11 @@
 package com.blackout.aow.events;
 
+import java.io.File;
+
 import com.blackout.aow.core.Core;
 import com.blackout.aow.warrior.WarriorManager;
 import com.blackout.npcapi.utils.SkinLoader;
+import com.xxmicloxx.NoteBlockAPI.utils.NBSDecoder;
 
 public class EnableEvent {
 
@@ -28,6 +31,9 @@ public class EnableEvent {
 		SkinLoader.loadSkinFromUUID(14, "7af7cf026d1d419cbbceef32944f812e"); //Super soldier
 		
 		WarriorManager.doActions();
+		
+		Core.song = NBSDecoder.parse(new File("plugins/AOW/aow.nbs"));
+		
 		Core.update();
 	}
 }
