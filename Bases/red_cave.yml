@@ -1,0 +1,9439 @@
+blocks:
+  '0':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1345
+  '1':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1346
+  '2':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1347
+  '3':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1348
+  '4':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1349
+  '5':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1350
+  '6':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1351
+  '7':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1352
+  '8':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1353
+  '9':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1354
+  '10':
+    type: AIR
+    data: 0
+    x: 978
+    y: 54
+    z: 1355
+  '11':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1345
+  '12':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1346
+  '13':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1347
+  '14':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1348
+  '15':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1349
+  '16':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1350
+  '17':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1351
+  '18':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1352
+  '19':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1353
+  '20':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1354
+  '21':
+    type: AIR
+    data: 0
+    x: 978
+    y: 55
+    z: 1355
+  '22':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1345
+  '23':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1346
+  '24':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1347
+  '25':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1348
+  '26':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1349
+  '27':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1350
+  '28':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1351
+  '29':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1352
+  '30':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1353
+  '31':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1354
+  '32':
+    type: AIR
+    data: 0
+    x: 978
+    y: 56
+    z: 1355
+  '33':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1345
+  '34':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1346
+  '35':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1347
+  '36':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1348
+  '37':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1349
+  '38':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1350
+  '39':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1351
+  '40':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1352
+  '41':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1353
+  '42':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1354
+  '43':
+    type: AIR
+    data: 0
+    x: 978
+    y: 57
+    z: 1355
+  '44':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1345
+  '45':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1346
+  '46':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1347
+  '47':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1348
+  '48':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1349
+  '49':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1350
+  '50':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1351
+  '51':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1352
+  '52':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1353
+  '53':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1354
+  '54':
+    type: AIR
+    data: 0
+    x: 978
+    y: 58
+    z: 1355
+  '55':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1345
+  '56':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1346
+  '57':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1347
+  '58':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1348
+  '59':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1349
+  '60':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1350
+  '61':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1351
+  '62':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1352
+  '63':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1353
+  '64':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1354
+  '65':
+    type: AIR
+    data: 0
+    x: 978
+    y: 59
+    z: 1355
+  '66':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1345
+  '67':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1346
+  '68':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1347
+  '69':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1348
+  '70':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1349
+  '71':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1350
+  '72':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1351
+  '73':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1352
+  '74':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1353
+  '75':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1354
+  '76':
+    type: AIR
+    data: 0
+    x: 978
+    y: 60
+    z: 1355
+  '77':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1345
+  '78':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1346
+  '79':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1347
+  '80':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1348
+  '81':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1349
+  '82':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1350
+  '83':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1351
+  '84':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1352
+  '85':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1353
+  '86':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1354
+  '87':
+    type: AIR
+    data: 0
+    x: 978
+    y: 61
+    z: 1355
+  '88':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1345
+  '89':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1346
+  '90':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1347
+  '91':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1348
+  '92':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1349
+  '93':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1350
+  '94':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1351
+  '95':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1352
+  '96':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1353
+  '97':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1354
+  '98':
+    type: AIR
+    data: 0
+    x: 978
+    y: 62
+    z: 1355
+  '99':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1345
+  '100':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1346
+  '101':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1347
+  '102':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1348
+  '103':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1349
+  '104':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1350
+  '105':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1351
+  '106':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1352
+  '107':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1353
+  '108':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1354
+  '109':
+    type: AIR
+    data: 0
+    x: 978
+    y: 63
+    z: 1355
+  '110':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1345
+  '111':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1346
+  '112':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1347
+  '113':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1348
+  '114':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1349
+  '115':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1350
+  '116':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1351
+  '117':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1352
+  '118':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1353
+  '119':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1354
+  '120':
+    type: AIR
+    data: 0
+    x: 978
+    y: 64
+    z: 1355
+  '121':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1345
+  '122':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1346
+  '123':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1347
+  '124':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1348
+  '125':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1349
+  '126':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1350
+  '127':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1351
+  '128':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1352
+  '129':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1353
+  '130':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1354
+  '131':
+    type: AIR
+    data: 0
+    x: 978
+    y: 65
+    z: 1355
+  '132':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1345
+  '133':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1346
+  '134':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1347
+  '135':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1348
+  '136':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1349
+  '137':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1350
+  '138':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1351
+  '139':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1352
+  '140':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1353
+  '141':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1354
+  '142':
+    type: AIR
+    data: 0
+    x: 978
+    y: 66
+    z: 1355
+  '143':
+    type: AIR
+    data: 0
+    x: 979
+    y: 54
+    z: 1345
+  '144':
+    type: STONE
+    data: 0
+    x: 979
+    y: 54
+    z: 1346
+  '145':
+    type: STONE
+    data: 0
+    x: 979
+    y: 54
+    z: 1347
+  '146':
+    type: COBBLESTONE
+    data: 0
+    x: 979
+    y: 54
+    z: 1348
+  '147':
+    type: STONE
+    data: 0
+    x: 979
+    y: 54
+    z: 1349
+  '148':
+    type: STONE
+    data: 0
+    x: 979
+    y: 54
+    z: 1350
+  '149':
+    type: STONE
+    data: 5
+    x: 979
+    y: 54
+    z: 1351
+  '150':
+    type: STONE
+    data: 0
+    x: 979
+    y: 54
+    z: 1352
+  '151':
+    type: AIR
+    data: 0
+    x: 979
+    y: 54
+    z: 1353
+  '152':
+    type: AIR
+    data: 0
+    x: 979
+    y: 54
+    z: 1354
+  '153':
+    type: AIR
+    data: 0
+    x: 979
+    y: 54
+    z: 1355
+  '154':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1345
+  '155':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1346
+  '156':
+    type: STONE
+    data: 0
+    x: 979
+    y: 55
+    z: 1347
+  '157':
+    type: STONE
+    data: 0
+    x: 979
+    y: 55
+    z: 1348
+  '158':
+    type: STONE
+    data: 5
+    x: 979
+    y: 55
+    z: 1349
+  '159':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1350
+  '160':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1351
+  '161':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1352
+  '162':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1353
+  '163':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1354
+  '164':
+    type: AIR
+    data: 0
+    x: 979
+    y: 55
+    z: 1355
+  '165':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1345
+  '166':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1346
+  '167':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1347
+  '168':
+    type: COBBLESTONE
+    data: 0
+    x: 979
+    y: 56
+    z: 1348
+  '169':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1349
+  '170':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1350
+  '171':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1351
+  '172':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1352
+  '173':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1353
+  '174':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1354
+  '175':
+    type: AIR
+    data: 0
+    x: 979
+    y: 56
+    z: 1355
+  '176':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1345
+  '177':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1346
+  '178':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1347
+  '179':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1348
+  '180':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1349
+  '181':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1350
+  '182':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1351
+  '183':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1352
+  '184':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1353
+  '185':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1354
+  '186':
+    type: AIR
+    data: 0
+    x: 979
+    y: 57
+    z: 1355
+  '187':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1345
+  '188':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1346
+  '189':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1347
+  '190':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1348
+  '191':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1349
+  '192':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1350
+  '193':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1351
+  '194':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1352
+  '195':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1353
+  '196':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1354
+  '197':
+    type: AIR
+    data: 0
+    x: 979
+    y: 58
+    z: 1355
+  '198':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1345
+  '199':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1346
+  '200':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1347
+  '201':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1348
+  '202':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1349
+  '203':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1350
+  '204':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1351
+  '205':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1352
+  '206':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1353
+  '207':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1354
+  '208':
+    type: AIR
+    data: 0
+    x: 979
+    y: 59
+    z: 1355
+  '209':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1345
+  '210':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1346
+  '211':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1347
+  '212':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1348
+  '213':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1349
+  '214':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1350
+  '215':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1351
+  '216':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1352
+  '217':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1353
+  '218':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1354
+  '219':
+    type: AIR
+    data: 0
+    x: 979
+    y: 60
+    z: 1355
+  '220':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1345
+  '221':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1346
+  '222':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1347
+  '223':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1348
+  '224':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1349
+  '225':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1350
+  '226':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1351
+  '227':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1352
+  '228':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1353
+  '229':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1354
+  '230':
+    type: AIR
+    data: 0
+    x: 979
+    y: 61
+    z: 1355
+  '231':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1345
+  '232':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1346
+  '233':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1347
+  '234':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1348
+  '235':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1349
+  '236':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1350
+  '237':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1351
+  '238':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1352
+  '239':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1353
+  '240':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1354
+  '241':
+    type: AIR
+    data: 0
+    x: 979
+    y: 62
+    z: 1355
+  '242':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1345
+  '243':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1346
+  '244':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1347
+  '245':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1348
+  '246':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1349
+  '247':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1350
+  '248':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1351
+  '249':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1352
+  '250':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1353
+  '251':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1354
+  '252':
+    type: AIR
+    data: 0
+    x: 979
+    y: 63
+    z: 1355
+  '253':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1345
+  '254':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1346
+  '255':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1347
+  '256':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1348
+  '257':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1349
+  '258':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1350
+  '259':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1351
+  '260':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1352
+  '261':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1353
+  '262':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1354
+  '263':
+    type: AIR
+    data: 0
+    x: 979
+    y: 64
+    z: 1355
+  '264':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1345
+  '265':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1346
+  '266':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1347
+  '267':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1348
+  '268':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1349
+  '269':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1350
+  '270':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1351
+  '271':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1352
+  '272':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1353
+  '273':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1354
+  '274':
+    type: AIR
+    data: 0
+    x: 979
+    y: 65
+    z: 1355
+  '275':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1345
+  '276':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1346
+  '277':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1347
+  '278':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1348
+  '279':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1349
+  '280':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1350
+  '281':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1351
+  '282':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1352
+  '283':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1353
+  '284':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1354
+  '285':
+    type: AIR
+    data: 0
+    x: 979
+    y: 66
+    z: 1355
+  '286':
+    type: AIR
+    data: 0
+    x: 980
+    y: 54
+    z: 1345
+  '287':
+    type: STONE
+    data: 0
+    x: 980
+    y: 54
+    z: 1346
+  '288':
+    type: STONE
+    data: 0
+    x: 980
+    y: 54
+    z: 1347
+  '289':
+    type: AIR
+    data: 0
+    x: 980
+    y: 54
+    z: 1348
+  '290':
+    type: AIR
+    data: 0
+    x: 980
+    y: 54
+    z: 1349
+  '291':
+    type: STONE
+    data: 0
+    x: 980
+    y: 54
+    z: 1350
+  '292':
+    type: STONE
+    data: 0
+    x: 980
+    y: 54
+    z: 1351
+  '293':
+    type: STONE
+    data: 5
+    x: 980
+    y: 54
+    z: 1352
+  '294':
+    type: COBBLESTONE
+    data: 0
+    x: 980
+    y: 54
+    z: 1353
+  '295':
+    type: AIR
+    data: 0
+    x: 980
+    y: 54
+    z: 1354
+  '296':
+    type: AIR
+    data: 0
+    x: 980
+    y: 54
+    z: 1355
+  '297':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1345
+  '298':
+    type: STONE
+    data: 5
+    x: 980
+    y: 55
+    z: 1346
+  '299':
+    type: STONE
+    data: 0
+    x: 980
+    y: 55
+    z: 1347
+  '300':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1348
+  '301':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1349
+  '302':
+    type: STONE
+    data: 0
+    x: 980
+    y: 55
+    z: 1350
+  '303':
+    type: STONE
+    data: 0
+    x: 980
+    y: 55
+    z: 1351
+  '304':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1352
+  '305':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1353
+  '306':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1354
+  '307':
+    type: AIR
+    data: 0
+    x: 980
+    y: 55
+    z: 1355
+  '308':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1345
+  '309':
+    type: STONE
+    data: 0
+    x: 980
+    y: 56
+    z: 1346
+  '310':
+    type: STONE
+    data: 0
+    x: 980
+    y: 56
+    z: 1347
+  '311':
+    type: STONE
+    data: 0
+    x: 980
+    y: 56
+    z: 1348
+  '312':
+    type: STONE
+    data: 5
+    x: 980
+    y: 56
+    z: 1349
+  '313':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1350
+  '314':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1351
+  '315':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1352
+  '316':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1353
+  '317':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1354
+  '318':
+    type: AIR
+    data: 0
+    x: 980
+    y: 56
+    z: 1355
+  '319':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1345
+  '320':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1346
+  '321':
+    type: COBBLESTONE
+    data: 0
+    x: 980
+    y: 57
+    z: 1347
+  '322':
+    type: STONE
+    data: 0
+    x: 980
+    y: 57
+    z: 1348
+  '323':
+    type: STONE
+    data: 5
+    x: 980
+    y: 57
+    z: 1349
+  '324':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1350
+  '325':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1351
+  '326':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1352
+  '327':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1353
+  '328':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1354
+  '329':
+    type: AIR
+    data: 0
+    x: 980
+    y: 57
+    z: 1355
+  '330':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1345
+  '331':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1346
+  '332':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1347
+  '333':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1348
+  '334':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1349
+  '335':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1350
+  '336':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1351
+  '337':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1352
+  '338':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1353
+  '339':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1354
+  '340':
+    type: AIR
+    data: 0
+    x: 980
+    y: 58
+    z: 1355
+  '341':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1345
+  '342':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1346
+  '343':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1347
+  '344':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1348
+  '345':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1349
+  '346':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1350
+  '347':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1351
+  '348':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1352
+  '349':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1353
+  '350':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1354
+  '351':
+    type: AIR
+    data: 0
+    x: 980
+    y: 59
+    z: 1355
+  '352':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1345
+  '353':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1346
+  '354':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1347
+  '355':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1348
+  '356':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1349
+  '357':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1350
+  '358':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1351
+  '359':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1352
+  '360':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1353
+  '361':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1354
+  '362':
+    type: AIR
+    data: 0
+    x: 980
+    y: 60
+    z: 1355
+  '363':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1345
+  '364':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1346
+  '365':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1347
+  '366':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1348
+  '367':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1349
+  '368':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1350
+  '369':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1351
+  '370':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1352
+  '371':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1353
+  '372':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1354
+  '373':
+    type: AIR
+    data: 0
+    x: 980
+    y: 61
+    z: 1355
+  '374':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1345
+  '375':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1346
+  '376':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1347
+  '377':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1348
+  '378':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1349
+  '379':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1350
+  '380':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1351
+  '381':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1352
+  '382':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1353
+  '383':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1354
+  '384':
+    type: AIR
+    data: 0
+    x: 980
+    y: 62
+    z: 1355
+  '385':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1345
+  '386':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1346
+  '387':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1347
+  '388':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1348
+  '389':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1349
+  '390':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1350
+  '391':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1351
+  '392':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1352
+  '393':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1353
+  '394':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1354
+  '395':
+    type: AIR
+    data: 0
+    x: 980
+    y: 63
+    z: 1355
+  '396':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1345
+  '397':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1346
+  '398':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1347
+  '399':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1348
+  '400':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1349
+  '401':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1350
+  '402':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1351
+  '403':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1352
+  '404':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1353
+  '405':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1354
+  '406':
+    type: AIR
+    data: 0
+    x: 980
+    y: 64
+    z: 1355
+  '407':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1345
+  '408':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1346
+  '409':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1347
+  '410':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1348
+  '411':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1349
+  '412':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1350
+  '413':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1351
+  '414':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1352
+  '415':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1353
+  '416':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1354
+  '417':
+    type: AIR
+    data: 0
+    x: 980
+    y: 65
+    z: 1355
+  '418':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1345
+  '419':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1346
+  '420':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1347
+  '421':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1348
+  '422':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1349
+  '423':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1350
+  '424':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1351
+  '425':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1352
+  '426':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1353
+  '427':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1354
+  '428':
+    type: AIR
+    data: 0
+    x: 980
+    y: 66
+    z: 1355
+  '429':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1345
+  '430':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1346
+  '431':
+    type: COAL_BLOCK
+    data: 0
+    x: 981
+    y: 54
+    z: 1347
+  '432':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1348
+  '433':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1349
+  '434':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1350
+  '435':
+    type: COBBLESTONE
+    data: 0
+    x: 981
+    y: 54
+    z: 1351
+  '436':
+    type: STONE
+    data: 0
+    x: 981
+    y: 54
+    z: 1352
+  '437':
+    type: COBBLESTONE
+    data: 0
+    x: 981
+    y: 54
+    z: 1353
+  '438':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1354
+  '439':
+    type: AIR
+    data: 0
+    x: 981
+    y: 54
+    z: 1355
+  '440':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1345
+  '441':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1346
+  '442':
+    type: COAL_BLOCK
+    data: 0
+    x: 981
+    y: 55
+    z: 1347
+  '443':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1348
+  '444':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1349
+  '445':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1350
+  '446':
+    type: STONE
+    data: 5
+    x: 981
+    y: 55
+    z: 1351
+  '447':
+    type: STONE
+    data: 5
+    x: 981
+    y: 55
+    z: 1352
+  '448':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1353
+  '449':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1354
+  '450':
+    type: AIR
+    data: 0
+    x: 981
+    y: 55
+    z: 1355
+  '451':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1345
+  '452':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1346
+  '453':
+    type: COAL_BLOCK
+    data: 0
+    x: 981
+    y: 56
+    z: 1347
+  '454':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1348
+  '455':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1349
+  '456':
+    type: COBBLESTONE
+    data: 0
+    x: 981
+    y: 56
+    z: 1350
+  '457':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1351
+  '458':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1352
+  '459':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1353
+  '460':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1354
+  '461':
+    type: AIR
+    data: 0
+    x: 981
+    y: 56
+    z: 1355
+  '462':
+    type: AIR
+    data: 0
+    x: 981
+    y: 57
+    z: 1345
+  '463':
+    type: STONE
+    data: 0
+    x: 981
+    y: 57
+    z: 1346
+  '464':
+    type: STONE
+    data: 0
+    x: 981
+    y: 57
+    z: 1347
+  '465':
+    type: STONE
+    data: 0
+    x: 981
+    y: 57
+    z: 1348
+  '466':
+    type: STONE
+    data: 0
+    x: 981
+    y: 57
+    z: 1349
+  '467':
+    type: STONE
+    data: 0
+    x: 981
+    y: 57
+    z: 1350
+  '468':
+    type: AIR
+    data: 0
+    x: 981
+    y: 57
+    z: 1351
+  '469':
+    type: AIR
+    data: 0
+    x: 981
+    y: 57
+    z: 1352
+  '470':
+    type: AIR
+    data: 0
+    x: 981
+    y: 57
+    z: 1353
+  '471':
+    type: AIR
+    data: 0
+    x: 981
+    y: 57
+    z: 1354
+  '472':
+    type: AIR
+    data: 0
+    x: 981
+    y: 57
+    z: 1355
+  '473':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1345
+  '474':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1346
+  '475':
+    type: STONE
+    data: 0
+    x: 981
+    y: 58
+    z: 1347
+  '476':
+    type: COBBLESTONE
+    data: 0
+    x: 981
+    y: 58
+    z: 1348
+  '477':
+    type: COBBLESTONE
+    data: 0
+    x: 981
+    y: 58
+    z: 1349
+  '478':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1350
+  '479':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1351
+  '480':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1352
+  '481':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1353
+  '482':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1354
+  '483':
+    type: AIR
+    data: 0
+    x: 981
+    y: 58
+    z: 1355
+  '484':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1345
+  '485':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1346
+  '486':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1347
+  '487':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1348
+  '488':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1349
+  '489':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1350
+  '490':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1351
+  '491':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1352
+  '492':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1353
+  '493':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1354
+  '494':
+    type: AIR
+    data: 0
+    x: 981
+    y: 59
+    z: 1355
+  '495':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1345
+  '496':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1346
+  '497':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1347
+  '498':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1348
+  '499':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1349
+  '500':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1350
+  '501':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1351
+  '502':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1352
+  '503':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1353
+  '504':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1354
+  '505':
+    type: AIR
+    data: 0
+    x: 981
+    y: 60
+    z: 1355
+  '506':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1345
+  '507':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1346
+  '508':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1347
+  '509':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1348
+  '510':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1349
+  '511':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1350
+  '512':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1351
+  '513':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1352
+  '514':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1353
+  '515':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1354
+  '516':
+    type: AIR
+    data: 0
+    x: 981
+    y: 61
+    z: 1355
+  '517':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1345
+  '518':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1346
+  '519':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1347
+  '520':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1348
+  '521':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1349
+  '522':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1350
+  '523':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1351
+  '524':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1352
+  '525':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1353
+  '526':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1354
+  '527':
+    type: AIR
+    data: 0
+    x: 981
+    y: 62
+    z: 1355
+  '528':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1345
+  '529':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1346
+  '530':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1347
+  '531':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1348
+  '532':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1349
+  '533':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1350
+  '534':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1351
+  '535':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1352
+  '536':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1353
+  '537':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1354
+  '538':
+    type: AIR
+    data: 0
+    x: 981
+    y: 63
+    z: 1355
+  '539':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1345
+  '540':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1346
+  '541':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1347
+  '542':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1348
+  '543':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1349
+  '544':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1350
+  '545':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1351
+  '546':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1352
+  '547':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1353
+  '548':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1354
+  '549':
+    type: AIR
+    data: 0
+    x: 981
+    y: 64
+    z: 1355
+  '550':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1345
+  '551':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1346
+  '552':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1347
+  '553':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1348
+  '554':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1349
+  '555':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1350
+  '556':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1351
+  '557':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1352
+  '558':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1353
+  '559':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1354
+  '560':
+    type: AIR
+    data: 0
+    x: 981
+    y: 65
+    z: 1355
+  '561':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1345
+  '562':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1346
+  '563':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1347
+  '564':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1348
+  '565':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1349
+  '566':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1350
+  '567':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1351
+  '568':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1352
+  '569':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1353
+  '570':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1354
+  '571':
+    type: AIR
+    data: 0
+    x: 981
+    y: 66
+    z: 1355
+  '572':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1345
+  '573':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1346
+  '574':
+    type: COAL_BLOCK
+    data: 0
+    x: 982
+    y: 54
+    z: 1347
+  '575':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1348
+  '576':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1349
+  '577':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1350
+  '578':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1351
+  '579':
+    type: STONE
+    data: 0
+    x: 982
+    y: 54
+    z: 1352
+  '580':
+    type: COBBLESTONE
+    data: 0
+    x: 982
+    y: 54
+    z: 1353
+  '581':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1354
+  '582':
+    type: AIR
+    data: 0
+    x: 982
+    y: 54
+    z: 1355
+  '583':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1345
+  '584':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1346
+  '585':
+    type: COAL_BLOCK
+    data: 0
+    x: 982
+    y: 55
+    z: 1347
+  '586':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1348
+  '587':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1349
+  '588':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1350
+  '589':
+    type: STONE
+    data: 5
+    x: 982
+    y: 55
+    z: 1351
+  '590':
+    type: STONE
+    data: 5
+    x: 982
+    y: 55
+    z: 1352
+  '591':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1353
+  '592':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1354
+  '593':
+    type: AIR
+    data: 0
+    x: 982
+    y: 55
+    z: 1355
+  '594':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1345
+  '595':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1346
+  '596':
+    type: COAL_BLOCK
+    data: 0
+    x: 982
+    y: 56
+    z: 1347
+  '597':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1348
+  '598':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1349
+  '599':
+    type: STONE
+    data: 0
+    x: 982
+    y: 56
+    z: 1350
+  '600':
+    type: STONE
+    data: 0
+    x: 982
+    y: 56
+    z: 1351
+  '601':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1352
+  '602':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1353
+  '603':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1354
+  '604':
+    type: AIR
+    data: 0
+    x: 982
+    y: 56
+    z: 1355
+  '605':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1345
+  '606':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1346
+  '607':
+    type: STONE
+    data: 0
+    x: 982
+    y: 57
+    z: 1347
+  '608':
+    type: STONE
+    data: 0
+    x: 982
+    y: 57
+    z: 1348
+  '609':
+    type: STONE
+    data: 5
+    x: 982
+    y: 57
+    z: 1349
+  '610':
+    type: COBBLESTONE
+    data: 0
+    x: 982
+    y: 57
+    z: 1350
+  '611':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1351
+  '612':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1352
+  '613':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1353
+  '614':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1354
+  '615':
+    type: AIR
+    data: 0
+    x: 982
+    y: 57
+    z: 1355
+  '616':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1345
+  '617':
+    type: COBBLESTONE
+    data: 0
+    x: 982
+    y: 58
+    z: 1346
+  '618':
+    type: STONE
+    data: 0
+    x: 982
+    y: 58
+    z: 1347
+  '619':
+    type: STONE
+    data: 5
+    x: 982
+    y: 58
+    z: 1348
+  '620':
+    type: STONE
+    data: 0
+    x: 982
+    y: 58
+    z: 1349
+  '621':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1350
+  '622':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1351
+  '623':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1352
+  '624':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1353
+  '625':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1354
+  '626':
+    type: AIR
+    data: 0
+    x: 982
+    y: 58
+    z: 1355
+  '627':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1345
+  '628':
+    type: STONE
+    data: 0
+    x: 982
+    y: 59
+    z: 1346
+  '629':
+    type: COBBLESTONE
+    data: 0
+    x: 982
+    y: 59
+    z: 1347
+  '630':
+    type: STONE
+    data: 0
+    x: 982
+    y: 59
+    z: 1348
+  '631':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1349
+  '632':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1350
+  '633':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1351
+  '634':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1352
+  '635':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1353
+  '636':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1354
+  '637':
+    type: AIR
+    data: 0
+    x: 982
+    y: 59
+    z: 1355
+  '638':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1345
+  '639':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1346
+  '640':
+    type: STONE
+    data: 0
+    x: 982
+    y: 60
+    z: 1347
+  '641':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1348
+  '642':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1349
+  '643':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1350
+  '644':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1351
+  '645':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1352
+  '646':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1353
+  '647':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1354
+  '648':
+    type: AIR
+    data: 0
+    x: 982
+    y: 60
+    z: 1355
+  '649':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1345
+  '650':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1346
+  '651':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1347
+  '652':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1348
+  '653':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1349
+  '654':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1350
+  '655':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1351
+  '656':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1352
+  '657':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1353
+  '658':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1354
+  '659':
+    type: AIR
+    data: 0
+    x: 982
+    y: 61
+    z: 1355
+  '660':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1345
+  '661':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1346
+  '662':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1347
+  '663':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1348
+  '664':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1349
+  '665':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1350
+  '666':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1351
+  '667':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1352
+  '668':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1353
+  '669':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1354
+  '670':
+    type: AIR
+    data: 0
+    x: 982
+    y: 62
+    z: 1355
+  '671':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1345
+  '672':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1346
+  '673':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1347
+  '674':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1348
+  '675':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1349
+  '676':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1350
+  '677':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1351
+  '678':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1352
+  '679':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1353
+  '680':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1354
+  '681':
+    type: AIR
+    data: 0
+    x: 982
+    y: 63
+    z: 1355
+  '682':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1345
+  '683':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1346
+  '684':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1347
+  '685':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1348
+  '686':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1349
+  '687':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1350
+  '688':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1351
+  '689':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1352
+  '690':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1353
+  '691':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1354
+  '692':
+    type: AIR
+    data: 0
+    x: 982
+    y: 64
+    z: 1355
+  '693':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1345
+  '694':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1346
+  '695':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1347
+  '696':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1348
+  '697':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1349
+  '698':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1350
+  '699':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1351
+  '700':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1352
+  '701':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1353
+  '702':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1354
+  '703':
+    type: AIR
+    data: 0
+    x: 982
+    y: 65
+    z: 1355
+  '704':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1345
+  '705':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1346
+  '706':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1347
+  '707':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1348
+  '708':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1349
+  '709':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1350
+  '710':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1351
+  '711':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1352
+  '712':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1353
+  '713':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1354
+  '714':
+    type: AIR
+    data: 0
+    x: 982
+    y: 66
+    z: 1355
+  '715':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1345
+  '716':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1346
+  '717':
+    type: COAL_BLOCK
+    data: 0
+    x: 983
+    y: 54
+    z: 1347
+  '718':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1348
+  '719':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1349
+  '720':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1350
+  '721':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1351
+  '722':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1352
+  '723':
+    type: STONE
+    data: 5
+    x: 983
+    y: 54
+    z: 1353
+  '724':
+    type: STONE
+    data: 0
+    x: 983
+    y: 54
+    z: 1354
+  '725':
+    type: AIR
+    data: 0
+    x: 983
+    y: 54
+    z: 1355
+  '726':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1345
+  '727':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1346
+  '728':
+    type: COAL_BLOCK
+    data: 0
+    x: 983
+    y: 55
+    z: 1347
+  '729':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1348
+  '730':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1349
+  '731':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1350
+  '732':
+    type: STONE
+    data: 5
+    x: 983
+    y: 55
+    z: 1351
+  '733':
+    type: STONE
+    data: 5
+    x: 983
+    y: 55
+    z: 1352
+  '734':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 55
+    z: 1353
+  '735':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1354
+  '736':
+    type: AIR
+    data: 0
+    x: 983
+    y: 55
+    z: 1355
+  '737':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1345
+  '738':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1346
+  '739':
+    type: COAL_BLOCK
+    data: 0
+    x: 983
+    y: 56
+    z: 1347
+  '740':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1348
+  '741':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1349
+  '742':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 56
+    z: 1350
+  '743':
+    type: STONE
+    data: 0
+    x: 983
+    y: 56
+    z: 1351
+  '744':
+    type: STONE
+    data: 5
+    x: 983
+    y: 56
+    z: 1352
+  '745':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1353
+  '746':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1354
+  '747':
+    type: AIR
+    data: 0
+    x: 983
+    y: 56
+    z: 1355
+  '748':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1345
+  '749':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1346
+  '750':
+    type: COAL_BLOCK
+    data: 0
+    x: 983
+    y: 57
+    z: 1347
+  '751':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1348
+  '752':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1349
+  '753':
+    type: STONE
+    data: 5
+    x: 983
+    y: 57
+    z: 1350
+  '754':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1351
+  '755':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1352
+  '756':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1353
+  '757':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1354
+  '758':
+    type: AIR
+    data: 0
+    x: 983
+    y: 57
+    z: 1355
+  '759':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1345
+  '760':
+    type: STONE
+    data: 5
+    x: 983
+    y: 58
+    z: 1346
+  '761':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 58
+    z: 1347
+  '762':
+    type: STONE
+    data: 0
+    x: 983
+    y: 58
+    z: 1348
+  '763':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 58
+    z: 1349
+  '764':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1350
+  '765':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1351
+  '766':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1352
+  '767':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1353
+  '768':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1354
+  '769':
+    type: AIR
+    data: 0
+    x: 983
+    y: 58
+    z: 1355
+  '770':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1345
+  '771':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 59
+    z: 1346
+  '772':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 59
+    z: 1347
+  '773':
+    type: COBBLESTONE
+    data: 0
+    x: 983
+    y: 59
+    z: 1348
+  '774':
+    type: STONE
+    data: 5
+    x: 983
+    y: 59
+    z: 1349
+  '775':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1350
+  '776':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1351
+  '777':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1352
+  '778':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1353
+  '779':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1354
+  '780':
+    type: AIR
+    data: 0
+    x: 983
+    y: 59
+    z: 1355
+  '781':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1345
+  '782':
+    type: STONE
+    data: 0
+    x: 983
+    y: 60
+    z: 1346
+  '783':
+    type: STONE
+    data: 0
+    x: 983
+    y: 60
+    z: 1347
+  '784':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1348
+  '785':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1349
+  '786':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1350
+  '787':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1351
+  '788':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1352
+  '789':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1353
+  '790':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1354
+  '791':
+    type: AIR
+    data: 0
+    x: 983
+    y: 60
+    z: 1355
+  '792':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1345
+  '793':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1346
+  '794':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1347
+  '795':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1348
+  '796':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1349
+  '797':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1350
+  '798':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1351
+  '799':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1352
+  '800':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1353
+  '801':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1354
+  '802':
+    type: AIR
+    data: 0
+    x: 983
+    y: 61
+    z: 1355
+  '803':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1345
+  '804':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1346
+  '805':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1347
+  '806':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1348
+  '807':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1349
+  '808':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1350
+  '809':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1351
+  '810':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1352
+  '811':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1353
+  '812':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1354
+  '813':
+    type: AIR
+    data: 0
+    x: 983
+    y: 62
+    z: 1355
+  '814':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1345
+  '815':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1346
+  '816':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1347
+  '817':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1348
+  '818':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1349
+  '819':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1350
+  '820':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1351
+  '821':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1352
+  '822':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1353
+  '823':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1354
+  '824':
+    type: AIR
+    data: 0
+    x: 983
+    y: 63
+    z: 1355
+  '825':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1345
+  '826':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1346
+  '827':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1347
+  '828':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1348
+  '829':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1349
+  '830':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1350
+  '831':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1351
+  '832':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1352
+  '833':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1353
+  '834':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1354
+  '835':
+    type: AIR
+    data: 0
+    x: 983
+    y: 64
+    z: 1355
+  '836':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1345
+  '837':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1346
+  '838':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1347
+  '839':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1348
+  '840':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1349
+  '841':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1350
+  '842':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1351
+  '843':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1352
+  '844':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1353
+  '845':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1354
+  '846':
+    type: AIR
+    data: 0
+    x: 983
+    y: 65
+    z: 1355
+  '847':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1345
+  '848':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1346
+  '849':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1347
+  '850':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1348
+  '851':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1349
+  '852':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1350
+  '853':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1351
+  '854':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1352
+  '855':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1353
+  '856':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1354
+  '857':
+    type: AIR
+    data: 0
+    x: 983
+    y: 66
+    z: 1355
+  '858':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1345
+  '859':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1346
+  '860':
+    type: COAL_BLOCK
+    data: 0
+    x: 984
+    y: 54
+    z: 1347
+  '861':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1348
+  '862':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1349
+  '863':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1350
+  '864':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1351
+  '865':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1352
+  '866':
+    type: STONE
+    data: 5
+    x: 984
+    y: 54
+    z: 1353
+  '867':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1354
+  '868':
+    type: AIR
+    data: 0
+    x: 984
+    y: 54
+    z: 1355
+  '869':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1345
+  '870':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1346
+  '871':
+    type: COAL_BLOCK
+    data: 0
+    x: 984
+    y: 55
+    z: 1347
+  '872':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1348
+  '873':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1349
+  '874':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1350
+  '875':
+    type: COBBLESTONE
+    data: 0
+    x: 984
+    y: 55
+    z: 1351
+  '876':
+    type: STONE
+    data: 0
+    x: 984
+    y: 55
+    z: 1352
+  '877':
+    type: COBBLESTONE
+    data: 0
+    x: 984
+    y: 55
+    z: 1353
+  '878':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1354
+  '879':
+    type: AIR
+    data: 0
+    x: 984
+    y: 55
+    z: 1355
+  '880':
+    type: AIR
+    data: 0
+    x: 984
+    y: 56
+    z: 1345
+  '881':
+    type: AIR
+    data: 0
+    x: 984
+    y: 56
+    z: 1346
+  '882':
+    type: COAL_BLOCK
+    data: 0
+    x: 984
+    y: 56
+    z: 1347
+  '883':
+    type: AIR
+    data: 0
+    x: 984
+    y: 56
+    z: 1348
+  '884':
+    type: COAL_BLOCK
+    data: 0
+    x: 984
+    y: 56
+    z: 1349
+  '885':
+    type: COBBLESTONE
+    data: 0
+    x: 984
+    y: 56
+    z: 1350
+  '886':
+    type: STONE
+    data: 5
+    x: 984
+    y: 56
+    z: 1351
+  '887':
+    type: COBBLESTONE
+    data: 0
+    x: 984
+    y: 56
+    z: 1352
+  '888':
+    type: AIR
+    data: 0
+    x: 984
+    y: 56
+    z: 1353
+  '889':
+    type: AIR
+    data: 0
+    x: 984
+    y: 56
+    z: 1354
+  '890':
+    type: AIR
+    data: 0
+    x: 984
+    y: 56
+    z: 1355
+  '891':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1345
+  '892':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1346
+  '893':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1347
+  '894':
+    type: COAL_BLOCK
+    data: 0
+    x: 984
+    y: 57
+    z: 1348
+  '895':
+    type: STONE
+    data: 0
+    x: 984
+    y: 57
+    z: 1349
+  '896':
+    type: STONE
+    data: 5
+    x: 984
+    y: 57
+    z: 1350
+  '897':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1351
+  '898':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1352
+  '899':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1353
+  '900':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1354
+  '901':
+    type: AIR
+    data: 0
+    x: 984
+    y: 57
+    z: 1355
+  '902':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1345
+  '903':
+    type: COBBLESTONE
+    data: 0
+    x: 984
+    y: 58
+    z: 1346
+  '904':
+    type: STONE
+    data: 5
+    x: 984
+    y: 58
+    z: 1347
+  '905':
+    type: STONE
+    data: 0
+    x: 984
+    y: 58
+    z: 1348
+  '906':
+    type: STONE
+    data: 5
+    x: 984
+    y: 58
+    z: 1349
+  '907':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1350
+  '908':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1351
+  '909':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1352
+  '910':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1353
+  '911':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1354
+  '912':
+    type: AIR
+    data: 0
+    x: 984
+    y: 58
+    z: 1355
+  '913':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1345
+  '914':
+    type: STONE
+    data: 5
+    x: 984
+    y: 59
+    z: 1346
+  '915':
+    type: STONE
+    data: 0
+    x: 984
+    y: 59
+    z: 1347
+  '916':
+    type: STONE
+    data: 0
+    x: 984
+    y: 59
+    z: 1348
+  '917':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1349
+  '918':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1350
+  '919':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1351
+  '920':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1352
+  '921':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1353
+  '922':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1354
+  '923':
+    type: AIR
+    data: 0
+    x: 984
+    y: 59
+    z: 1355
+  '924':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1345
+  '925':
+    type: STONE
+    data: 0
+    x: 984
+    y: 60
+    z: 1346
+  '926':
+    type: STONE
+    data: 0
+    x: 984
+    y: 60
+    z: 1347
+  '927':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1348
+  '928':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1349
+  '929':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1350
+  '930':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1351
+  '931':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1352
+  '932':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1353
+  '933':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1354
+  '934':
+    type: AIR
+    data: 0
+    x: 984
+    y: 60
+    z: 1355
+  '935':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1345
+  '936':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1346
+  '937':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1347
+  '938':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1348
+  '939':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1349
+  '940':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1350
+  '941':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1351
+  '942':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1352
+  '943':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1353
+  '944':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1354
+  '945':
+    type: AIR
+    data: 0
+    x: 984
+    y: 61
+    z: 1355
+  '946':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1345
+  '947':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1346
+  '948':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1347
+  '949':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1348
+  '950':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1349
+  '951':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1350
+  '952':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1351
+  '953':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1352
+  '954':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1353
+  '955':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1354
+  '956':
+    type: AIR
+    data: 0
+    x: 984
+    y: 62
+    z: 1355
+  '957':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1345
+  '958':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1346
+  '959':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1347
+  '960':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1348
+  '961':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1349
+  '962':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1350
+  '963':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1351
+  '964':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1352
+  '965':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1353
+  '966':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1354
+  '967':
+    type: AIR
+    data: 0
+    x: 984
+    y: 63
+    z: 1355
+  '968':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1345
+  '969':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1346
+  '970':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1347
+  '971':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1348
+  '972':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1349
+  '973':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1350
+  '974':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1351
+  '975':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1352
+  '976':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1353
+  '977':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1354
+  '978':
+    type: AIR
+    data: 0
+    x: 984
+    y: 64
+    z: 1355
+  '979':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1345
+  '980':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1346
+  '981':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1347
+  '982':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1348
+  '983':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1349
+  '984':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1350
+  '985':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1351
+  '986':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1352
+  '987':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1353
+  '988':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1354
+  '989':
+    type: AIR
+    data: 0
+    x: 984
+    y: 65
+    z: 1355
+  '990':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1345
+  '991':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1346
+  '992':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1347
+  '993':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1348
+  '994':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1349
+  '995':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1350
+  '996':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1351
+  '997':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1352
+  '998':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1353
+  '999':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1354
+  '1000':
+    type: AIR
+    data: 0
+    x: 984
+    y: 66
+    z: 1355
+  '1001':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1345
+  '1002':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1346
+  '1003':
+    type: COAL_BLOCK
+    data: 0
+    x: 985
+    y: 54
+    z: 1347
+  '1004':
+    type: STONE
+    data: 5
+    x: 985
+    y: 54
+    z: 1348
+  '1005':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1349
+  '1006':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1350
+  '1007':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1351
+  '1008':
+    type: STONE
+    data: 0
+    x: 985
+    y: 54
+    z: 1352
+  '1009':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1353
+  '1010':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1354
+  '1011':
+    type: AIR
+    data: 0
+    x: 985
+    y: 54
+    z: 1355
+  '1012':
+    type: AIR
+    data: 0
+    x: 985
+    y: 55
+    z: 1345
+  '1013':
+    type: AIR
+    data: 0
+    x: 985
+    y: 55
+    z: 1346
+  '1014':
+    type: COAL_BLOCK
+    data: 0
+    x: 985
+    y: 55
+    z: 1347
+  '1015':
+    type: COBBLESTONE
+    data: 0
+    x: 985
+    y: 55
+    z: 1348
+  '1016':
+    type: AIR
+    data: 0
+    x: 985
+    y: 55
+    z: 1349
+  '1017':
+    type: COBBLESTONE
+    data: 0
+    x: 985
+    y: 55
+    z: 1350
+  '1018':
+    type: STONE
+    data: 5
+    x: 985
+    y: 55
+    z: 1351
+  '1019':
+    type: STONE
+    data: 5
+    x: 985
+    y: 55
+    z: 1352
+  '1020':
+    type: AIR
+    data: 0
+    x: 985
+    y: 55
+    z: 1353
+  '1021':
+    type: AIR
+    data: 0
+    x: 985
+    y: 55
+    z: 1354
+  '1022':
+    type: AIR
+    data: 0
+    x: 985
+    y: 55
+    z: 1355
+  '1023':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1345
+  '1024':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1346
+  '1025':
+    type: COAL_BLOCK
+    data: 0
+    x: 985
+    y: 56
+    z: 1347
+  '1026':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1348
+  '1027':
+    type: STONE
+    data: 0
+    x: 985
+    y: 56
+    z: 1349
+  '1028':
+    type: STONE
+    data: 0
+    x: 985
+    y: 56
+    z: 1350
+  '1029':
+    type: COBBLESTONE
+    data: 0
+    x: 985
+    y: 56
+    z: 1351
+  '1030':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1352
+  '1031':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1353
+  '1032':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1354
+  '1033':
+    type: AIR
+    data: 0
+    x: 985
+    y: 56
+    z: 1355
+  '1034':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1345
+  '1035':
+    type: COBBLESTONE
+    data: 0
+    x: 985
+    y: 57
+    z: 1346
+  '1036':
+    type: COAL_BLOCK
+    data: 0
+    x: 985
+    y: 57
+    z: 1347
+  '1037':
+    type: COBBLESTONE
+    data: 0
+    x: 985
+    y: 57
+    z: 1348
+  '1038':
+    type: STONE
+    data: 0
+    x: 985
+    y: 57
+    z: 1349
+  '1039':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1350
+  '1040':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1351
+  '1041':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1352
+  '1042':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1353
+  '1043':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1354
+  '1044':
+    type: AIR
+    data: 0
+    x: 985
+    y: 57
+    z: 1355
+  '1045':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1345
+  '1046':
+    type: STONE
+    data: 0
+    x: 985
+    y: 58
+    z: 1346
+  '1047':
+    type: STONE
+    data: 0
+    x: 985
+    y: 58
+    z: 1347
+  '1048':
+    type: STONE
+    data: 0
+    x: 985
+    y: 58
+    z: 1348
+  '1049':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1349
+  '1050':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1350
+  '1051':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1351
+  '1052':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1352
+  '1053':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1353
+  '1054':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1354
+  '1055':
+    type: AIR
+    data: 0
+    x: 985
+    y: 58
+    z: 1355
+  '1056':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1345
+  '1057':
+    type: STONE
+    data: 0
+    x: 985
+    y: 59
+    z: 1346
+  '1058':
+    type: COBBLESTONE
+    data: 0
+    x: 985
+    y: 59
+    z: 1347
+  '1059':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1348
+  '1060':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1349
+  '1061':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1350
+  '1062':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1351
+  '1063':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1352
+  '1064':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1353
+  '1065':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1354
+  '1066':
+    type: AIR
+    data: 0
+    x: 985
+    y: 59
+    z: 1355
+  '1067':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1345
+  '1068':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1346
+  '1069':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1347
+  '1070':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1348
+  '1071':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1349
+  '1072':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1350
+  '1073':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1351
+  '1074':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1352
+  '1075':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1353
+  '1076':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1354
+  '1077':
+    type: AIR
+    data: 0
+    x: 985
+    y: 60
+    z: 1355
+  '1078':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1345
+  '1079':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1346
+  '1080':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1347
+  '1081':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1348
+  '1082':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1349
+  '1083':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1350
+  '1084':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1351
+  '1085':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1352
+  '1086':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1353
+  '1087':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1354
+  '1088':
+    type: AIR
+    data: 0
+    x: 985
+    y: 61
+    z: 1355
+  '1089':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1345
+  '1090':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1346
+  '1091':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1347
+  '1092':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1348
+  '1093':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1349
+  '1094':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1350
+  '1095':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1351
+  '1096':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1352
+  '1097':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1353
+  '1098':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1354
+  '1099':
+    type: AIR
+    data: 0
+    x: 985
+    y: 62
+    z: 1355
+  '1100':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1345
+  '1101':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1346
+  '1102':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1347
+  '1103':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1348
+  '1104':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1349
+  '1105':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1350
+  '1106':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1351
+  '1107':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1352
+  '1108':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1353
+  '1109':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1354
+  '1110':
+    type: AIR
+    data: 0
+    x: 985
+    y: 63
+    z: 1355
+  '1111':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1345
+  '1112':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1346
+  '1113':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1347
+  '1114':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1348
+  '1115':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1349
+  '1116':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1350
+  '1117':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1351
+  '1118':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1352
+  '1119':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1353
+  '1120':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1354
+  '1121':
+    type: AIR
+    data: 0
+    x: 985
+    y: 64
+    z: 1355
+  '1122':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1345
+  '1123':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1346
+  '1124':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1347
+  '1125':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1348
+  '1126':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1349
+  '1127':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1350
+  '1128':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1351
+  '1129':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1352
+  '1130':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1353
+  '1131':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1354
+  '1132':
+    type: AIR
+    data: 0
+    x: 985
+    y: 65
+    z: 1355
+  '1133':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1345
+  '1134':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1346
+  '1135':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1347
+  '1136':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1348
+  '1137':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1349
+  '1138':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1350
+  '1139':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1351
+  '1140':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1352
+  '1141':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1353
+  '1142':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1354
+  '1143':
+    type: AIR
+    data: 0
+    x: 985
+    y: 66
+    z: 1355
+  '1144':
+    type: AIR
+    data: 0
+    x: 986
+    y: 54
+    z: 1345
+  '1145':
+    type: COBBLESTONE
+    data: 0
+    x: 986
+    y: 54
+    z: 1346
+  '1146':
+    type: STONE
+    data: 5
+    x: 986
+    y: 54
+    z: 1347
+  '1147':
+    type: AIR
+    data: 0
+    x: 986
+    y: 54
+    z: 1348
+  '1148':
+    type: AIR
+    data: 0
+    x: 986
+    y: 54
+    z: 1349
+  '1149':
+    type: COBBLESTONE
+    data: 0
+    x: 986
+    y: 54
+    z: 1350
+  '1150':
+    type: STONE
+    data: 5
+    x: 986
+    y: 54
+    z: 1351
+  '1151':
+    type: COBBLESTONE
+    data: 0
+    x: 986
+    y: 54
+    z: 1352
+  '1152':
+    type: AIR
+    data: 0
+    x: 986
+    y: 54
+    z: 1353
+  '1153':
+    type: AIR
+    data: 0
+    x: 986
+    y: 54
+    z: 1354
+  '1154':
+    type: AIR
+    data: 0
+    x: 986
+    y: 54
+    z: 1355
+  '1155':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1345
+  '1156':
+    type: STONE
+    data: 0
+    x: 986
+    y: 55
+    z: 1346
+  '1157':
+    type: STONE
+    data: 0
+    x: 986
+    y: 55
+    z: 1347
+  '1158':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1348
+  '1159':
+    type: COBBLESTONE
+    data: 0
+    x: 986
+    y: 55
+    z: 1349
+  '1160':
+    type: COBBLESTONE
+    data: 0
+    x: 986
+    y: 55
+    z: 1350
+  '1161':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1351
+  '1162':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1352
+  '1163':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1353
+  '1164':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1354
+  '1165':
+    type: AIR
+    data: 0
+    x: 986
+    y: 55
+    z: 1355
+  '1166':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1345
+  '1167':
+    type: STONE
+    data: 5
+    x: 986
+    y: 56
+    z: 1346
+  '1168':
+    type: STONE
+    data: 5
+    x: 986
+    y: 56
+    z: 1347
+  '1169':
+    type: STONE
+    data: 0
+    x: 986
+    y: 56
+    z: 1348
+  '1170':
+    type: STONE
+    data: 0
+    x: 986
+    y: 56
+    z: 1349
+  '1171':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1350
+  '1172':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1351
+  '1173':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1352
+  '1174':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1353
+  '1175':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1354
+  '1176':
+    type: AIR
+    data: 0
+    x: 986
+    y: 56
+    z: 1355
+  '1177':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1345
+  '1178':
+    type: STONE
+    data: 0
+    x: 986
+    y: 57
+    z: 1346
+  '1179':
+    type: STONE
+    data: 5
+    x: 986
+    y: 57
+    z: 1347
+  '1180':
+    type: COBBLESTONE
+    data: 0
+    x: 986
+    y: 57
+    z: 1348
+  '1181':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1349
+  '1182':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1350
+  '1183':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1351
+  '1184':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1352
+  '1185':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1353
+  '1186':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1354
+  '1187':
+    type: AIR
+    data: 0
+    x: 986
+    y: 57
+    z: 1355
+  '1188':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1345
+  '1189':
+    type: STONE
+    data: 0
+    x: 986
+    y: 58
+    z: 1346
+  '1190':
+    type: STONE
+    data: 0
+    x: 986
+    y: 58
+    z: 1347
+  '1191':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1348
+  '1192':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1349
+  '1193':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1350
+  '1194':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1351
+  '1195':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1352
+  '1196':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1353
+  '1197':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1354
+  '1198':
+    type: AIR
+    data: 0
+    x: 986
+    y: 58
+    z: 1355
+  '1199':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1345
+  '1200':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1346
+  '1201':
+    type: STONE
+    data: 5
+    x: 986
+    y: 59
+    z: 1347
+  '1202':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1348
+  '1203':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1349
+  '1204':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1350
+  '1205':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1351
+  '1206':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1352
+  '1207':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1353
+  '1208':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1354
+  '1209':
+    type: AIR
+    data: 0
+    x: 986
+    y: 59
+    z: 1355
+  '1210':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1345
+  '1211':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1346
+  '1212':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1347
+  '1213':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1348
+  '1214':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1349
+  '1215':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1350
+  '1216':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1351
+  '1217':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1352
+  '1218':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1353
+  '1219':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1354
+  '1220':
+    type: AIR
+    data: 0
+    x: 986
+    y: 60
+    z: 1355
+  '1221':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1345
+  '1222':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1346
+  '1223':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1347
+  '1224':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1348
+  '1225':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1349
+  '1226':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1350
+  '1227':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1351
+  '1228':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1352
+  '1229':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1353
+  '1230':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1354
+  '1231':
+    type: AIR
+    data: 0
+    x: 986
+    y: 61
+    z: 1355
+  '1232':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1345
+  '1233':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1346
+  '1234':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1347
+  '1235':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1348
+  '1236':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1349
+  '1237':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1350
+  '1238':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1351
+  '1239':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1352
+  '1240':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1353
+  '1241':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1354
+  '1242':
+    type: AIR
+    data: 0
+    x: 986
+    y: 62
+    z: 1355
+  '1243':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1345
+  '1244':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1346
+  '1245':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1347
+  '1246':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1348
+  '1247':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1349
+  '1248':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1350
+  '1249':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1351
+  '1250':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1352
+  '1251':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1353
+  '1252':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1354
+  '1253':
+    type: AIR
+    data: 0
+    x: 986
+    y: 63
+    z: 1355
+  '1254':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1345
+  '1255':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1346
+  '1256':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1347
+  '1257':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1348
+  '1258':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1349
+  '1259':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1350
+  '1260':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1351
+  '1261':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1352
+  '1262':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1353
+  '1263':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1354
+  '1264':
+    type: AIR
+    data: 0
+    x: 986
+    y: 64
+    z: 1355
+  '1265':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1345
+  '1266':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1346
+  '1267':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1347
+  '1268':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1348
+  '1269':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1349
+  '1270':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1350
+  '1271':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1351
+  '1272':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1352
+  '1273':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1353
+  '1274':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1354
+  '1275':
+    type: AIR
+    data: 0
+    x: 986
+    y: 65
+    z: 1355
+  '1276':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1345
+  '1277':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1346
+  '1278':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1347
+  '1279':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1348
+  '1280':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1349
+  '1281':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1350
+  '1282':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1351
+  '1283':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1352
+  '1284':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1353
+  '1285':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1354
+  '1286':
+    type: AIR
+    data: 0
+    x: 986
+    y: 66
+    z: 1355
+  '1287':
+    type: AIR
+    data: 0
+    x: 987
+    y: 54
+    z: 1345
+  '1288':
+    type: COBBLESTONE
+    data: 0
+    x: 987
+    y: 54
+    z: 1346
+  '1289':
+    type: STONE
+    data: 5
+    x: 987
+    y: 54
+    z: 1347
+  '1290':
+    type: COBBLESTONE
+    data: 0
+    x: 987
+    y: 54
+    z: 1348
+  '1291':
+    type: STONE
+    data: 5
+    x: 987
+    y: 54
+    z: 1349
+  '1292':
+    type: COBBLESTONE
+    data: 0
+    x: 987
+    y: 54
+    z: 1350
+  '1293':
+    type: AIR
+    data: 0
+    x: 987
+    y: 54
+    z: 1351
+  '1294':
+    type: AIR
+    data: 0
+    x: 987
+    y: 54
+    z: 1352
+  '1295':
+    type: AIR
+    data: 0
+    x: 987
+    y: 54
+    z: 1353
+  '1296':
+    type: AIR
+    data: 0
+    x: 987
+    y: 54
+    z: 1354
+  '1297':
+    type: AIR
+    data: 0
+    x: 987
+    y: 54
+    z: 1355
+  '1298':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1345
+  '1299':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1346
+  '1300':
+    type: STONE
+    data: 0
+    x: 987
+    y: 55
+    z: 1347
+  '1301':
+    type: STONE
+    data: 5
+    x: 987
+    y: 55
+    z: 1348
+  '1302':
+    type: COBBLESTONE
+    data: 0
+    x: 987
+    y: 55
+    z: 1349
+  '1303':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1350
+  '1304':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1351
+  '1305':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1352
+  '1306':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1353
+  '1307':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1354
+  '1308':
+    type: AIR
+    data: 0
+    x: 987
+    y: 55
+    z: 1355
+  '1309':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1345
+  '1310':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1346
+  '1311':
+    type: STONE
+    data: 0
+    x: 987
+    y: 56
+    z: 1347
+  '1312':
+    type: COBBLESTONE
+    data: 0
+    x: 987
+    y: 56
+    z: 1348
+  '1313':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1349
+  '1314':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1350
+  '1315':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1351
+  '1316':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1352
+  '1317':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1353
+  '1318':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1354
+  '1319':
+    type: AIR
+    data: 0
+    x: 987
+    y: 56
+    z: 1355
+  '1320':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1345
+  '1321':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1346
+  '1322':
+    type: STONE
+    data: 0
+    x: 987
+    y: 57
+    z: 1347
+  '1323':
+    type: STONE
+    data: 5
+    x: 987
+    y: 57
+    z: 1348
+  '1324':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1349
+  '1325':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1350
+  '1326':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1351
+  '1327':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1352
+  '1328':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1353
+  '1329':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1354
+  '1330':
+    type: AIR
+    data: 0
+    x: 987
+    y: 57
+    z: 1355
+  '1331':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1345
+  '1332':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1346
+  '1333':
+    type: COBBLESTONE
+    data: 0
+    x: 987
+    y: 58
+    z: 1347
+  '1334':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1348
+  '1335':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1349
+  '1336':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1350
+  '1337':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1351
+  '1338':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1352
+  '1339':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1353
+  '1340':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1354
+  '1341':
+    type: AIR
+    data: 0
+    x: 987
+    y: 58
+    z: 1355
+  '1342':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1345
+  '1343':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1346
+  '1344':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1347
+  '1345':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1348
+  '1346':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1349
+  '1347':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1350
+  '1348':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1351
+  '1349':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1352
+  '1350':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1353
+  '1351':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1354
+  '1352':
+    type: AIR
+    data: 0
+    x: 987
+    y: 59
+    z: 1355
+  '1353':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1345
+  '1354':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1346
+  '1355':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1347
+  '1356':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1348
+  '1357':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1349
+  '1358':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1350
+  '1359':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1351
+  '1360':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1352
+  '1361':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1353
+  '1362':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1354
+  '1363':
+    type: AIR
+    data: 0
+    x: 987
+    y: 60
+    z: 1355
+  '1364':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1345
+  '1365':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1346
+  '1366':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1347
+  '1367':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1348
+  '1368':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1349
+  '1369':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1350
+  '1370':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1351
+  '1371':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1352
+  '1372':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1353
+  '1373':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1354
+  '1374':
+    type: AIR
+    data: 0
+    x: 987
+    y: 61
+    z: 1355
+  '1375':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1345
+  '1376':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1346
+  '1377':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1347
+  '1378':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1348
+  '1379':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1349
+  '1380':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1350
+  '1381':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1351
+  '1382':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1352
+  '1383':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1353
+  '1384':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1354
+  '1385':
+    type: AIR
+    data: 0
+    x: 987
+    y: 62
+    z: 1355
+  '1386':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1345
+  '1387':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1346
+  '1388':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1347
+  '1389':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1348
+  '1390':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1349
+  '1391':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1350
+  '1392':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1351
+  '1393':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1352
+  '1394':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1353
+  '1395':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1354
+  '1396':
+    type: AIR
+    data: 0
+    x: 987
+    y: 63
+    z: 1355
+  '1397':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1345
+  '1398':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1346
+  '1399':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1347
+  '1400':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1348
+  '1401':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1349
+  '1402':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1350
+  '1403':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1351
+  '1404':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1352
+  '1405':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1353
+  '1406':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1354
+  '1407':
+    type: AIR
+    data: 0
+    x: 987
+    y: 64
+    z: 1355
+  '1408':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1345
+  '1409':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1346
+  '1410':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1347
+  '1411':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1348
+  '1412':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1349
+  '1413':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1350
+  '1414':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1351
+  '1415':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1352
+  '1416':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1353
+  '1417':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1354
+  '1418':
+    type: AIR
+    data: 0
+    x: 987
+    y: 65
+    z: 1355
+  '1419':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1345
+  '1420':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1346
+  '1421':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1347
+  '1422':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1348
+  '1423':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1349
+  '1424':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1350
+  '1425':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1351
+  '1426':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1352
+  '1427':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1353
+  '1428':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1354
+  '1429':
+    type: AIR
+    data: 0
+    x: 987
+    y: 66
+    z: 1355
+  '1430':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1345
+  '1431':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1346
+  '1432':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1347
+  '1433':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1348
+  '1434':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1349
+  '1435':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1350
+  '1436':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1351
+  '1437':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1352
+  '1438':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1353
+  '1439':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1354
+  '1440':
+    type: AIR
+    data: 0
+    x: 988
+    y: 54
+    z: 1355
+  '1441':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1345
+  '1442':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1346
+  '1443':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1347
+  '1444':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1348
+  '1445':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1349
+  '1446':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1350
+  '1447':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1351
+  '1448':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1352
+  '1449':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1353
+  '1450':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1354
+  '1451':
+    type: AIR
+    data: 0
+    x: 988
+    y: 55
+    z: 1355
+  '1452':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1345
+  '1453':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1346
+  '1454':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1347
+  '1455':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1348
+  '1456':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1349
+  '1457':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1350
+  '1458':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1351
+  '1459':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1352
+  '1460':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1353
+  '1461':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1354
+  '1462':
+    type: AIR
+    data: 0
+    x: 988
+    y: 56
+    z: 1355
+  '1463':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1345
+  '1464':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1346
+  '1465':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1347
+  '1466':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1348
+  '1467':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1349
+  '1468':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1350
+  '1469':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1351
+  '1470':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1352
+  '1471':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1353
+  '1472':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1354
+  '1473':
+    type: AIR
+    data: 0
+    x: 988
+    y: 57
+    z: 1355
+  '1474':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1345
+  '1475':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1346
+  '1476':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1347
+  '1477':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1348
+  '1478':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1349
+  '1479':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1350
+  '1480':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1351
+  '1481':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1352
+  '1482':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1353
+  '1483':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1354
+  '1484':
+    type: AIR
+    data: 0
+    x: 988
+    y: 58
+    z: 1355
+  '1485':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1345
+  '1486':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1346
+  '1487':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1347
+  '1488':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1348
+  '1489':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1349
+  '1490':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1350
+  '1491':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1351
+  '1492':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1352
+  '1493':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1353
+  '1494':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1354
+  '1495':
+    type: AIR
+    data: 0
+    x: 988
+    y: 59
+    z: 1355
+  '1496':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1345
+  '1497':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1346
+  '1498':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1347
+  '1499':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1348
+  '1500':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1349
+  '1501':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1350
+  '1502':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1351
+  '1503':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1352
+  '1504':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1353
+  '1505':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1354
+  '1506':
+    type: AIR
+    data: 0
+    x: 988
+    y: 60
+    z: 1355
+  '1507':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1345
+  '1508':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1346
+  '1509':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1347
+  '1510':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1348
+  '1511':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1349
+  '1512':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1350
+  '1513':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1351
+  '1514':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1352
+  '1515':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1353
+  '1516':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1354
+  '1517':
+    type: AIR
+    data: 0
+    x: 988
+    y: 61
+    z: 1355
+  '1518':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1345
+  '1519':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1346
+  '1520':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1347
+  '1521':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1348
+  '1522':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1349
+  '1523':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1350
+  '1524':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1351
+  '1525':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1352
+  '1526':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1353
+  '1527':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1354
+  '1528':
+    type: AIR
+    data: 0
+    x: 988
+    y: 62
+    z: 1355
+  '1529':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1345
+  '1530':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1346
+  '1531':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1347
+  '1532':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1348
+  '1533':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1349
+  '1534':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1350
+  '1535':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1351
+  '1536':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1352
+  '1537':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1353
+  '1538':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1354
+  '1539':
+    type: AIR
+    data: 0
+    x: 988
+    y: 63
+    z: 1355
+  '1540':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1345
+  '1541':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1346
+  '1542':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1347
+  '1543':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1348
+  '1544':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1349
+  '1545':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1350
+  '1546':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1351
+  '1547':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1352
+  '1548':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1353
+  '1549':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1354
+  '1550':
+    type: AIR
+    data: 0
+    x: 988
+    y: 64
+    z: 1355
+  '1551':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1345
+  '1552':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1346
+  '1553':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1347
+  '1554':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1348
+  '1555':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1349
+  '1556':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1350
+  '1557':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1351
+  '1558':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1352
+  '1559':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1353
+  '1560':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1354
+  '1561':
+    type: AIR
+    data: 0
+    x: 988
+    y: 65
+    z: 1355
+  '1562':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1345
+  '1563':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1346
+  '1564':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1347
+  '1565':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1348
+  '1566':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1349
+  '1567':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1350
+  '1568':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1351
+  '1569':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1352
+  '1570':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1353
+  '1571':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1354
+  '1572':
+    type: AIR
+    data: 0
+    x: 988
+    y: 66
+    z: 1355
