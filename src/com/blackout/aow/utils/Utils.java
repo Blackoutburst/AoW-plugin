@@ -1,6 +1,15 @@
 package com.blackout.aow.utils;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -76,5 +85,28 @@ public class Utils {
 		if (Core.player1.getPlayer() == p) return Core.player1;
 		if (Core.player2.getPlayer() == p) return Core.player2;
 		return null;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public static void loadBase(String fileName) {
+		YamlConfiguration file = YamlConfiguration.loadConfiguration(new File("plugins/AOW/"+fileName+".yml"));
+		Set<String> blocks = file.getConfigurationSection("blocks").getKeys(false);
+		List<BaseBlock> bb = new ArrayList<BaseBlock>();
+		
+		for (String index : blocks) {
+			Material material = Material.getMaterial(file.getString("blocks."+index+".type"));
+			int data = file.getInt("blocks."+index+".data");
+			int x = file.getInt("blocks."+index+".x");
+			int y = file.getInt("blocks."+index+".y");
+			int z = file.getInt("blocks."+index+".z");
+			
+			bb.add(new BaseBlock(material, data, x, y, z));
+		}
+		
+		for (BaseBlock b : bb) {
+			Block block = Bukkit.getWorld("world").getBlockAt(new Location(Bukkit.getWorld("world"), b.getX(), b.getY(), b.getZ()));
+			block.setType(b.getType());
+			block.setData((byte) b.getData());
+		}
 	}
 }

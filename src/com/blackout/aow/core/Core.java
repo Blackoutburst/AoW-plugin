@@ -157,6 +157,8 @@ public class Core {
 		gameTime = 0;
 		ShopNPCManager.addNPC(player1);
 		ShopNPCManager.addNPC(player2);
+		Utils.loadBase("blue_cave");
+		Utils.loadBase("red_cave");
 		Utils.giveItems(player1);
 		Utils.giveItems(player2);
 		for (AowPlayer p : aowplayers)

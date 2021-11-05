@@ -203,6 +203,18 @@ public class WarriorManager {
 				}
 				ShopNPCManager.addNPC(Core.player1);
 				Utils.giveItems(Core.player1);
+				
+				String baseName = "blue_cave";
+				
+				switch(p.getAge()) {
+					case MEDIEVAL: baseName = "blue_castle"; break;
+					case RENAISSANCE: baseName = "blue_church"; break;
+					case MODERN: baseName = "blue_base"; break;
+					case FUTURISTIC: baseName = "blue_space"; break;
+					default: baseName = "blue_cave"; break;
+				}
+				Utils.loadBase(baseName);
+				
 			} else {
 				Core.redBase.setLife(Core.redBase.getLife() + 5000);
 				Core.redBase.setMaxLife(Core.redBase.getMaxLife() + 5000);
@@ -212,6 +224,17 @@ public class WarriorManager {
 				}
 				ShopNPCManager.addNPC(Core.player2);
 				Utils.giveItems(Core.player2);
+				
+				String baseName = "red_cave";
+				
+				switch(p.getAge()) {
+					case MEDIEVAL: baseName = "red_castle"; break;
+					case RENAISSANCE: baseName = "red_church"; break;
+					case MODERN: baseName = "red_base"; break;
+					case FUTURISTIC: baseName = "red_space"; break;
+					default: baseName = "red_cave"; break;
+				}
+				Utils.loadBase(baseName);
 			}
 		} else {
 			p.getPlayer().sendMessage("§cYou don't have enough xp for that!");
