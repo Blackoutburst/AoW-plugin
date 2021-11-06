@@ -20,7 +20,7 @@ public class UltimateManager {
 		
 		switch(p.getAge()) {
 			case PREHISTORIC: new MeteorShower().meteorShower(p); break;
-			case MEDIEVAL: break;
+			case MEDIEVAL: new ArrowShower().arrowShower(p); break;
 			case RENAISSANCE: break;
 			case MODERN: break;
 			case FUTURISTIC: break;
