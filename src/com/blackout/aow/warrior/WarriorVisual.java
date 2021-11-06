@@ -20,7 +20,7 @@ public class WarriorVisual {
 		this.lifeBar = lifeBar;
 	}
 	
-	protected void updateLifeBar(Player p, WarriorLogical w) {
+	public void updateLifeBar(Player p, WarriorLogical w) {
 		int lifePercent = (int) (w.getOptions().getHealth() * 100 / w.getOptions().getMaxHealth());
 		HoloManager.deleteHolo(p, this.lifeBar);
 		

@@ -133,7 +133,7 @@ public abstract class WarriorLogical {
 		return (false);
 	}
 	
-	protected void die() {
+	protected void die(int index) {
 		if ((int) (this.options.health) <= 0 && !this.dead) {
 			this.dead = true;
 			if (this.owner.getPlayerID() == 0) {
@@ -150,12 +150,12 @@ public abstract class WarriorLogical {
 					NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.CLOUD, (float)(this.position.getX()) + new Random().nextFloat() - 0.5f, (float)(this.position.getY()) + 1.6f - (0.1f * i), (float)(this.position.getZ()) + new Random().nextFloat() - 0.5f);
 				}
 				if (this.owner.getPlayerID() == 0) {
-					WarriorVisual wv = p.getBlueNPC().get(0);
+					WarriorVisual wv = p.getBlueNPC().get(index);
 					HoloManager.deleteHolo(p.getPlayer(), wv.lifeBar);
 					NPCManager.deleteNPC(p.getPlayer(), wv.npc);
 					p.getBlueNPC().remove(wv);
 				} else {
-					WarriorVisual wv = p.getRedNPC().get(0);
+					WarriorVisual wv = p.getRedNPC().get(index);
 					HoloManager.deleteHolo(p.getPlayer(), wv.lifeBar);
 					NPCManager.deleteNPC(p.getPlayer(), wv.npc);
 					p.getRedNPC().remove(wv);

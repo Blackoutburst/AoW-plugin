@@ -15,6 +15,7 @@ import com.blackout.aow.core.AowPlayer;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.main.Main;
 import com.blackout.aow.nms.NMSParticle;
+import com.blackout.aow.warrior.WarriorLogical;
 
 import net.minecraft.server.v1_8_R3.EnumParticle;
 
@@ -63,11 +64,50 @@ public class MeteorShower {
 		}
 	}
 	
+	private void hitWarrior(Meteor m) {
+		if (m.owner.getPlayer().getUniqueId().equals(Core.player1.getPlayer().getUniqueId())) {
+			for (AowPlayer p : Core.aowplayers) {
+				int index = 0;
+				for (WarriorLogical w : Core.redWarrior) {
+					double distance = Math.sqrt(
+							Math.pow(((m.getEntity().getLocation().getX() + 0.5) - w.getPosition().getX() + 0.5), 2) +
+							Math.pow(((m.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
+							Math.pow(((m.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
+					
+					if (distance < 2 && !m.isDead()) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 200);
+						p.getRedNPC().get(index).updateLifeBar(p.getPlayer(), w);
+						m.setDead(true);
+					}
+					index++;
+				}
+			}
+		} else {
+			for (AowPlayer p : Core.aowplayers) {
+				int index = 0;
+				for (WarriorLogical w : Core.blueWarrior) {
+					double distance = Math.sqrt(
+							Math.pow(((m.getEntity().getLocation().getX() + 0.5) - w.getPosition().getX() + 0.5), 2) +
+							Math.pow(((m.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
+							Math.pow(((m.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
+					
+					if (distance < 2 && !m.isDead()) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 200);
+						p.getBlueNPC().get(index).updateLifeBar(p.getPlayer(), w);
+						m.setDead(true);
+					}
+					index++;
+				}
+			}
+		}
+	}
+	
 	private void update() {
 		for (Meteor m : meteors) {
 			if (m.getEntity().isDead() && !m.isDead()) {
 				hitGround(m);
 			} else {
+				hitWarrior(m);
 				meteorParticles(m);
 			}
 		}
