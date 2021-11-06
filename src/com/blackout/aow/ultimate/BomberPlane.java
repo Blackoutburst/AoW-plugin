@@ -25,7 +25,7 @@ import com.blackout.aow.warrior.WarriorLogical;
 
 import net.minecraft.server.v1_8_R3.EnumParticle;
 
-public class Bombarder {
+public class BomberPlane {
 
 	private List<PlaneBlocks> plane_blocks = new ArrayList<PlaneBlocks>();
 	private List<Bomb> bombs = new ArrayList<Bomb>();
@@ -197,7 +197,7 @@ public class Bombarder {
 				planeParticles();
 				time++;
 				
-				if (time > 65 && time < 155 && time % 5 == 0) {
+				if (tail.getLocation().getZ() + ((player1) ? 3 : -3) > 1307 && tail.getLocation().getZ() + ((player1) ? 3 : -3) < 1345 && time % 5 == 0) {
 					dropBomb(p, player1); 
 				}
 			}

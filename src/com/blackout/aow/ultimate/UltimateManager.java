@@ -22,7 +22,7 @@ public class UltimateManager {
 			case PREHISTORIC: new MeteorShower().meteorShower(p); break;
 			case MEDIEVAL: new ArrowShower().arrowShower(p); break;
 			case RENAISSANCE: new Heal().heal(p); break;
-			case MODERN: new Bombarder().bombarder(p); break;
+			case MODERN: new BomberPlane().bombarder(p); break;
 			case FUTURISTIC: break;
 			default: break;
 		}
