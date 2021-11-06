@@ -1,0 +1,883 @@
+blocks:
+  '0':
+    type: STEP
+    data: 7
+    x: 980
+    y: 70
+    z: 1278
+  '1':
+    type: AIR
+    data: 0
+    x: 980
+    y: 70
+    z: 1279
+  '2':
+    type: AIR
+    data: 0
+    x: 980
+    y: 70
+    z: 1280
+  '3':
+    type: AIR
+    data: 0
+    x: 980
+    y: 70
+    z: 1281
+  '4':
+    type: AIR
+    data: 0
+    x: 980
+    y: 70
+    z: 1282
+  '5':
+    type: AIR
+    data: 0
+    x: 980
+    y: 70
+    z: 1283
+  '6':
+    type: AIR
+    data: 0
+    x: 980
+    y: 70
+    z: 1284
+  '7':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1278
+  '8':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1279
+  '9':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1280
+  '10':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1281
+  '11':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1282
+  '12':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1283
+  '13':
+    type: AIR
+    data: 0
+    x: 980
+    y: 71
+    z: 1284
+  '14':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1278
+  '15':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1279
+  '16':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1280
+  '17':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1281
+  '18':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1282
+  '19':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1283
+  '20':
+    type: AIR
+    data: 0
+    x: 980
+    y: 72
+    z: 1284
+  '21':
+    type: STEP
+    data: 7
+    x: 981
+    y: 70
+    z: 1278
+  '22':
+    type: STEP
+    data: 7
+    x: 981
+    y: 70
+    z: 1279
+  '23':
+    type: AIR
+    data: 0
+    x: 981
+    y: 70
+    z: 1280
+  '24':
+    type: AIR
+    data: 0
+    x: 981
+    y: 70
+    z: 1281
+  '25':
+    type: STEP
+    data: 7
+    x: 981
+    y: 70
+    z: 1282
+  '26':
+    type: AIR
+    data: 0
+    x: 981
+    y: 70
+    z: 1283
+  '27':
+    type: AIR
+    data: 0
+    x: 981
+    y: 70
+    z: 1284
+  '28':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1278
+  '29':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1279
+  '30':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1280
+  '31':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1281
+  '32':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1282
+  '33':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1283
+  '34':
+    type: AIR
+    data: 0
+    x: 981
+    y: 71
+    z: 1284
+  '35':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1278
+  '36':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1279
+  '37':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1280
+  '38':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1281
+  '39':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1282
+  '40':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1283
+  '41':
+    type: AIR
+    data: 0
+    x: 981
+    y: 72
+    z: 1284
+  '42':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 982
+    y: 70
+    z: 1278
+  '43':
+    type: QUARTZ_STAIRS
+    data: 0
+    x: 982
+    y: 70
+    z: 1279
+  '44':
+    type: QUARTZ_STAIRS
+    data: 0
+    x: 982
+    y: 70
+    z: 1280
+  '45':
+    type: AIR
+    data: 0
+    x: 982
+    y: 70
+    z: 1281
+  '46':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 982
+    y: 70
+    z: 1282
+  '47':
+    type: QUARTZ_STAIRS
+    data: 0
+    x: 982
+    y: 70
+    z: 1283
+  '48':
+    type: AIR
+    data: 0
+    x: 982
+    y: 70
+    z: 1284
+  '49':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1278
+  '50':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1279
+  '51':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1280
+  '52':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1281
+  '53':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1282
+  '54':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1283
+  '55':
+    type: AIR
+    data: 0
+    x: 982
+    y: 71
+    z: 1284
+  '56':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1278
+  '57':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1279
+  '58':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1280
+  '59':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1281
+  '60':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1282
+  '61':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1283
+  '62':
+    type: AIR
+    data: 0
+    x: 982
+    y: 72
+    z: 1284
+  '63':
+    type: DISPENSER
+    data: 2
+    x: 983
+    y: 70
+    z: 1278
+  '64':
+    type: STAINED_CLAY
+    data: 13
+    x: 983
+    y: 70
+    z: 1279
+  '65':
+    type: STAINED_CLAY
+    data: 13
+    x: 983
+    y: 70
+    z: 1280
+  '66':
+    type: STAINED_CLAY
+    data: 13
+    x: 983
+    y: 70
+    z: 1281
+  '67':
+    type: STAINED_CLAY
+    data: 13
+    x: 983
+    y: 70
+    z: 1282
+  '68':
+    type: STAINED_CLAY
+    data: 13
+    x: 983
+    y: 70
+    z: 1283
+  '69':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 983
+    y: 70
+    z: 1284
+  '70':
+    type: WOOL
+    data: 11
+    x: 983
+    y: 71
+    z: 1278
+  '71':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 983
+    y: 71
+    z: 1279
+  '72':
+    type: AIR
+    data: 0
+    x: 983
+    y: 71
+    z: 1280
+  '73':
+    type: QUARTZ_STAIRS
+    data: 2
+    x: 983
+    y: 71
+    z: 1281
+  '74':
+    type: STAINED_GLASS
+    data: 9
+    x: 983
+    y: 71
+    z: 1282
+  '75':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 983
+    y: 71
+    z: 1283
+  '76':
+    type: AIR
+    data: 0
+    x: 983
+    y: 71
+    z: 1284
+  '77':
+    type: STEP
+    data: 7
+    x: 983
+    y: 72
+    z: 1278
+  '78':
+    type: AIR
+    data: 0
+    x: 983
+    y: 72
+    z: 1279
+  '79':
+    type: AIR
+    data: 0
+    x: 983
+    y: 72
+    z: 1280
+  '80':
+    type: AIR
+    data: 0
+    x: 983
+    y: 72
+    z: 1281
+  '81':
+    type: AIR
+    data: 0
+    x: 983
+    y: 72
+    z: 1282
+  '82':
+    type: AIR
+    data: 0
+    x: 983
+    y: 72
+    z: 1283
+  '83':
+    type: AIR
+    data: 0
+    x: 983
+    y: 72
+    z: 1284
+  '84':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 984
+    y: 70
+    z: 1278
+  '85':
+    type: QUARTZ_STAIRS
+    data: 1
+    x: 984
+    y: 70
+    z: 1279
+  '86':
+    type: QUARTZ_STAIRS
+    data: 1
+    x: 984
+    y: 70
+    z: 1280
+  '87':
+    type: AIR
+    data: 0
+    x: 984
+    y: 70
+    z: 1281
+  '88':
+    type: QUARTZ_STAIRS
+    data: 3
+    x: 984
+    y: 70
+    z: 1282
+  '89':
+    type: QUARTZ_STAIRS
+    data: 1
+    x: 984
+    y: 70
+    z: 1283
+  '90':
+    type: AIR
+    data: 0
+    x: 984
+    y: 70
+    z: 1284
+  '91':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1278
+  '92':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1279
+  '93':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1280
+  '94':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1281
+  '95':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1282
+  '96':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1283
+  '97':
+    type: AIR
+    data: 0
+    x: 984
+    y: 71
+    z: 1284
+  '98':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1278
+  '99':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1279
+  '100':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1280
+  '101':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1281
+  '102':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1282
+  '103':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1283
+  '104':
+    type: AIR
+    data: 0
+    x: 984
+    y: 72
+    z: 1284
+  '105':
+    type: STEP
+    data: 7
+    x: 985
+    y: 70
+    z: 1278
+  '106':
+    type: STEP
+    data: 7
+    x: 985
+    y: 70
+    z: 1279
+  '107':
+    type: AIR
+    data: 0
+    x: 985
+    y: 70
+    z: 1280
+  '108':
+    type: AIR
+    data: 0
+    x: 985
+    y: 70
+    z: 1281
+  '109':
+    type: STEP
+    data: 7
+    x: 985
+    y: 70
+    z: 1282
+  '110':
+    type: AIR
+    data: 0
+    x: 985
+    y: 70
+    z: 1283
+  '111':
+    type: AIR
+    data: 0
+    x: 985
+    y: 70
+    z: 1284
+  '112':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1278
+  '113':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1279
+  '114':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1280
+  '115':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1281
+  '116':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1282
+  '117':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1283
+  '118':
+    type: AIR
+    data: 0
+    x: 985
+    y: 71
+    z: 1284
+  '119':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1278
+  '120':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1279
+  '121':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1280
+  '122':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1281
+  '123':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1282
+  '124':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1283
+  '125':
+    type: AIR
+    data: 0
+    x: 985
+    y: 72
+    z: 1284
+  '126':
+    type: STEP
+    data: 7
+    x: 986
+    y: 70
+    z: 1278
+  '127':
+    type: AIR
+    data: 0
+    x: 986
+    y: 70
+    z: 1279
+  '128':
+    type: AIR
+    data: 0
+    x: 986
+    y: 70
+    z: 1280
+  '129':
+    type: AIR
+    data: 0
+    x: 986
+    y: 70
+    z: 1281
+  '130':
+    type: AIR
+    data: 0
+    x: 986
+    y: 70
+    z: 1282
+  '131':
+    type: AIR
+    data: 0
+    x: 986
+    y: 70
+    z: 1283
+  '132':
+    type: AIR
+    data: 0
+    x: 986
+    y: 70
+    z: 1284
+  '133':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1278
+  '134':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1279
+  '135':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1280
+  '136':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1281
+  '137':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1282
+  '138':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1283
+  '139':
+    type: AIR
+    data: 0
+    x: 986
+    y: 71
+    z: 1284
+  '140':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1278
+  '141':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1279
+  '142':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1280
+  '143':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1281
+  '144':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1282
+  '145':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1283
+  '146':
+    type: AIR
+    data: 0
+    x: 986
+    y: 72
+    z: 1284

@@ -40,7 +40,7 @@ public class AowPlayer {
 		this.age = Ages.PREHISTORIC;
 		this.spawnUnitsDelay = 0;
 		this.spawnUnitsDelayInit = 0;
-		this.ultimeDelay = 60;
+		this.ultimeDelay = 10;
 	}
 
 	public Board getBoard() {

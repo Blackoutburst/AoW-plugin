@@ -22,12 +22,12 @@ public class UltimateManager {
 			case PREHISTORIC: new MeteorShower().meteorShower(p); break;
 			case MEDIEVAL: new ArrowShower().arrowShower(p); break;
 			case RENAISSANCE: new Heal().heal(p); break;
-			case MODERN: break;
+			case MODERN: new Bombarder().bombarder(p); break;
 			case FUTURISTIC: break;
 			default: break;
 		}
 		player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 1);
-		p.setUltimeDelay(60);
+		p.setUltimeDelay(10);
 		Utils.giveItems(p);
 	}
 	

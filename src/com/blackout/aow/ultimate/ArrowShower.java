@@ -37,7 +37,7 @@ public class ArrowShower {
 				float y = (float) (a.getEntity().getLocation().getY());
 				float z = (float) (a.getEntity().getLocation().getZ());
 			
-				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.FIREWORKS_SPARK, x, y, z);
+				NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.FLAME, x, y, z);
 			}
 		}
 	}

@@ -59,7 +59,7 @@ public class MeteorShower {
 		float z = (float) (m.getEntity().getLocation().getZ() + 0.5f);
 		
 		for (AowPlayer p : Core.aowplayers) {
-			p.getPlayer().playSound(m.getEntity().getLocation(), Sound.EXPLODE, 1, 1);
+			p.getPlayer().playSound(m.getEntity().getLocation(), Sound.EXPLODE, 2, 1);
 			NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, x, y, z);
 		}
 	}
