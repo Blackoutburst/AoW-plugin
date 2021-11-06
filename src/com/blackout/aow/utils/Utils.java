@@ -47,7 +47,7 @@ public class Utils {
 		ItemMeta meta;
 		
 		if (p.getUltimeDelay() > 0) {
-			item = new ItemStack(Material.INK_SACK, 8);
+			item = new ItemStack(Material.INK_SACK, p.getUltimeDelay(), (short) 8);
 			meta = item.getItemMeta();
 			meta.setDisplayName("§7Ultimate skill");
 			item.setItemMeta(meta);

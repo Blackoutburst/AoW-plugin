@@ -24,7 +24,7 @@ public class AowPlayer {
 	protected Holo redBaseLife;
 	protected Holo blueBaseName;
 	protected Holo redBaseName;
-	protected float ultimeDelay;
+	protected int ultimeDelay;
 	
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
@@ -176,11 +176,11 @@ public class AowPlayer {
 		this.redBaseName = redBaseName;
 	}
 	
-	public float getUltimeDelay() {
+	public int getUltimeDelay() {
 		return ultimeDelay;
 	}
 
-	public void setUltimeDelay(float ultimeDelay) {
+	public void setUltimeDelay(int ultimeDelay) {
 		this.ultimeDelay = ultimeDelay;
 	}
 

@@ -57,16 +57,15 @@ public class Core {
 					Core.gameTime++;
 					player1.gold += 5 * (player1.getAge().ordinal() + 1);
 					player2.gold += 5 * (player1.getAge().ordinal() + 1);
-					player1.ultimeDelay--;
-					player2.ultimeDelay--;
 					
-					if (player1.ultimeDelay == 0) {
-						Utils.giveItems(player1);
-					}
+					if (player1.ultimeDelay > 0)
+						player1.ultimeDelay--;
 					
-					if (player2.ultimeDelay == 0) {
-						Utils.giveItems(player2);
-					}
+					if (player2.ultimeDelay > 0)
+						player2.ultimeDelay--;
+						
+					Utils.giveItems(player1);
+					Utils.giveItems(player2);
 					
 					for (AowPlayer p : Core.aowplayers) {
 						ScoreboardManager.update(p);

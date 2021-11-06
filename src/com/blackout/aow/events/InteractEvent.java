@@ -3,7 +3,7 @@ package com.blackout.aow.events;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import com.blackout.aow.core.AowPlayer;
+import com.blackout.aow.core.Core;
 import com.blackout.aow.ultimate.UltimateManager;
 import com.blackout.aow.warrior.WarriorManager;
 
@@ -23,6 +23,7 @@ public class InteractEvent {
 	public void execute(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
 		
-		clickItems(player);
+		if (Core.gameRunning)
+			clickItems(player);
 	}
 }

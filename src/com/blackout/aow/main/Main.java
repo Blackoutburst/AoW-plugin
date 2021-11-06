@@ -3,10 +3,12 @@ package com.blackout.aow.main;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
@@ -64,6 +66,12 @@ public class Main extends JavaPlugin implements Listener {
 	public void onItemDrop(PlayerDropItemEvent event) {
 		if (!event.getPlayer().getGameMode().equals(GameMode.CREATIVE))
 			event.setCancelled(true);
+	}
+	
+	@EventHandler
+	public void onForm(EntityChangeBlockEvent event) {
+	    if(event.getEntity().getType() == EntityType.FALLING_BLOCK)
+	        event.setCancelled(true);
 	}
 	
 	@EventHandler
