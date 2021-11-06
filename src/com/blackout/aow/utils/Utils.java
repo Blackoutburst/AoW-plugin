@@ -43,11 +43,22 @@ public class Utils {
 		Player player = p.getPlayer();
 		int unitIndex = p.getAge().ordinal() * 3;
 		
-		ItemStack item = new ItemStack(Material.BLAZE_POWDER);
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName("§6Ultimate skill");
-		item.setItemMeta(meta);
-		player.getInventory().setItem(0, item);
+		ItemStack item;
+		ItemMeta meta;
+		
+		if (p.getUltimeDelay() > 0) {
+			item = new ItemStack(Material.INK_SACK, 8);
+			meta = item.getItemMeta();
+			meta.setDisplayName("§7Ultimate skill");
+			item.setItemMeta(meta);
+			player.getInventory().setItem(0, item);
+		} else {
+			item = new ItemStack(Material.BLAZE_POWDER);
+			meta = item.getItemMeta();
+			meta.setDisplayName("§6Ultimate skill");
+			item.setItemMeta(meta);
+			player.getInventory().setItem(0, item);
+		}
 		
 		item = new ItemStack(items[unitIndex]);
 		meta = item.getItemMeta();

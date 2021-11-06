@@ -24,6 +24,7 @@ public class AowPlayer {
 	protected Holo redBaseLife;
 	protected Holo blueBaseName;
 	protected Holo redBaseName;
+	protected float ultimeDelay;
 	
 	protected List<ShopNPC> leftShop = new ArrayList<ShopNPC>();
 	protected List<ShopNPC> rightShop = new ArrayList<ShopNPC>();
@@ -39,6 +40,7 @@ public class AowPlayer {
 		this.age = Ages.PREHISTORIC;
 		this.spawnUnitsDelay = 0;
 		this.spawnUnitsDelayInit = 0;
+		this.ultimeDelay = 60;
 	}
 
 	public Board getBoard() {
@@ -172,6 +174,14 @@ public class AowPlayer {
 
 	public void setRedBaseName(Holo redBaseName) {
 		this.redBaseName = redBaseName;
+	}
+	
+	public float getUltimeDelay() {
+		return ultimeDelay;
+	}
+
+	public void setUltimeDelay(float ultimeDelay) {
+		this.ultimeDelay = ultimeDelay;
 	}
 
 	public static AowPlayer getFromPlayer(Player p) {
