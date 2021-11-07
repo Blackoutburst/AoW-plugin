@@ -36,6 +36,21 @@ All units go on a straight line to the opponent base and fight the first unit in
 All the bases in the game change look to match your current age while somewhat respecting the original game bases look.\
 Here are some examples.
 
-![combat](readme/base1.png)\
-![combat](readme/base2.png)\
-![combat](readme/base3.png)
+![base1](readme/base1.png)\
+![base2](readme/base2.png)\
+![base3](readme/base3.png)
+
+### Skills
+Each age possesses a special skill that can be used once every 60 seconds.\
+Most of these skills are offensive and can completely turn the situation of the game.
+
+Here are some examples.
+
+![skill1](readme/skill1.png)\
+![skill2](readme/skill2.png)\
+![skill3](readme/skill3.png)
+
+## Special Thanks
+- Esurique for making the soundtrack
+- Yzoshi for play testing with me
+- Fuby for helping me a lot with the game balancing
