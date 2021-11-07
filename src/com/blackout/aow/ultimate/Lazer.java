@@ -41,8 +41,8 @@ public class Lazer {
 							Math.pow(((l.getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((l.getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 2) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 1000);
+					if (distance < 4) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 800);
 						p.getRedNPC().get(index).updateLifeBar(p.getPlayer(), w);
 					}
 					index++;
@@ -57,8 +57,8 @@ public class Lazer {
 							Math.pow(((l.getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((l.getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 2) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 1000);
+					if (distance < 4) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 800);
 						p.getBlueNPC().get(index).updateLifeBar(p.getPlayer(), w);
 					}
 					index++;

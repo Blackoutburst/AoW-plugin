@@ -53,35 +53,35 @@ public abstract class WarriorLogical {
 	private boolean canWalk(int index) {
 		if (this.dead) return (false);
 		if (this.owner.getPlayerID() == 0) {//Toward right
-			double prevZ = 0;
+			double frontZ = 0;
 			double myZ = this.position.getZ();
 			
 			if (Core.redWarrior.size() > 0) {
-				prevZ = Core.redWarrior.get(0).getPosition().getZ();
-				if (Math.abs(prevZ - myZ) < 1.5f) {
+				frontZ = Core.redWarrior.get(0).getPosition().getZ();
+				if (frontZ - myZ < 1.5f) {
 					return (false);
 				}
 			}
 			
 			if (index == 0) return (true);
-			prevZ = Core.blueWarrior.get(index - 1).getPosition().getZ();
+			frontZ = Core.blueWarrior.get(index - 1).getPosition().getZ();
 			
-			return (prevZ - myZ > 1.5f);
+			return !(frontZ - myZ < 1.5f);
 		} else { // Toward left
-			double prevZ = 0;
+			double frontZ = 0;
 			double myZ = this.position.getZ();
 			
 			if (Core.blueWarrior.size() > 0) {
-				prevZ = Core.blueWarrior.get(0).getPosition().getZ();
-				if (Math.abs(prevZ - myZ) < 1.5f) {
+				frontZ = Core.blueWarrior.get(0).getPosition().getZ();
+				if (myZ - frontZ < 1.5f) {
 					return (false);
 				}
 			}
 			
 			if (index == 0) return (true);
-			prevZ = Core.redWarrior.get(index - 1).getPosition().getZ();
+			frontZ = Core.redWarrior.get(index - 1).getPosition().getZ();
 		
-			return (myZ - prevZ > 1.5f);
+			return !(myZ - frontZ < 1.5f);
 		}
 	}
 	

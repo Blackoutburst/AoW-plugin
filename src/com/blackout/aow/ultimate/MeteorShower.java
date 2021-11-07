@@ -74,7 +74,7 @@ public class MeteorShower {
 							Math.pow(((m.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((m.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 2 && !m.isDead()) {
+					if (distance < 4 && !m.isDead()) {
 						w.getOptions().setHealth(w.getOptions().getHealth() - 200);
 						p.getRedNPC().get(index).updateLifeBar(p.getPlayer(), w);
 						m.setDead(true);
@@ -91,7 +91,7 @@ public class MeteorShower {
 							Math.pow(((m.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((m.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 2 && !m.isDead()) {
+					if (distance < 4 && !m.isDead()) {
 						w.getOptions().setHealth(w.getOptions().getHealth() - 200);
 						p.getBlueNPC().get(index).updateLifeBar(p.getPlayer(), w);
 						m.setDead(true);
