@@ -6,18 +6,32 @@ import java.util.List;
 import java.util.Set;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Color;
+import org.bukkit.FireworkEffect;
+import org.bukkit.FireworkEffect.Type;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.blackout.aow.core.Ages;
 import com.blackout.aow.core.AowPlayer;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.warrior.WarriorManager;
+
+import net.minecraft.server.v1_8_R3.EntityFireworks;
+import net.minecraft.server.v1_8_R3.PacketPlayOutEntityDestroy;
+import net.minecraft.server.v1_8_R3.PacketPlayOutEntityMetadata;
+import net.minecraft.server.v1_8_R3.PacketPlayOutEntityStatus;
+import net.minecraft.server.v1_8_R3.PacketPlayOutSpawnEntity;
+import net.minecraft.server.v1_8_R3.PlayerConnection;
 
 public class Utils {
 	
@@ -96,6 +110,24 @@ public class Utils {
 		if (Core.player1.getPlayer() == p) return Core.player1;
 		if (Core.player2.getPlayer() == p) return Core.player2;
 		return null;
+	}
+	
+	public static void endingFireworks(Location location, Color color) {
+		for (Player p : Bukkit.getOnlinePlayers()) {
+			PlayerConnection connection = ((CraftPlayer) p).getHandle().playerConnection;
+			ItemStack stackFirework = new ItemStack(Material.FIREWORK);
+			FireworkMeta fireworkMeta = (FireworkMeta) stackFirework.getItemMeta();
+			FireworkEffect effect = FireworkEffect.builder().flicker(false).withColor(color).with(Type.BALL_LARGE).build();
+			fireworkMeta.addEffect(effect);
+			fireworkMeta.setPower(2);
+			stackFirework.setItemMeta(fireworkMeta);
+			EntityFireworks firework = new EntityFireworks(((CraftWorld) location.getWorld()).getHandle(), location.getX(), location.getY(), location.getZ(), CraftItemStack.asNMSCopy(stackFirework));
+			firework.expectedLifespan = 0;
+			connection.sendPacket(new PacketPlayOutSpawnEntity(firework, 76));
+			connection.sendPacket(new PacketPlayOutEntityMetadata(firework.getId(), firework.getDataWatcher(), true));
+			connection.sendPacket(new PacketPlayOutEntityStatus(firework, (byte) 17));
+			connection.sendPacket(new PacketPlayOutEntityDestroy(firework.getId()));
+		}
 	}
 	
 	@SuppressWarnings("deprecation")

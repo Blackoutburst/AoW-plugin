@@ -8,6 +8,7 @@ import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Sound;
+import org.bukkit.Color;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -203,6 +204,33 @@ public class Core {
 		for (AowPlayer p : Core.aowplayers) {
 			ScoreboardManager.update(p);
 		}
+		
+		
+		for (int i = 0; i < 10; i++) {
+			
+			new BukkitRunnable(){
+				@Override
+				public void run() {
+					
+					Location loc = new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? 1345 : 1302);
+					
+					loc.setX(loc.getX() + (((new Random().nextFloat() * 2) - 1) * 10));
+					loc.setZ(loc.getZ() + (((new Random().nextFloat() * 2) - 1) * 10));
+					loc.setY(60 + new Random().nextInt(10));
+					
+					Color color = Color.WHITE;
+					
+					if ((loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId()))) {
+						color = (new Random().nextInt(2) == 0) ? Color.RED : Color.ORANGE;
+					} else {
+						color = (new Random().nextInt(2) == 0) ? Color.BLUE : Color.AQUA;
+					}
+					
+					Utils.endingFireworks(loc, color);
+				}
+			}.runTaskLater(Main.getPlugin(Main.class), 20L * (i + 1));
+		}
+		
 		
 		switch(loser.getAge()) {
 			case PREHISTORIC: baseName += "_cave_broke"; break;
