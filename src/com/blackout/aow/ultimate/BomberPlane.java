@@ -136,7 +136,7 @@ public class BomberPlane {
 							Math.pow(((b.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
 					if (distance < 2 && !b.isDead()) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 200);
+						w.getOptions().setHealth(w.getOptions().getHealth() - 500);
 						p.getRedNPC().get(index).updateLifeBar(p.getPlayer(), w);
 						b.setDead(true);
 					}
@@ -153,7 +153,7 @@ public class BomberPlane {
 							Math.pow(((b.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
 					if (distance < 2 && !b.isDead()) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 200);
+						w.getOptions().setHealth(w.getOptions().getHealth() - 500);
 						p.getBlueNPC().get(index).updateLifeBar(p.getPlayer(), w);
 						b.setDead(true);
 					}
