@@ -185,69 +185,71 @@ public class Core {
 		gameRunning = false;
 		
 		
-		AowPlayer loser = (blueBase.getLife() > redBase.getLife()) ? player2 : player1;
-		String baseName = (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? "blue" : "red";
-		Location l = (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, 1302) : new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, 1350); 
-		
-		for (int i = 0; i < 5; i++) {
+		if (blueBase.getLife() != redBase.getLife()) {
+			
+			AowPlayer loser = (blueBase.getLife() > redBase.getLife()) ? player2 : player1;
+			String baseName = (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? "blue" : "red";
+			Location l = (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, 1302) : new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, 1350); 
+			
+			for (int i = 0; i < 5; i++) {
+				new BukkitRunnable(){
+					@Override
+					public void run() {
+						for (AowPlayer p : aowplayers) {
+							NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float) l.getX() + (((new Random().nextFloat() * 2) - 1) * 5), (float) l.getY() + (((new Random().nextFloat() * 2) - 1) * 5), (float) l.getZ() + (((new Random().nextFloat() * 2) - 1) * 5));
+							p.getPlayer().playSound(l, Sound.EXPLODE, 4, 1);
+						}
+					}
+				}.runTaskLater(Main.getPlugin(Main.class), 5L * (i + 1));
+			}
+			
+			for (int i = 0; i < 10; i++) {
+				
+				new BukkitRunnable(){
+					@Override
+					public void run() {
+						
+						Location loc = new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? 1345 : 1302);
+						
+						loc.setX(loc.getX() + (((new Random().nextFloat() * 2) - 1) * 10));
+						loc.setZ(loc.getZ() + (((new Random().nextFloat() * 2) - 1) * 10));
+						loc.setY(60 + new Random().nextInt(10));
+						
+						Color color = Color.WHITE;
+						
+						if ((loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId()))) {
+							color = (new Random().nextInt(2) == 0) ? Color.RED : Color.ORANGE;
+						} else {
+							color = (new Random().nextInt(2) == 0) ? Color.BLUE : Color.AQUA;
+						}
+						
+						Utils.endingFireworks(loc, color);
+					}
+				}.runTaskLater(Main.getPlugin(Main.class), 20L * (i + 1));
+			}
+			
+			
+			switch(loser.getAge()) {
+				case PREHISTORIC: baseName += "_cave_broke"; break;
+				case MEDIEVAL: baseName += "_castle_broke"; break;
+				case RENAISSANCE: baseName += "_church_broke"; break;
+				case MODERN: baseName += "_base_broke"; break;
+				case FUTURISTIC: baseName += "_space_broke"; break;
+				default: baseName += "_cave_broke"; break;
+			}
+			final String base = baseName;
+			
 			new BukkitRunnable(){
 				@Override
 				public void run() {
-					for (AowPlayer p : aowplayers) {
-						NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float) l.getX() + (((new Random().nextFloat() * 2) - 1) * 5), (float) l.getY() + (((new Random().nextFloat() * 2) - 1) * 5), (float) l.getZ() + (((new Random().nextFloat() * 2) - 1) * 5));
-						p.getPlayer().playSound(l, Sound.EXPLODE, 4, 1);
-					}
+					Utils.loadBase(base);
 				}
-			}.runTaskLater(Main.getPlugin(Main.class), 5L * (i + 1));
+			}.runTaskLater(Main.getPlugin(Main.class), 20L);
 		}
 		
 		for (AowPlayer p : Core.aowplayers) {
 			ScoreboardManager.update(p);
 		}
-		
-		
-		for (int i = 0; i < 10; i++) {
-			
-			new BukkitRunnable(){
-				@Override
-				public void run() {
-					
-					Location loc = new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? 1345 : 1302);
-					
-					loc.setX(loc.getX() + (((new Random().nextFloat() * 2) - 1) * 10));
-					loc.setZ(loc.getZ() + (((new Random().nextFloat() * 2) - 1) * 10));
-					loc.setY(60 + new Random().nextInt(10));
-					
-					Color color = Color.WHITE;
-					
-					if ((loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId()))) {
-						color = (new Random().nextInt(2) == 0) ? Color.RED : Color.ORANGE;
-					} else {
-						color = (new Random().nextInt(2) == 0) ? Color.BLUE : Color.AQUA;
-					}
-					
-					Utils.endingFireworks(loc, color);
-				}
-			}.runTaskLater(Main.getPlugin(Main.class), 20L * (i + 1));
-		}
-		
-		
-		switch(loser.getAge()) {
-			case PREHISTORIC: baseName += "_cave_broke"; break;
-			case MEDIEVAL: baseName += "_castle_broke"; break;
-			case RENAISSANCE: baseName += "_church_broke"; break;
-			case MODERN: baseName += "_base_broke"; break;
-			case FUTURISTIC: baseName += "_space_broke"; break;
-			default: baseName += "_cave_broke"; break;
-		}
-		final String base = baseName;
-		
-		new BukkitRunnable(){
-			@Override
-			public void run() {
-				Utils.loadBase(base);
-			}
-		}.runTaskLater(Main.getPlugin(Main.class), 20L);
 		
 		for (AowPlayer p : aowplayers) {
 			p.getPlayer().getInventory().clear();
