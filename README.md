@@ -20,4 +20,9 @@ There is 15 different combat units, 3 per age. All of them have different stats 
 ### Shop NPC
 On every age you have 3 NPCs in front of you used for purchasing units.\
 The fourth NPC is used to evolve to the next age when you have enough XP to do so.\
-![shopnpcs](readme/shopnpcs.png)
+![shopnpcs](readme/shopnpc.png)
+
+### Items
+Items are an alternative way to buy units and/or evolve.\
+The only special item is the first one used to invoke your age special skill.\
+![items](readme/items.png)
