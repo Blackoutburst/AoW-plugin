@@ -61,8 +61,11 @@ public class Core {
 			public void run(){
 				if (Core.gameRunning) {
 					Core.gameTime++;
-					player1.gold += 2 * (player1.getAge().ordinal() + 1);
-					player2.gold += 2 * (player1.getAge().ordinal() + 1);
+					
+					if (player1.gold > player2.gold)
+						player2.gold += 5 * (player1.getAge().ordinal() + 1);
+					else if (player1.gold < player2.gold)
+						player1.gold += 5 * (player1.getAge().ordinal() + 1);
 					
 					if (player1.ultimeDelay > 0)
 						player1.ultimeDelay--;

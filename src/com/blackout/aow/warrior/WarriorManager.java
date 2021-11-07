@@ -45,7 +45,7 @@ public class WarriorManager {
 			1000,
 			5000,
 			15000,
-			30000};
+			50000};
 	
 	public static String[] names = new String[] {
 			"Cave man",
@@ -66,21 +66,21 @@ public class WarriorManager {
 	
 	//     xp | gold | hp |  range | dmg | cost | combat delay | spawn delay
 	public static float[][] unitsStats = new float[][] {
-		{  20,   30,    100,  2.0f,  25,   15,    20, 10}, //Cave man
-		{  30,   35,     80,  5.0f,  20,   25,    25, 10}, //Slingshot
-		{  80,   90,    250,  2.0f,  30,  100,    20, 20}, //Steve
-		{ 100,  100,    400,  2.0f,  80,   70,    20, 15}, //Swordsman
-		{ 120,  120,    300,  5.0f,  60,   90,    18, 15}, //Archer
-		{ 200,  180,    700,  2.0f, 100,  200,    20, 30}, //Knight
-		{ 200,  240,    800,  2.0f, 160,  200,    18, 20}, //Musketeer
-		{ 240,  280,    600,  5.0f, 120,  260,    16, 20}, //Rifleman
-		{ 400,  350,   1000,  2.0f, 400,  400,    30, 35}, //Cannoneer
-		{ 500,  400,   1500,  2.0f, 400,  350,    15, 25}, //Soldier
-		{ 560,  420,   1000,  6.0f,  80,  450,     5, 25}, //Gunner
-		{ 800,  550,   1500,  2.0f, 450,  600,    30, 40}, //Bomber
-		{ 800,  600,   2000,  2.0f, 600,  550,    10, 30}, //Space soldier
-		{1200,  740,   1600,  7.0f, 200,  700,     5, 30}, //Space gunner
-		{2000, 3500,  50000,  2.0f, 700, 5000,     5, 50}, //Super soldier
+		{  20,   30,    100,  2.0f,  25,    15,    20, 10}, //Cave man
+		{  30,   35,     80,  5.0f,  20,    25,    25, 10}, //Slingshot
+		{  80,   90,    250,  2.0f,  30,   100,    20, 20}, //Steve
+		{ 100,  100,    400,  2.0f,  80,    70,    20, 15}, //Swordsman
+		{ 120,  120,    300,  5.0f,  60,    90,    18, 15}, //Archer
+		{ 200,  180,    700,  2.0f, 100,   200,    20, 30}, //Knight
+		{ 200,  240,    800,  2.0f, 160,   200,    18, 20}, //Musketeer
+		{ 240,  280,    600,  5.0f, 120,   260,    16, 20}, //Rifleman
+		{ 400,  350,   1000,  2.0f, 400,   400,    30, 35}, //Cannoneer
+		{ 500,  400,   1500,  2.0f, 400,   350,    15, 25}, //Soldier
+		{ 560,  420,   1000,  6.0f,  80,   450,     5, 25}, //Gunner
+		{ 800,  550,   1500,  2.0f, 450,   600,    30, 40}, //Bomber
+		{ 800,  600,   2000,  2.0f, 600,   550,    10, 30}, //Space soldier
+		{1200,  740,   1600,  7.0f, 200,   700,     5, 30}, //Space gunner
+		{2000, 3500,  50000,  2.0f, 700, 10000,     5, 50}, //Super soldier
 	};
 	
 	public static void createNewWarrior(String name, Player p) {

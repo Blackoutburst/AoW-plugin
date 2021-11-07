@@ -35,7 +35,7 @@ public class Heal {
 				healParticles(w);
 				
 				if (w.getOptions().getHealth() < w.getOptions().getMaxHealth()) {
-					w.getOptions().setHealth(w.getOptions().getHealth() + 3);
+					w.getOptions().setHealth(w.getOptions().getHealth() + 6);
 					
 					if (w.getOptions().getHealth() > w.getOptions().getMaxHealth())
 						w.getOptions().setHealth(w.getOptions().getMaxHealth());

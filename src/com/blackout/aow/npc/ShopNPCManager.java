@@ -25,10 +25,11 @@ public class ShopNPCManager {
 		new Location(Bukkit.getWorld("world"), 973.5, 54, 1311.5, 90, 0),
 		new Location(Bukkit.getWorld("world"), 973.5, 54, 1313.5, 90, 0),
 		new Location(Bukkit.getWorld("world"), 973.5, 54, 1315.5, 90, 0),
-		new Location(Bukkit.getWorld("world"), 973.5, 54, 1343.5, 90, 0),
-		new Location(Bukkit.getWorld("world"), 973.5, 54, 1341.5, 90, 0),
+		
+		new Location(Bukkit.getWorld("world"), 973.5, 54, 1337.5, 90, 0),
 		new Location(Bukkit.getWorld("world"), 973.5, 54, 1339.5, 90, 0),
-		new Location(Bukkit.getWorld("world"), 973.5, 54, 1337.5, 90, 0)};
+		new Location(Bukkit.getWorld("world"), 973.5, 54, 1341.5, 90, 0),
+		new Location(Bukkit.getWorld("world"), 973.5, 54, 1343.5, 90, 0)};
 	
 	public static void addNPC(AowPlayer owner) {
 		int skinIndex = owner.getAge().ordinal() * 3;
@@ -55,13 +56,33 @@ public class ShopNPCManager {
 				        .setLocation(loc);
 				HoloManager.spawnHolo(name, p.getPlayer());
 				
-				loc.setY(loc.getY() - 0.20);
-				
+				loc.setY(loc.getY() - 0.21);
 				Holo cost = new Holo(UUID.randomUUID(), i == 3 ? "§bCost "+WarriorManager.ageCost[owner.getAge().ordinal()]+" xp" : "§6Cost "+(int) (WarriorManager.unitsStats[skinIndex + i][5])+" gold")
 				        .setLocation(loc);
 				HoloManager.spawnHolo(cost, p.getPlayer());
 				
-				ShopNPC shopNPC = new ShopNPC(npc, name, cost, WarriorManager.unitsStats[skinIndex + i][5]);
+				loc.setY(loc.getY() + 0.43);
+				
+				Holo range = new Holo(UUID.randomUUID(), "§bRange §e"+(int) (WarriorManager.unitsStats[skinIndex + i][3]))
+						.setLocation(loc);
+				
+				if (i != 3)
+					HoloManager.spawnHolo(range, p.getPlayer());
+				
+				loc.setY(loc.getY() + 0.22);
+				Holo damage = new Holo(UUID.randomUUID(), "§bDamage §e"+(int) (WarriorManager.unitsStats[skinIndex + i][4]))
+						.setLocation(loc);
+				if (i != 3)
+					HoloManager.spawnHolo(damage, p.getPlayer());
+				
+				loc.setY(loc.getY() + 0.23);
+				Holo hp = new Holo(UUID.randomUUID(), "§bHealth §e"+(int) (WarriorManager.unitsStats[skinIndex + i][2]))
+						.setLocation(loc);
+				if (i != 3)
+					HoloManager.spawnHolo(hp, p.getPlayer());
+				
+				
+				ShopNPC shopNPC = new ShopNPC(npc, name, cost, hp, range, damage, WarriorManager.unitsStats[skinIndex + i][5]);
 				
 				if (owner.getPlayerID() == 0) {
 					p.getLeftShop().add(shopNPC);
@@ -77,6 +98,9 @@ public class ShopNPCManager {
 			NPCManager.deleteNPC(p, npc.getNpc());
 			HoloManager.deleteHolo(p, npc.getName());
 			HoloManager.deleteHolo(p, npc.getPrice());
+			HoloManager.deleteHolo(p, npc.getHp());
+			HoloManager.deleteHolo(p, npc.getRange());
+			HoloManager.deleteHolo(p, npc.getDamage());
 		}
 	}
 }
