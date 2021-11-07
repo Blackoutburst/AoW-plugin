@@ -35,12 +35,12 @@ public class AowPlayer {
 		this.playerID = playerID;
 		this.player = player;
 		this.board = board;
-		this.xp = 100000;
+		this.xp = 0;
 		this.gold = 100;
 		this.age = Ages.PREHISTORIC;
 		this.spawnUnitsDelay = 0;
 		this.spawnUnitsDelayInit = 0;
-		this.ultimeDelay = 10;
+		this.ultimeDelay = 60;
 	}
 
 	public Board getBoard() {

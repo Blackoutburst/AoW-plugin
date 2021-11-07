@@ -27,7 +27,7 @@ public class UltimateManager {
 			default: break;
 		}
 		player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 1);
-		p.setUltimeDelay(10);
+		p.setUltimeDelay(60);
 		Utils.giveItems(p);
 	}
 	
