@@ -6,7 +6,7 @@ import com.blackout.aow.core.Core;
 public class ScoreboardManager {
 	
 	private static String getBaseLifeColor(int lifePercent) {
-		if (lifePercent <= 5) return "§8";
+		if (lifePercent <= 0) return "§8";
 		if (lifePercent <= 10) return "§4";
 		if (lifePercent <= 15) return "§4";
 		if (lifePercent <= 20) return "§4";

@@ -2,16 +2,19 @@ package com.blackout.aow.core;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.blackout.aow.main.Main;
+import com.blackout.aow.nms.NMSParticle;
 import com.blackout.aow.nms.NMSTitle;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Board;
@@ -24,6 +27,8 @@ import com.blackout.holoapi.utils.HoloManager;
 import com.xxmicloxx.NoteBlockAPI.model.RepeatMode;
 import com.xxmicloxx.NoteBlockAPI.model.Song;
 import com.xxmicloxx.NoteBlockAPI.songplayer.RadioSongPlayer;
+
+import net.minecraft.server.v1_8_R3.EnumParticle;
 
 public class Core {
 
@@ -55,8 +60,8 @@ public class Core {
 			public void run(){
 				if (Core.gameRunning) {
 					Core.gameTime++;
-					player1.gold += 5 * (player1.getAge().ordinal() + 1);
-					player2.gold += 5 * (player1.getAge().ordinal() + 1);
+					player1.gold += 2 * (player1.getAge().ordinal() + 1);
+					player2.gold += 2 * (player1.getAge().ordinal() + 1);
 					
 					if (player1.ultimeDelay > 0)
 						player1.ultimeDelay--;
@@ -176,46 +181,97 @@ public class Core {
 	}
 	
 	public static void endGame() {
-		resetNameColor();
 		gameRunning = false;
-		rsp.setPlaying(false);
-		rsp.destroy();
+		
+		
+		AowPlayer loser = (blueBase.getLife() > redBase.getLife()) ? player2 : player1;
+		String baseName = (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? "blue" : "red";
+		Location l = (loser.getPlayer().getUniqueId().equals(player1.getPlayer().getUniqueId())) ? new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, 1302) : new Location(loser.getPlayer().getLocation().getWorld(), 983, 57, 1350); 
+		
+		for (int i = 0; i < 5; i++) {
+			new BukkitRunnable(){
+				@Override
+				public void run() {
+					for (AowPlayer p : aowplayers) {
+						NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.EXPLOSION_HUGE, (float) l.getX() + (((new Random().nextFloat() * 2) - 1) * 5), (float) l.getY() + (((new Random().nextFloat() * 2) - 1) * 5), (float) l.getZ() + (((new Random().nextFloat() * 2) - 1) * 5));
+						p.getPlayer().playSound(l, Sound.EXPLODE, 4, 1);
+					}
+				}
+			}.runTaskLater(Main.getPlugin(Main.class), 5L * (i + 1));
+		}
+		
+		for (AowPlayer p : Core.aowplayers) {
+			ScoreboardManager.update(p);
+		}
+		
+		switch(loser.getAge()) {
+			case PREHISTORIC: baseName += "_cave_broke"; break;
+			case MEDIEVAL: baseName += "_castle_broke"; break;
+			case RENAISSANCE: baseName += "_church_broke"; break;
+			case MODERN: baseName += "_base_broke"; break;
+			case FUTURISTIC: baseName += "_space_broke"; break;
+			default: baseName += "_cave_broke"; break;
+		}
+		final String base = baseName;
+		
+		new BukkitRunnable(){
+			@Override
+			public void run() {
+				Utils.loadBase(base);
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 20L);
+		
 		for (AowPlayer p : aowplayers) {
 			p.getPlayer().getInventory().clear();
 			if (blueBase.getLife() > redBase.getLife()) {
 				if (p == player1) {
-					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 80, 20);
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 140, 20);
 				} else if (p == player2) {
-					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§cYou lost the game!", 0, 80, 20);
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§cYou lost the game!", 0, 140, 20);
 				} else {
-					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", player1.getPlayer().getDisplayName()+"§a won the game!", 0, 80, 20);
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", player1.getPlayer().getDisplayName()+"§a won the game!", 0, 140, 20);
 				}
 			} else if (blueBase.getLife() < redBase.getLife()){
 				if (p == player2) {
-					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 80, 20);
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§aYou won the game!", 0, 140, 20);
 				} else if (p == player1) {
-					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§cYou lost!", 0, 80, 20);
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§cYou lost!", 0, 140, 20);
 				} else {
-					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", player2.getPlayer().getDisplayName()+"§a won the game!", 0, 80, 20);
+					NMSTitle.sendTitle(p.getPlayer(), "§6Game over", player2.getPlayer().getDisplayName()+"§a won the game!", 0, 140, 20);
 				}
 			} else {
-				NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§eDraw!", 0, 80, 20);
+				NMSTitle.sendTitle(p.getPlayer(), "§6Game over", "§eDraw!", 0, 140, 20);
 			}
-			p.getPlayer().teleport(spawn);
-			p.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
 			ShopNPCManager.removeNPC(p.getLeftShop(), p.getPlayer());
 			ShopNPCManager.removeNPC(p.getRightShop(), p.getPlayer());
-			WarriorManager.clearWarrior(p);
-			HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseLife());
-			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseLife());
-			HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseName());
-			HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseName());
-			ScoreboardManager.clear(p);
 		}
-		player1 = null;
-		player2 = null;
-		blueBase = null;
-		redBase = null;
-		aowplayers.clear();
+		
+		
+		new BukkitRunnable(){
+			@Override
+			public void run() {
+				resetNameColor();
+				rsp.setPlaying(false);
+				rsp.destroy();
+				
+				for (AowPlayer p : aowplayers) {
+					p.getPlayer().teleport(spawn);
+					p.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
+					
+					WarriorManager.clearWarrior(p);
+					HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseLife());
+					HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseLife());
+					HoloManager.deleteHolo(p.getPlayer(), p.getBlueBaseName());
+					HoloManager.deleteHolo(p.getPlayer(), p.getRedBaseName());
+					ScoreboardManager.clear(p);
+				}
+				player1 = null;
+				player2 = null;
+				blueBase = null;
+				redBase = null;
+				aowplayers.clear();
+			}
+		}.runTaskLater(Main.getPlugin(Main.class), 200L);
+		
 	}
 }

@@ -41,7 +41,7 @@ public class Base {
 	}
 	
 	private String getLifeBarString(int lifePercent) {
-		if (lifePercent <= 5) return "§7[§8████████████████████§7]";
+		if (lifePercent <= 0) return "§7[§8████████████████████§7]";
 		if (lifePercent <= 10) return "§7[§4█§8███████████████████§7]";
 		if (lifePercent <= 15) return "§7[§4██§8██████████████████§7]";
 		if (lifePercent <= 20) return "§7[§4███§8█████████████████§7]";
