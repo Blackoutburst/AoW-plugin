@@ -14,3 +14,10 @@ Originally released in 2007 by Louissi, Age of War became a timeless classic, wi
 ## Features
 
 ### Combat units
+There is 15 different combat units, 3 per age. All of them have different stats and effects on the game.\
+![allunits](readme/allunits.png)
+
+### Shop NPC
+On every age you have 3 NPCs in front of you used for purchasing units.\
+The fourth NPC is used to evolve to the next age when you have enough XP to do so.\
+![shopnpcs](readme/shopnpcs.png)
