@@ -34,8 +34,8 @@ All units go on a straight line to the opponent base and fight the first unit in
 
 ### Bases
 All the bases in the game change look to match your current age while somewhat respecting the original game bases look.\
-Here are some examples.\
+Here are some examples.
 
 ![combat](readme/base1.png)\
 ![combat](readme/base2.png)\
-![combat](readme/base3.png)\
+![combat](readme/base3.png)
