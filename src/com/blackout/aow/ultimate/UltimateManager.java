@@ -23,7 +23,7 @@ public class UltimateManager {
 			case MEDIEVAL: new ArrowShower().arrowShower(p); break;
 			case RENAISSANCE: new Heal().heal(p); break;
 			case MODERN: new BomberPlane().bombarder(p); break;
-			case FUTURISTIC: break;
+			case FUTURISTIC: new Lazer().lazer(p); break;
 			default: break;
 		}
 		player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 1);
