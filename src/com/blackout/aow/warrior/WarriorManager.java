@@ -1,5 +1,6 @@
 package com.blackout.aow.warrior;
 
+import java.util.Random;
 import java.util.UUID;
 
 import org.bukkit.Location;
@@ -14,6 +15,7 @@ import com.blackout.aow.main.Main;
 import com.blackout.aow.nms.NMSAttachEntity;
 import com.blackout.aow.nms.NMSEntityEquipment;
 import com.blackout.aow.nms.NMSExperience;
+import com.blackout.aow.nms.NMSParticle;
 import com.blackout.aow.npc.ShopNPCManager;
 import com.blackout.aow.utils.Utils;
 import com.blackout.holoapi.core.Holo;
@@ -21,6 +23,8 @@ import com.blackout.holoapi.utils.HoloManager;
 import com.blackout.npcapi.core.NPC;
 import com.blackout.npcapi.utils.NPCManager;
 import com.blackout.npcapi.utils.SkinLoader;
+
+import net.minecraft.server.v1_8_R3.EnumParticle;
 
 public class WarriorManager {
 
@@ -77,7 +81,7 @@ public class WarriorManager {
 		{ 400,  350,   1000,  2.0f, 400,   400,    30, 35}, //Cannoneer
 		{ 500,  400,   1500,  2.0f, 400,   350,    15, 25}, //Soldier
 		{ 560,  420,   1000,  6.0f,  80,   450,     5, 25}, //Gunner
-		{ 800,  550,   1500,  2.0f, 450,   600,    30, 40}, //Bomber
+		{ 800,  550,   3000,  5.0f, 500,   750,    30, 40}, //Bomber
 		{ 800,  600,   2000,  2.0f, 600,   550,    10, 30}, //Space soldier
 		{1200,  740,   1600,  7.0f, 200,   700,     5, 30}, //Space gunner
 		{2000, 3500,  50000,  2.0f, 700, 10000,     5, 50}, //Super soldier
@@ -280,6 +284,17 @@ public class WarriorManager {
 					for (int i = 0; i < j; i++) {
 						WarriorLogical w = Core.blueWarrior.get(i);
 						if (w.dead) {
+							
+							for (AowPlayer p : Core.aowplayers) {
+								for (int k = 0; k < 10; k++) {
+									NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.CLOUD, (float)(w.position.getX()) + new Random().nextFloat() - 0.5f, (float)(w.position.getY()) + 1.6f - (0.1f * i), (float)(w.position.getZ()) + new Random().nextFloat() - 0.5f);
+								}
+								WarriorVisual wv = p.getBlueNPC().get(i);
+								HoloManager.deleteHolo(p.getPlayer(), wv.lifeBar);
+								NPCManager.deleteNPC(p.getPlayer(), wv.npc);
+								p.getBlueNPC().remove(wv);
+							}
+							
 							Core.blueWarrior.remove(i);
 							j--;
 						}
@@ -289,11 +304,22 @@ public class WarriorManager {
 					for (int i = 0; i < j; i++) {
 						WarriorLogical w = Core.redWarrior.get(i);
 						if (w.dead) {
+							
+							for (AowPlayer p : Core.aowplayers) {
+								for (int k = 0; k < 10; k++) {
+									NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.CLOUD, (float)(w.position.getX()) + new Random().nextFloat() - 0.5f, (float)(w.position.getY()) + 1.6f - (0.1f * i), (float)(w.position.getZ()) + new Random().nextFloat() - 0.5f);
+								}
+								WarriorVisual wv = p.getRedNPC().get(i);
+								HoloManager.deleteHolo(p.getPlayer(), wv.lifeBar);
+								NPCManager.deleteNPC(p.getPlayer(), wv.npc);
+								p.getRedNPC().remove(wv);
+							}
+							
 							Core.redWarrior.remove(i);
 							j--;
 						}
 					}
-					
+
 					for (int i = 0; i < Core.blueWarrior.size(); i++) {
 						WarriorLogical w = Core.blueWarrior.get(i);
 						w.update(i);

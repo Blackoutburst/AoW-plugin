@@ -18,7 +18,7 @@ public class Knight extends WarriorLogical {
 	protected void update(int index) {
 		fight(index);
 		walk(index);
-		die(index);		
+		die(index);
 	}
 
 	@Override

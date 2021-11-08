@@ -78,6 +78,9 @@ public class Base {
 
 	public void setLife(int life) {
 		this.life = life;
+		if (this.life < 0) {
+			this.life = 0;
+		}
 	}
 
 	public int getMaxLife() {

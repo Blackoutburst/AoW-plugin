@@ -60,10 +60,9 @@ public class ArrowShower {
 							Math.pow(((a.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((a.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 4 && !a.isDead()) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 300);
+					if (distance < 2 && !a.isDead()) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 100);
 						p.getRedNPC().get(index).updateLifeBar(p.getPlayer(), w);
-						a.setDead(true);
 					}
 					index++;
 				}
@@ -77,10 +76,9 @@ public class ArrowShower {
 							Math.pow(((a.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((a.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 4 && !a.isDead()) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 300);
+					if (distance < 2 && !a.isDead()) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 100);
 						p.getBlueNPC().get(index).updateLifeBar(p.getPlayer(), w);
-						a.setDead(true);
 					}
 					index++;
 				}
@@ -110,7 +108,6 @@ public class ArrowShower {
 	
 	public void arrowShower(AowPlayer p) {
 		init(p);
-		
 		new BukkitRunnable(){
 			@Override
 			public void run() {

@@ -1,17 +1,10 @@
 package com.blackout.aow.warrior;
 
-import java.util.Random;
-
 import org.bukkit.Location;
 
 import com.blackout.aow.core.AowPlayer;
 import com.blackout.aow.core.Core;
 import com.blackout.aow.nms.NMSEntityMove;
-import com.blackout.aow.nms.NMSParticle;
-import com.blackout.holoapi.utils.HoloManager;
-import com.blackout.npcapi.utils.NPCManager;
-
-import net.minecraft.server.v1_8_R3.EnumParticle;
 
 public abstract class WarriorLogical {
 	
@@ -144,22 +137,6 @@ public abstract class WarriorLogical {
 				Core.player1.setXp((int) (Core.player1.getXp() + this.options.xpDrop));
 				Core.player1.setGold((int) (Core.player1.getGold() + this.options.goldDrop));
 				Core.player1.getPlayer().sendMessage("§aYou received §6"+(int) (this.options.goldDrop)+" gold and §b"+(int) (this.options.xpDrop)+" xp§a!");
-			}
-			for (AowPlayer p : Core.aowplayers) {
-				for (int i = 0; i < 10; i++) {
-					NMSParticle.spawnParticle(p.getPlayer(), EnumParticle.CLOUD, (float)(this.position.getX()) + new Random().nextFloat() - 0.5f, (float)(this.position.getY()) + 1.6f - (0.1f * i), (float)(this.position.getZ()) + new Random().nextFloat() - 0.5f);
-				}
-				if (this.owner.getPlayerID() == 0) {
-					WarriorVisual wv = p.getBlueNPC().get(index);
-					HoloManager.deleteHolo(p.getPlayer(), wv.lifeBar);
-					NPCManager.deleteNPC(p.getPlayer(), wv.npc);
-					p.getBlueNPC().remove(wv);
-				} else {
-					WarriorVisual wv = p.getRedNPC().get(index);
-					HoloManager.deleteHolo(p.getPlayer(), wv.lifeBar);
-					NPCManager.deleteNPC(p.getPlayer(), wv.npc);
-					p.getRedNPC().remove(wv);
-				}
 			}
 		}
 	}

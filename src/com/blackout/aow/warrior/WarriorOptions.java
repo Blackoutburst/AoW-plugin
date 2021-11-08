@@ -49,6 +49,9 @@ public class WarriorOptions {
 
 	public void setHealth(float health) {
 		this.health = health;
+		if (this.health < 0) {
+			this.health = 0;
+		}
 	}
 
 	public float getMaxHealth() {
