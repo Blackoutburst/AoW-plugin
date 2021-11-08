@@ -60,8 +60,8 @@ public class ArrowShower {
 							Math.pow(((a.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((a.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 2 && !a.isDead()) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 100);
+					if (distance < 4 && !a.isDead()) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 80);
 						p.getRedNPC().get(index).updateLifeBar(p.getPlayer(), w);
 					}
 					index++;
@@ -76,8 +76,8 @@ public class ArrowShower {
 							Math.pow(((a.getEntity().getLocation().getY() + 0.5) - w.getPosition().getY() + 0.5), 2) +
 							Math.pow(((a.getEntity().getLocation().getZ() + 0.5) - w.getPosition().getZ() + 0.5), 2));
 					
-					if (distance < 2 && !a.isDead()) {
-						w.getOptions().setHealth(w.getOptions().getHealth() - 100);
+					if (distance < 4 && !a.isDead()) {
+						w.getOptions().setHealth(w.getOptions().getHealth() - 80);
 						p.getBlueNPC().get(index).updateLifeBar(p.getPlayer(), w);
 					}
 					index++;
