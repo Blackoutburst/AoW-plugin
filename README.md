@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/github/license/Blackoutburst/AoW-plugin.svg)](LICENSE)
 [![Release](https://img.shields.io/github/release/Blackoutburst/AoW-plugin.svg)](https://github.com/Blackoutburst/AoW-plugin/releases)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8e4206e8498248a28c02f020061cdf82)](https://www.codacy.com/gh/Blackoutburst/AoW-plugin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Blackoutburst/AoW-plugin&amp;utm_campaign=Badge_Grade)
+[<img src="https://img.shields.io/badge/Webpage-Age of War-blueviolet">](https://www.blackoutburst.com/aow.html)
 
 # Age of War plugin
 This plugin is based on the old flash game Age of War (the first one). Some elements differ from the original game.\
